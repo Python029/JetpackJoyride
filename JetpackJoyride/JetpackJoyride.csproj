@@ -94,6 +94,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Barry_Steakfries.ico" />
+    <None Include="Resources\jetpack.png" />
+    <None Include="Resources\jetpack2.png" />
     <None Include="Resources\background.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -83,6 +83,26 @@ namespace JetpackJoyride.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bgstart1 {
+            get {
+                object obj = ResourceManager.GetObject("bgstart1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bgstart2 {
+            get {
+                object obj = ResourceManager.GetObject("bgstart2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap JetpackJoyride {
             get {
                 object obj = ResourceManager.GetObject("JetpackJoyride", resourceCulture);

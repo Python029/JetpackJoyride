@@ -31,9 +31,11 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tmrAnimate = new System.Windows.Forms.Timer(this.components);
+            this.bgstart = new System.Windows.Forms.PictureBox();
             this.bg3 = new System.Windows.Forms.PictureBox();
             this.bg2 = new System.Windows.Forms.PictureBox();
             this.bg1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.bgstart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bg3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bg2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bg1)).BeginInit();
@@ -41,9 +43,18 @@
             // 
             // tmrAnimate
             // 
-            this.tmrAnimate.Enabled = true;
             this.tmrAnimate.Interval = 5;
             this.tmrAnimate.Tick += new System.EventHandler(this.tmrAnimate_Tick);
+            // 
+            // bgstart
+            // 
+            this.bgstart.Image = global::JetpackJoyride.Properties.Resources.bgstart1;
+            this.bgstart.Location = new System.Drawing.Point(0, 0);
+            this.bgstart.Name = "bgstart";
+            this.bgstart.Size = new System.Drawing.Size(960, 720);
+            this.bgstart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.bgstart.TabIndex = 3;
+            this.bgstart.TabStop = false;
             // 
             // bg3
             // 
@@ -80,6 +91,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(986, 720);
+            this.Controls.Add(this.bgstart);
             this.Controls.Add(this.bg3);
             this.Controls.Add(this.bg2);
             this.Controls.Add(this.bg1);
@@ -87,6 +99,8 @@
             this.Name = "Form1";
             this.Text = "Jetpack Joyride";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
+            ((System.ComponentModel.ISupportInitialize)(this.bgstart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bg3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bg2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bg1)).EndInit();
@@ -101,6 +115,7 @@
         private System.Windows.Forms.PictureBox bg2;
         private System.Windows.Forms.Timer tmrAnimate;
         private System.Windows.Forms.PictureBox bg3;
+        private System.Windows.Forms.PictureBox bgstart;
     }
 }
 

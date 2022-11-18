@@ -17,12 +17,18 @@ namespace JetpackJoyride
             SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
             InitializeComponent();
         }
-
         List<PictureBox> bgList = new List<PictureBox>();
+        #region Booleans
+        bool start = false;
+        #endregion
+        #region Integers/Doubles
+
+        #endregion
         private void Form1_Load(object sender, EventArgs e)
         {
-
-            bg3.Location = new Point(1012, 0);
+            bg1.Location = new Point(959, 0);
+            bg2.Location = new Point(1465, 0);
+            bg3.Location = new Point(1971, 0);
             for(int i = 1; i<4;i++)
             {
                 PictureBox pb = (PictureBox)this.Controls["bg" + i.ToString()];
@@ -40,6 +46,23 @@ namespace JetpackJoyride
             {
                 if (bgList[i].Location.X<-500) { bgList[i].Location = new Point(1012,0); }
                 bgList[i].Left -= 2;
+            }
+            if(bgstart.Location.X>-965)
+            {
+                bgstart.Left -= 2;
+            }
+            else if(bgstart.Location.X < -965)
+            {
+                this.Controls.Remove(bgstart);
+            }
+        }
+
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Space)
+            {
+                tmrAnimate.Enabled = true;
+                bgstart.Image = Properties.Resources.bgstart2;
             }
         }
     }
