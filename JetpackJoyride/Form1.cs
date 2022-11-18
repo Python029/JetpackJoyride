@@ -26,7 +26,7 @@ namespace JetpackJoyride
         #endregion
         private void Form1_Load(object sender, EventArgs e)
         {
-            bg1.Location = new Point(959, 0);
+            bg1.Location = new Point(959, -29);
             bg2.Location = new Point(1465, 0);
             bg3.Location = new Point(1971, 0);
             for(int i = 1; i<4;i++)
@@ -62,6 +62,9 @@ namespace JetpackJoyride
             if(e.KeyCode == Keys.Space)
             {
                 tmrAnimate.Enabled = true;
+                this.BackgroundImage = null;
+                this.Controls.Remove(pbLogo);
+                this.Controls.Remove(txtStart);
                 bgstart.Image = Properties.Resources.bgstart2;
             }
         }

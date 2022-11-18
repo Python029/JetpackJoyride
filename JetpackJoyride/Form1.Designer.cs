@@ -35,10 +35,13 @@
             this.bg3 = new System.Windows.Forms.PictureBox();
             this.bg2 = new System.Windows.Forms.PictureBox();
             this.bg1 = new System.Windows.Forms.PictureBox();
+            this.pbLogo = new System.Windows.Forms.PictureBox();
+            this.txtStart = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.bgstart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bg3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bg2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bg1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // tmrAnimate
@@ -86,11 +89,37 @@
             this.bg1.TabIndex = 0;
             this.bg1.TabStop = false;
             // 
+            // pbLogo
+            // 
+            this.pbLogo.BackColor = System.Drawing.Color.Transparent;
+            this.pbLogo.Image = global::JetpackJoyride.Properties.Resources.JetpackJoyride;
+            this.pbLogo.Location = new System.Drawing.Point(170, 118);
+            this.pbLogo.Name = "pbLogo";
+            this.pbLogo.Size = new System.Drawing.Size(624, 348);
+            this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbLogo.TabIndex = 4;
+            this.pbLogo.TabStop = false;
+            // 
+            // txtStart
+            // 
+            this.txtStart.AutoSize = true;
+            this.txtStart.BackColor = System.Drawing.Color.Transparent;
+            this.txtStart.Font = new System.Drawing.Font("New Athletic M54", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtStart.ForeColor = System.Drawing.SystemColors.Control;
+            this.txtStart.Location = new System.Drawing.Point(334, 469);
+            this.txtStart.Name = "txtStart";
+            this.txtStart.Size = new System.Drawing.Size(313, 38);
+            this.txtStart.TabIndex = 5;
+            this.txtStart.Text = "Press Space to Start";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::JetpackJoyride.Properties.Resources.bgstart1;
             this.ClientSize = new System.Drawing.Size(986, 720);
+            this.Controls.Add(this.txtStart);
+            this.Controls.Add(this.pbLogo);
             this.Controls.Add(this.bgstart);
             this.Controls.Add(this.bg3);
             this.Controls.Add(this.bg2);
@@ -104,6 +133,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.bg3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bg2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bg1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -116,6 +146,8 @@
         private System.Windows.Forms.Timer tmrAnimate;
         private System.Windows.Forms.PictureBox bg3;
         private System.Windows.Forms.PictureBox bgstart;
+        private System.Windows.Forms.PictureBox pbLogo;
+        private System.Windows.Forms.Label txtStart;
     }
 }
 
