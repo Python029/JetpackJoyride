@@ -94,6 +94,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Barry_Steakfries.ico" />
+    <None Include="Resources\zapper.png" />
+    <None Include="Resources\zapper2.png" />
+    <None Include="Resources\zapper3.png" />
+    <None Include="Resources\zapper4.png" />
     <None Include="Resources\jetpack.png" />
     <None Include="Resources\jetpack2.png" />
     <None Include="Resources\background.png" />
