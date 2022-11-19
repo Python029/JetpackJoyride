@@ -22,13 +22,14 @@ namespace JetpackJoyride
         bool start = false;
         #endregion
         #region Integers/Doubles
-
+        int bgMove = 4;
+        int barryRun = 0;
         #endregion
         private void Form1_Load(object sender, EventArgs e)
         {
-            bg1.Location = new Point(959, -29);
-            bg2.Location = new Point(1465, 0);
-            bg3.Location = new Point(1971, 0);
+            bg1.Location = new Point(959, -28);
+            bg2.Location = new Point(1465, -28);
+            bg3.Location = new Point(1971, -28);
             for(int i = 1; i<4;i++)
             {
                 PictureBox pb = (PictureBox)this.Controls["bg" + i.ToString()];
@@ -39,24 +40,37 @@ namespace JetpackJoyride
         private void tmrAnimate_Tick(object sender, EventArgs e)
         {
             Background();
+            Barry();
         }
         private void Background()
         {
             for(int i = 0; i<bgList.Count;i++)
             {
-                if (bgList[i].Location.X<-500) { bgList[i].Location = new Point(1012,0); }
-                bgList[i].Left -= 2;
+                if (bgList[i].Location.X<-500) { bgList[i].Location = new Point(1012,-28); }
+                bgList[i].Left -= bgMove;
             }
             if(bgstart.Location.X>-965)
             {
-                bgstart.Left -= 2;
+                bgstart.Left -= bgMove;
             }
             else if(bgstart.Location.X < -965)
             {
                 this.Controls.Remove(bgstart);
             }
         }
-
+        private void Barry()
+        {
+            barryRun++;
+            if(barryRun==8)
+            {
+                pbBarry.Image = Properties.Resources.running2;
+            }
+            if (barryRun == 16)
+            {
+                pbBarry.Image = Properties.Resources.running1;
+                barryRun = 0;
+            }
+        }
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
             if(e.KeyCode == Keys.Space)

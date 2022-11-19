@@ -37,11 +37,13 @@
             this.bg1 = new System.Windows.Forms.PictureBox();
             this.pbLogo = new System.Windows.Forms.PictureBox();
             this.txtStart = new System.Windows.Forms.Label();
+            this.pbBarry = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.bgstart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bg3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bg2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bg1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBarry)).BeginInit();
             this.SuspendLayout();
             // 
             // tmrAnimate
@@ -112,12 +114,24 @@
             this.txtStart.TabIndex = 5;
             this.txtStart.Text = "Press Space to Start";
             // 
+            // pbBarry
+            // 
+            this.pbBarry.BackColor = System.Drawing.Color.Transparent;
+            this.pbBarry.Image = global::JetpackJoyride.Properties.Resources.running1;
+            this.pbBarry.Location = new System.Drawing.Point(260, 548);
+            this.pbBarry.Name = "pbBarry";
+            this.pbBarry.Size = new System.Drawing.Size(48, 56);
+            this.pbBarry.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbBarry.TabIndex = 6;
+            this.pbBarry.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::JetpackJoyride.Properties.Resources.bgstart1;
-            this.ClientSize = new System.Drawing.Size(986, 720);
+            this.ClientSize = new System.Drawing.Size(986, 692);
+            this.Controls.Add(this.pbBarry);
             this.Controls.Add(this.txtStart);
             this.Controls.Add(this.pbLogo);
             this.Controls.Add(this.bgstart);
@@ -134,6 +148,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.bg2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bg1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBarry)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -148,6 +163,7 @@
         private System.Windows.Forms.PictureBox bgstart;
         private System.Windows.Forms.PictureBox pbLogo;
         private System.Windows.Forms.Label txtStart;
+        private System.Windows.Forms.PictureBox pbBarry;
     }
 }
 
