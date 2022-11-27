@@ -30,7 +30,9 @@ namespace JetpackJoyride
             bg1.Location = new Point(959, -28);
             bg2.Location = new Point(1465, -28);
             bg3.Location = new Point(1971, -28);
-            for(int i = 1; i<4;i++)
+            pbBarry.BackgroundImageLayout = ImageLayout.None;
+            this.BackgroundImageLayout = ImageLayout.None;
+            for (int i = 1; i<4;i++)
             {
                 PictureBox pb = (PictureBox)this.Controls["bg" + i.ToString()];
                 bgList.Add(pb);
