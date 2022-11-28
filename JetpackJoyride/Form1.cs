@@ -24,14 +24,16 @@ namespace JetpackJoyride
         #region Integers/Doubles
         int bgMove = 4;
         int barryRun = 0;
+        int barryMove = 4;
         #endregion
         private void Form1_Load(object sender, EventArgs e)
         {
             bg1.Location = new Point(959, -28);
             bg2.Location = new Point(1465, -28);
             bg3.Location = new Point(1971, -28);
-            pbBarry.BackgroundImageLayout = ImageLayout.None;
-            this.BackgroundImageLayout = ImageLayout.None;
+            pbLogo.Parent = bgstart;
+            txtStart.Parent = bgstart;
+            pbBarry.Parent = bgstart;
             for (int i = 1; i<4;i++)
             {
                 PictureBox pb = (PictureBox)this.Controls["bg" + i.ToString()];
@@ -43,6 +45,7 @@ namespace JetpackJoyride
         {
             Background();
             Barry();
+            TransparentBG();
         }
         private void Background()
         {
@@ -63,6 +66,7 @@ namespace JetpackJoyride
         private void Barry()
         {
             barryRun++;
+            pbBarry.Left += barryMove;
             if(barryRun==8)
             {
                 pbBarry.Image = Properties.Resources.running2;
@@ -73,12 +77,20 @@ namespace JetpackJoyride
                 barryRun = 0;
             }
         }
+        private void TransparentBG()
+        {
+            if(bgstart.Location.X > -965)
+            {
+                
+            }
+        }
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
-            if(e.KeyCode == Keys.Space)
+            if(e.KeyCode == Keys.Space && start==false)
             {
                 tmrAnimate.Enabled = true;
-                this.BackgroundImage = null;
+                pbLogo.Parent = null;
+                txtStart.Parent = null;
                 this.Controls.Remove(pbLogo);
                 this.Controls.Remove(txtStart);
                 bgstart.Image = Properties.Resources.bgstart2;

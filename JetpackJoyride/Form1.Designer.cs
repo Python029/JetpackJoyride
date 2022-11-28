@@ -129,7 +129,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::JetpackJoyride.Properties.Resources.bgstart1;
             this.ClientSize = new System.Drawing.Size(986, 692);
             this.Controls.Add(this.pbBarry);
             this.Controls.Add(this.txtStart);
