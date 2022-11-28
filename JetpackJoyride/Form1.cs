@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 namespace JetpackJoyride
 {
     public partial class Form1 : Form
@@ -18,13 +17,18 @@ namespace JetpackJoyride
             InitializeComponent();
         }
         List<PictureBox> bgList = new List<PictureBox>();
+        Random rnd = new Random();
         #region Booleans
         bool start = false;
         #endregion
         #region Integers/Doubles
         int bgMove = 4;
         int barryRun = 0;
-        int barryMove = 4;
+        int zapper_rotation = 0;
+        int zapperY = 0;
+        int per_bg = 0;
+        int zapper_add = 0;
+        //int barryMove = 4;
         #endregion
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -45,7 +49,8 @@ namespace JetpackJoyride
         {
             Background();
             Barry();
-            TransparentBG();
+            Zapper();
+            //TransparentBG();
         }
         private void Background()
         {
@@ -66,21 +71,27 @@ namespace JetpackJoyride
         private void Barry()
         {
             barryRun++;
-            pbBarry.Left += barryMove;
-            if(barryRun==8)
+            //pbBarry.Left += barryMove;
+            switch(barryRun)
             {
-                pbBarry.Image = Properties.Resources.running2;
-            }
-            if (barryRun == 16)
-            {
-                pbBarry.Image = Properties.Resources.running1;
-                barryRun = 0;
-            }
+                case 8:
+                    pbBarry.Image = Properties.Resources.running2;
+                    break;
+                case 16:
+                    pbBarry.Image = Properties.Resources.running1;
+                    barryRun = 0;
+                    break;
+            } 
+        }
+        private void Zapper()
+        {
+            zapperY = rnd.Next();
         }
         private void TransparentBG()
         {
-            if(bgstart.Location.X > -965)
+            if(bgstart.Location.X <= -652)
             {
+                pbBarry.Parent = bg1;
                 
             }
         }
