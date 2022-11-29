@@ -38,6 +38,7 @@
             this.pbLogo = new System.Windows.Forms.PictureBox();
             this.txtStart = new System.Windows.Forms.Label();
             this.pbBarry = new System.Windows.Forms.PictureBox();
+            this.tmrUpdate = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.bgstart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bg3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bg2)).BeginInit();
@@ -63,7 +64,7 @@
             // 
             // bg3
             // 
-            this.bg3.Image = ((System.Drawing.Image)(resources.GetObject("bg3.Image")));
+            this.bg3.Image = global::JetpackJoyride.Properties.Resources.background;
             this.bg3.Location = new System.Drawing.Point(929, 0);
             this.bg3.Name = "bg3";
             this.bg3.Size = new System.Drawing.Size(508, 720);
@@ -73,7 +74,7 @@
             // 
             // bg2
             // 
-            this.bg2.Image = ((System.Drawing.Image)(resources.GetObject("bg2.Image")));
+            this.bg2.Image = global::JetpackJoyride.Properties.Resources.background;
             this.bg2.Location = new System.Drawing.Point(506, 0);
             this.bg2.Name = "bg2";
             this.bg2.Size = new System.Drawing.Size(508, 720);
@@ -94,6 +95,7 @@
             // pbLogo
             // 
             this.pbLogo.BackColor = System.Drawing.Color.Transparent;
+            this.pbLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pbLogo.Image = global::JetpackJoyride.Properties.Resources.JetpackJoyride;
             this.pbLogo.Location = new System.Drawing.Point(170, 118);
             this.pbLogo.Name = "pbLogo";
@@ -124,6 +126,11 @@
             this.pbBarry.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pbBarry.TabIndex = 6;
             this.pbBarry.TabStop = false;
+            // 
+            // tmrUpdate
+            // 
+            this.tmrUpdate.Interval = 1;
+            this.tmrUpdate.Tick += new System.EventHandler(this.tmrUpdate_Tick);
             // 
             // Form1
             // 
@@ -163,6 +170,7 @@
         private System.Windows.Forms.PictureBox pbLogo;
         private System.Windows.Forms.Label txtStart;
         private System.Windows.Forms.PictureBox pbBarry;
+        private System.Windows.Forms.Timer tmrUpdate;
     }
 }
 
