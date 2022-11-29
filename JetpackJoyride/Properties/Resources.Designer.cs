@@ -133,9 +133,9 @@ namespace JetpackJoyride.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap zapper1 {
+        internal static System.Drawing.Bitmap zapper {
             get {
-                object obj = ResourceManager.GetObject("zapper1", resourceCulture);
+                object obj = ResourceManager.GetObject("zapper", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
