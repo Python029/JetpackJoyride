@@ -24,13 +24,16 @@ namespace JetpackJoyride
         #endregion
         #region Integers/Doubles
         int bgMove = 4;
+        int zapMove = 4;
         int barryRun = 0;
         int z_rotation = 0;
         int zapperY1 = 0;
         int zapperY2 = 0;
         int zapperY3 = 0;
         int per_bg = 0;
-        int z_animate = 0;
+        int z_animate1 = 0;
+        int z_animate2 = 0;
+        int z_animate3 = 0;
         int newzap = 0;
         //int barryMove = 4;
         #endregion
@@ -44,6 +47,10 @@ namespace JetpackJoyride
             bg1.Location = new Point(956, -28);
             bg2.Location = new Point(1460, -28);
             bg3.Location = new Point(1964, -28);
+            z_animate1 = rnd.Next(0, 32);
+            z_animate2 = rnd.Next(0, 32);
+            z_animate3 = rnd.Next(0, 32);
+            ZapperAnimation();
             pbLogo.Parent = bgstart;
             txtStart.Parent = bgstart;
             //pbBarry.Parent = bgstart;
@@ -58,6 +65,7 @@ namespace JetpackJoyride
             zap1.Size = new Size(97,293);
             zap1.BackColor = Color.Transparent;
             zap1.Image = Properties.Resources.zapper1;
+            zap1.BackgroundImage=null;
             zap1.Location = new Point(1173, zapperY1);
             zap1.SizeMode = PictureBoxSizeMode.CenterImage;
             this.Controls.Add(zap1);
@@ -70,6 +78,7 @@ namespace JetpackJoyride
             zap2.Size = new Size(97, 293);
             zap2.BackColor = Color.Transparent;
             zap2.Image = Properties.Resources.zapper1;
+            zap2.BackgroundImage = null;
             zap2.Location = new Point(1681, zapperY2);
             zap2.SizeMode = PictureBoxSizeMode.CenterImage;
             this.Controls.Add(zap2);
@@ -82,6 +91,7 @@ namespace JetpackJoyride
             zap3.Size = new Size(97, 293);
             zap3.BackColor = Color.Transparent;
             zap3.Image = Properties.Resources.zapper1;
+            zap3.BackgroundImage = null;
             zap3.Location = new Point(2189, zapperY3);
             zap3.SizeMode = PictureBoxSizeMode.CenterImage;
             this.Controls.Add(zap3);
@@ -143,63 +153,97 @@ namespace JetpackJoyride
             
             if (bg1.Location.X<=-504)
             {
-                zapperY1 = rnd.Next(88, 338);
-                zap1.BringToFront();
+                zapperY1 = rnd.Next(88, 338);              
                 zap1.Location = new Point(1225, zapperY1);
+                ZapperOrientation();
             }
             else if (bg2.Location.X <= -504)
             {
-                zapperY2 = rnd.Next(88, 338);
-                zap2.BringToFront();
+                zapperY2 = rnd.Next(88, 338);               
                 zap2.Location = new Point(1225, zapperY2);
+                ZapperOrientation();
             }
             else if (bg3.Location.X <= -504)
             {
-                zapperY3 = rnd.Next(88, 338);
-                zap3.BringToFront();
+                zapperY3 = rnd.Next(88, 338);                
                 zap3.Location = new Point(1225, zapperY2);
+                ZapperOrientation();
             }
                 
         }
-        
+        private void ZapperOrientation()
+        {
+            z_rotation = rnd.Next(1,4);
+            if (bg1.Location.X <= -504)
+            {
+                
+            }
+            else if (bg2.Location.X <= -504)
+            {
+
+            }
+            else if (bg2.Location.X <= -504)
+            {
+
+            }
+        }
         private void ZapperMovement()
         {
             for (int i = 0; i < ZapList.Count; i++)
             {
-                ZapList[i].Left -= bgMove;
+                ZapList[i].Left -= zapMove;
             }
         }
         private void ZapperAnimation()
         {
-            z_animate++;
+            z_animate1++;
+            z_animate2++;
+            z_animate3++;
             //Zapper Animation
-            switch (z_animate)
+            switch (z_animate1)
             {
                 case 8:
-                    for (int z = 0; z < ZapList.Count; z++)
-                    {
-                        ZapList[z].Image = Properties.Resources.zapper2;
-                    }
+                    zap1.Image = Properties.Resources.zapper2;
                     break;
                 case 16:
-                    for (int z = 0; z < ZapList.Count; z++)
-                    {
-                        ZapList[z].Image = Properties.Resources.zapper3;
-                    }
+                    zap1.Image = Properties.Resources.zapper3;
                     break;
                 case 24:
-                    for (int z = 0; z < ZapList.Count; z++)
-                    {
-                        ZapList[z].Image = Properties.Resources.zapper4;
-                    }
+                    zap1.Image = Properties.Resources.zapper4;
                     break;
                 case 32:
-                    for (int z = 0; z < ZapList.Count; z++)
-                    {
-                        ZapList[z].Image = Properties.Resources.zapper1;
-                    }
+                    zap1.Image = Properties.Resources.zapper1;
                     break;
-
+            }
+            switch (z_animate2)
+            {
+                case 8:
+                    zap2.Image = Properties.Resources.zapper2;
+                    break;
+                case 16:
+                    zap2.Image = Properties.Resources.zapper3;
+                    break;
+                case 24:
+                    zap2.Image = Properties.Resources.zapper4;
+                    break;
+                case 32:
+                    zap2.Image = Properties.Resources.zapper1;
+                    break;
+            }
+            switch (z_animate3)
+            {
+                case 8:
+                    zap3.Image = Properties.Resources.zapper2;
+                    break;
+                case 16:
+                    zap3.Image = Properties.Resources.zapper3;
+                    break;
+                case 24:
+                    zap3.Image = Properties.Resources.zapper4;
+                    break;
+                case 32:
+                    zap3.Image = Properties.Resources.zapper1;
+                    break;
             }
         }
         #endregion
