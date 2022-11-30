@@ -41,6 +41,7 @@
             this.bg2 = new System.Windows.Forms.PictureBox();
             this.bg1 = new System.Windows.Forms.PictureBox();
             this.lblScore = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbScore)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBarry)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
@@ -158,11 +159,21 @@
             this.lblScore.TabIndex = 8;
             this.lblScore.Text = "0000m";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(790, 489);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(50, 13);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "#384561";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(986, 692);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lblScore);
             this.Controls.Add(this.pbScore);
             this.Controls.Add(this.pbBarry);
@@ -203,6 +214,7 @@
         private System.Windows.Forms.Timer tmrUpdate;
         private System.Windows.Forms.PictureBox pbScore;
         private System.Windows.Forms.Label lblScore;
+        private System.Windows.Forms.Label label1;
     }
 }
 
