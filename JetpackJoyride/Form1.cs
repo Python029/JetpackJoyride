@@ -58,6 +58,8 @@ namespace JetpackJoyride
             pbLogo.Parent = bgstart;
             txtStart.Parent = bgstart;
             //pbBarry.Parent = bgstart;
+            lblScore.Parent = pbScore;
+            lblScore.ForeColor= Color.White;
             for (int i = 1; i<4;i++)
             {
                 PictureBox pb = (PictureBox)this.Controls["bg" + i.ToString()];
