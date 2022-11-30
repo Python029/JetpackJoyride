@@ -23,6 +23,10 @@ namespace JetpackJoyride
         bool start = false;
         bool go = false;
         bool grav = false;
+        bool slowup = false;
+        bool speedup=false;
+        bool slowdown = false;
+        bool speeddown = false;
         #endregion
         #region Integers/Doubles
         int bgMove = 4;
@@ -147,12 +151,24 @@ namespace JetpackJoyride
         #region Flight Mechanics
         private void FlyUp()
         {
-            slow
-            if (slowfly < 10)
+            slowfall = 0;
+            if (slowfly < 9)
             {
                 slowfly++;
+                if (pbBarry.Location.Y > 70)
+                { pbBarry.Top -= fly/4; }
+                else if (pbBarry.Location.Y <= 70)
+                { pbBarry.Location = new Point(pbBarry.Location.X, 70); }
             }
-            else if (slowfly >=10)
+            else if (slowfly >=9 && slowfly<18)
+            {
+                slowfly++;
+                if (pbBarry.Location.Y > 70)
+                { pbBarry.Top -= fly/2; }
+                else if (pbBarry.Location.Y <= 70)
+                { pbBarry.Location = new Point(pbBarry.Location.X, 70); }
+            }
+            else if(slowfly>=18)
             {
                 if (pbBarry.Location.Y > 70)
                 { pbBarry.Top -= fly; }
@@ -162,10 +178,31 @@ namespace JetpackJoyride
         }
         private void Gravity()
         {
-            if (pbBarry.Location.Y < 548)
-            { pbBarry.Top += fly; }
-            else if (pbBarry.Location.Y >= 548)
-            { pbBarry.Location = new Point(pbBarry.Location.X, 548); }
+            slowfly= 0;
+            if(slowfall<9)
+            {
+                slowfall++;
+                if (pbBarry.Location.Y < 548)
+                { pbBarry.Top += fly/4; }
+                else if (pbBarry.Location.Y >= 548)
+                { pbBarry.Location = new Point(pbBarry.Location.X, 548); }
+            }
+            else if (slowfall>=9 && slowfall < 18)
+            {
+                slowfall++;
+                if (pbBarry.Location.Y < 548)
+                { pbBarry.Top += fly/2; }
+                else if (pbBarry.Location.Y >= 548)
+                { pbBarry.Location = new Point(pbBarry.Location.X, 548); }
+            }
+            if (slowfall >= 18)
+            {
+                slowfall++;
+                if (pbBarry.Location.Y < 548)
+                { pbBarry.Top += fly; }
+                else if (pbBarry.Location.Y >= 548)
+                { pbBarry.Location = new Point(pbBarry.Location.X, 548); }
+            }
         }
         #endregion
         private void Barry()
