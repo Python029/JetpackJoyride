@@ -33,6 +33,10 @@
             this.tmrAnimate = new System.Windows.Forms.Timer(this.components);
             this.txtStart = new System.Windows.Forms.Label();
             this.tmrUpdate = new System.Windows.Forms.Timer(this.components);
+            this.lblScore = new System.Windows.Forms.Label();
+            this.lblHighscore = new System.Windows.Forms.Label();
+            this.tmrScore = new System.Windows.Forms.Timer(this.components);
+            this.pnHigh = new System.Windows.Forms.Panel();
             this.pbScore = new System.Windows.Forms.PictureBox();
             this.pbBarry = new System.Windows.Forms.PictureBox();
             this.pbLogo = new System.Windows.Forms.PictureBox();
@@ -40,8 +44,7 @@
             this.bg3 = new System.Windows.Forms.PictureBox();
             this.bg2 = new System.Windows.Forms.PictureBox();
             this.bg1 = new System.Windows.Forms.PictureBox();
-            this.lblScore = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.pnInfo = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pbScore)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBarry)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
@@ -72,6 +75,45 @@
             // 
             this.tmrUpdate.Interval = 1;
             this.tmrUpdate.Tick += new System.EventHandler(this.tmrUpdate_Tick);
+            // 
+            // lblScore
+            // 
+            this.lblScore.AutoSize = true;
+            this.lblScore.BackColor = System.Drawing.Color.Transparent;
+            this.lblScore.Font = new System.Drawing.Font("New Athletic M54", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblScore.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblScore.Location = new System.Drawing.Point(24, 8);
+            this.lblScore.Name = "lblScore";
+            this.lblScore.Size = new System.Drawing.Size(117, 44);
+            this.lblScore.TabIndex = 8;
+            this.lblScore.Text = "0000m";
+            // 
+            // lblHighscore
+            // 
+            this.lblHighscore.AutoSize = true;
+            this.lblHighscore.BackColor = System.Drawing.Color.Transparent;
+            this.lblHighscore.Font = new System.Drawing.Font("New Athletic M54", 18.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHighscore.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(69)))), ((int)(((byte)(97)))));
+            this.lblHighscore.Location = new System.Drawing.Point(770, 482);
+            this.lblHighscore.Name = "lblHighscore";
+            this.lblHighscore.Size = new System.Drawing.Size(80, 29);
+            this.lblHighscore.TabIndex = 9;
+            this.lblHighscore.Text = "0000M";
+            this.lblHighscore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // tmrScore
+            // 
+            this.tmrScore.Interval = 400;
+            this.tmrScore.Tick += new System.EventHandler(this.tmrScore_Tick);
+            // 
+            // pnHigh
+            // 
+            this.pnHigh.BackColor = System.Drawing.Color.Transparent;
+            this.pnHigh.Location = new System.Drawing.Point(764, 456);
+            this.pnHigh.Name = "pnHigh";
+            this.pnHigh.Size = new System.Drawing.Size(88, 55);
+            this.pnHigh.TabIndex = 10;
+            this.pnHigh.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnHigh_MouseClick);
             // 
             // pbScore
             // 
@@ -147,33 +189,23 @@
             this.bg1.TabIndex = 0;
             this.bg1.TabStop = false;
             // 
-            // lblScore
+            // pnInfo
             // 
-            this.lblScore.AutoSize = true;
-            this.lblScore.BackColor = System.Drawing.Color.Transparent;
-            this.lblScore.Font = new System.Drawing.Font("New Athletic M54", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblScore.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblScore.Location = new System.Drawing.Point(24, 8);
-            this.lblScore.Name = "lblScore";
-            this.lblScore.Size = new System.Drawing.Size(117, 44);
-            this.lblScore.TabIndex = 8;
-            this.lblScore.Text = "0000m";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(790, 489);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 13);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "#384561";
+            this.pnInfo.BackColor = System.Drawing.Color.Transparent;
+            this.pnInfo.Location = new System.Drawing.Point(379, 108);
+            this.pnInfo.Name = "pnInfo";
+            this.pnInfo.Size = new System.Drawing.Size(204, 70);
+            this.pnInfo.TabIndex = 11;
+            this.pnInfo.Click += new System.EventHandler(this.pnInfo_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(986, 692);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.pnInfo);
+            this.Controls.Add(this.pnHigh);
+            this.Controls.Add(this.lblHighscore);
             this.Controls.Add(this.lblScore);
             this.Controls.Add(this.pbScore);
             this.Controls.Add(this.pbBarry);
@@ -214,7 +246,10 @@
         private System.Windows.Forms.Timer tmrUpdate;
         private System.Windows.Forms.PictureBox pbScore;
         private System.Windows.Forms.Label lblScore;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblHighscore;
+        private System.Windows.Forms.Timer tmrScore;
+        private System.Windows.Forms.Panel pnHigh;
+        private System.Windows.Forms.Panel pnInfo;
     }
 }
 

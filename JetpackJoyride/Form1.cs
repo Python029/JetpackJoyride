@@ -19,6 +19,8 @@ namespace JetpackJoyride
         List<PictureBox> bgList = new List<PictureBox>();
         List<PictureBox> ZapList = new List<PictureBox>();
         Random rnd = new Random();
+        Form2 f2 = new Form2();
+        AboutBox1 a1 = new AboutBox1();
         #region Booleans
         bool start = false;
         bool go = false;
@@ -41,12 +43,14 @@ namespace JetpackJoyride
         int fly = 8;
         int slowfly = 0;
         int slowfall = 0;
+        double distance = 0;
         #endregion
         #region Objects
         PictureBox zap1 = new PictureBox();
         PictureBox zap2 = new PictureBox();
         PictureBox zap3 = new PictureBox();
         #endregion
+        string score = "";
         private void Form1_Load(object sender, EventArgs e)
         {
             bg1.Location = new Point(956, -28);
@@ -59,6 +63,9 @@ namespace JetpackJoyride
             txtStart.Parent = bgstart;
             //pbBarry.Parent = bgstart;
             lblScore.Parent = pbScore;
+            lblHighscore.Parent = bgstart;
+            pnHigh.Parent = bgstart;
+            pnInfo.Parent = bgstart;
             lblScore.ForeColor= Color.White;
             for (int i = 1; i<4;i++)
             {
@@ -116,7 +123,7 @@ namespace JetpackJoyride
                 BackgroundMove();           
                 ZapperMovement();
                 ZapperAnimation();
-                if(grav)
+                if (grav)
                 {
                     FlyUp();
                 }
@@ -207,15 +214,34 @@ namespace JetpackJoyride
             }
         }
         #endregion
+        private void Score()
+        {
+            distance++;
+            switch(distance.ToString().Length)
+            {
+                case 1:
+                    lblScore.Text = $"000{Math.Round(distance,0)}M";
+                    break;
+                case 2:
+                    lblScore.Text = $"00{Math.Round(distance, 0)}M";
+                    break;
+                case 3:
+                    lblScore.Text = $"0{Math.Round(distance, 0)}M";
+                    break;
+                case 4:
+                    lblScore.Text = $"{Math.Round(distance, 0)}M";
+                    break;
+            }
+        }
         private void Barry()
         {
             barryRun++;
             if(go==false)
             {
                 pbBarry.Left += barryMove;
-            }           
+            }
             //Sprite Animation
-            switch(barryRun)
+            switch (barryRun)
             {
                 case 8:
                     pbBarry.Image = Properties.Resources.running2;
@@ -340,9 +366,27 @@ namespace JetpackJoyride
             {
                 pbBarry.Location = new Point(260, pbBarry.Location.Y);
                 go = true;
+                tmrScore.Enabled = true;
             }
         }
+        private void tmrScore_Tick(object sender, EventArgs e)
+        {
+            Score();
+        }
+        private void pnHigh_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (start == false && go == false)
+            {
+                f2.ShowDialog();
+            }
+        }
+        private void Form1_MouseClick(object sender, MouseEventArgs e)
+        {
 
-        
+        }
+        private void pnInfo_Click(object sender, EventArgs e)
+        {
+            a1.ShowDialog();
+        }
     }
 }
