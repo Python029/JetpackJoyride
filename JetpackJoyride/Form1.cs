@@ -12,8 +12,7 @@ namespace JetpackJoyride
     public partial class Form1 : Form
     {
         public Form1()
-        {
-            SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
+        {           
             InitializeComponent();
         }
         List<PictureBox> bgList = new List<PictureBox>();
@@ -25,10 +24,7 @@ namespace JetpackJoyride
         bool start = false;
         bool go = false;
         bool grav = false;
-        bool slowup = false;
-        bool speedup=false;
-        bool slowdown = false;
-        bool speeddown = false;
+        bool ground = true;
         #endregion
         #region Integers/Doubles
         int bgMove = 4;
@@ -53,6 +49,8 @@ namespace JetpackJoyride
         string score = "";
         private void Form1_Load(object sender, EventArgs e)
         {
+            this.SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
+            this.SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
             bg1.Location = new Point(956, -28);
             bg2.Location = new Point(1460, -28);
             bg3.Location = new Point(1964, -28);
@@ -79,11 +77,11 @@ namespace JetpackJoyride
             zap1.BackColor = Color.Transparent;
             zap1.Image = Properties.Resources.zapper;
             zap1.BackgroundImage=null;
-            zap1.Location = new Point(1173, zapperY1);
             zap1.SizeMode = PictureBoxSizeMode.CenterImage;
             this.Controls.Add(zap1);
+            zap1.Location = new Point(1173, zapperY1);
             zap1.BringToFront();
-            //zap1.Parent = bg1;
+            zap1.Parent = bg1;
             ZapList.Add(zap1);
             #endregion
             #region Zapepr 2
@@ -91,12 +89,12 @@ namespace JetpackJoyride
             zap2.Size = new Size(97, 293);
             zap2.BackColor = Color.Transparent;
             zap2.Image = Properties.Resources.zapper;
-            zap2.BackgroundImage = null;
-            zap2.Location = new Point(1681, zapperY2);
+            zap2.BackgroundImage = null;            
             zap2.SizeMode = PictureBoxSizeMode.CenterImage;
             this.Controls.Add(zap2);
+            zap2.Location = new Point(1681, zapperY2);
             zap2.BringToFront();
-            //zap2.Parent = bg2;
+            zap2.Parent = bg2;
             ZapList.Add(zap2);
             #endregion
             #region Zapper 3
@@ -104,12 +102,12 @@ namespace JetpackJoyride
             zap3.Size = new Size(97, 293);
             zap3.BackColor = Color.Transparent;
             zap3.Image = Properties.Resources.zapper;
-            zap3.BackgroundImage = null;
-            zap3.Location = new Point(2189, zapperY3);
+            zap3.BackgroundImage = null;        
             zap3.SizeMode = PictureBoxSizeMode.CenterImage;
             this.Controls.Add(zap3);
+            zap3.Location = new Point(2189, zapperY3);
             zap3.BringToFront();
-            //zap3.Parent = bg3;
+            zap3.Parent = bg3;
             ZapList.Add(zap3);
             #endregion
             #endregion
@@ -121,13 +119,12 @@ namespace JetpackJoyride
             if(go)
             {
                 BackgroundMove();           
-                ZapperMovement();
                 ZapperAnimation();
                 if (grav)
                 {
                     FlyUp();
                 }
-                else if(grav==false)
+                else if(grav==false&& ground==false)
                 {
                     Gravity();
                 }
@@ -160,9 +157,11 @@ namespace JetpackJoyride
         #region Flight Mechanics
         private void FlyUp()
         {
+            ground = false;
             slowfall = 0;
             if (slowfly < 9)
             {
+                pbBarry.Image = Properties.Resources.slowing_rise;
                 slowfly++;
                 if (pbBarry.Location.Y > 70)
                 { pbBarry.Top -= fly/4; }
@@ -172,6 +171,7 @@ namespace JetpackJoyride
             else if (slowfly >=9 && slowfly<18)
             {
                 slowfly++;
+                pbBarry.Image = Properties.Resources.rising;
                 if (pbBarry.Location.Y > 70)
                 { pbBarry.Top -= fly/2; }
                 else if (pbBarry.Location.Y <= 70)
@@ -192,9 +192,13 @@ namespace JetpackJoyride
             {
                 slowfall++;
                 if (pbBarry.Location.Y < 548)
-                { pbBarry.Top += fly/4; }
+                { 
+                    pbBarry.Top += fly/4;
+                    pbBarry.Image = Properties.Resources.falling;
+                }
                 else if (pbBarry.Location.Y >= 548)
-                { pbBarry.Location = new Point(pbBarry.Location.X, 548); }
+                { 
+                    pbBarry.Location = new Point(pbBarry.Location.X, 548);}
             }
             else if (slowfall>=9 && slowfall < 18)
             {
@@ -202,7 +206,7 @@ namespace JetpackJoyride
                 if (pbBarry.Location.Y < 548)
                 { pbBarry.Top += fly/2; }
                 else if (pbBarry.Location.Y >= 548)
-                { pbBarry.Location = new Point(pbBarry.Location.X, 548); }
+                { pbBarry.Location = new Point(pbBarry.Location.X, 548);}
             }
             if (slowfall >= 18)
             {
@@ -235,69 +239,53 @@ namespace JetpackJoyride
         }
         private void Barry()
         {
-            barryRun++;
             if(go==false)
             {
                 pbBarry.Left += barryMove;
             }
             //Sprite Animation
-            switch (barryRun)
+            if (ground)
             {
-                case 8:
-                    pbBarry.Image = Properties.Resources.running2;
-                    break;
-                case 16:
-                    pbBarry.Image = Properties.Resources.running1;
-                    barryRun = 0;
-                    break;
-            } 
+                barryRun++;
+                switch (barryRun)
+                {
+                    case 8:
+                        pbBarry.Image = Properties.Resources.running2;
+                        break;
+                    case 16:
+                        pbBarry.Image = Properties.Resources.running1;
+                        barryRun = 0;
+                        break;
+                }
+            }
         }
         #region Zappers
         private void ResetZappers()
-        {
-            
+        {        
             if (bg1.Location.X<=-504)
             {
                 zapperY1 = rnd.Next(88, 338);              
                 zap1.Location = new Point(1225, zapperY1);
-                ZapperOrientation();
+                zap1.Parent = bg1;
             }
             else if (bg2.Location.X <= -504)
             {
                 zapperY2 = rnd.Next(88, 338);               
                 zap2.Location = new Point(1225, zapperY2);
-                ZapperOrientation();
+                zap2.Parent = bg2;
             }
             else if (bg3.Location.X <= -504)
             {
                 zapperY3 = rnd.Next(88, 338);                
-                zap3.Location = new Point(1225, zapperY2);
-                ZapperOrientation();
-            }
-                
-        }
-        private void ZapperOrientation()
-        {
-            z_rotation = rnd.Next(1,4);
-            if (bg1.Location.X <= -504)
-            {
-                
-            }
-            else if (bg2.Location.X <= -504)
-            {
-
-            }
-            else if (bg2.Location.X <= -504)
-            {
-
+                zap3.Location = new Point(1225, zapperY3);
+                zap3.Parent = bg3;
             }
         }
         private void ZapperMovement()
         {
-            for (int i = 0; i < ZapList.Count; i++)
-            {
-                ZapList[i].Left -= zapMove;
-            }
+            zap1.Location = new Point(bg1.Location.X + 217, zapperY1);
+            zap2.Location = new Point(bg2.Location.X + 217, zapperY2);
+            zap3.Location = new Point(bg3.Location.X + 217, zapperY3);
         }
         private void ZapperAnimation()
         {
@@ -342,6 +330,7 @@ namespace JetpackJoyride
                 this.Controls.Remove(pbLogo);
                 this.Controls.Remove(txtStart);
                 bgstart.Image = Properties.Resources.bgstart2;
+                start = true;
             }
             if(e.KeyCode == Keys.Space ||e.KeyCode == Keys.Up || e.KeyCode == Keys.W)
             {
@@ -361,12 +350,17 @@ namespace JetpackJoyride
             {
                 BackgroundReset();
                 ResetZappers();
+                ZapperMovement();
             }      
-            if(pbBarry.Location.X>260 && go==false)
+            if(pbBarry.Location.X>260 && go==false && start)
             {
                 pbBarry.Location = new Point(260, pbBarry.Location.Y);
                 go = true;
                 tmrScore.Enabled = true;
+            }
+            if(pbBarry.Location.Y>=548 && go)
+            {
+                pbBarry.Location = new Point(pbBarry.Location.X, 548); ground = true;
             }
         }
         private void tmrScore_Tick(object sender, EventArgs e)
@@ -380,13 +374,13 @@ namespace JetpackJoyride
                 f2.ShowDialog();
             }
         }
-        private void Form1_MouseClick(object sender, MouseEventArgs e)
-        {
 
-        }
         private void pnInfo_Click(object sender, EventArgs e)
         {
-            a1.ShowDialog();
+            if (start == false && go == false)
+            {
+                a1.ShowDialog();
+            }
         }
     }
 }

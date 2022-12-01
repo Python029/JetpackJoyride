@@ -103,9 +103,9 @@ namespace JetpackJoyride.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap High {
+        internal static System.Drawing.Bitmap falling {
             get {
-                object obj = ResourceManager.GetObject("High", resourceCulture);
+                object obj = ResourceManager.GetObject("falling", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -116,6 +116,16 @@ namespace JetpackJoyride.Properties {
         internal static System.Drawing.Bitmap JetpackJoyride {
             get {
                 object obj = ResourceManager.GetObject("JetpackJoyride", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap rising {
+            get {
+                object obj = ResourceManager.GetObject("rising", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -136,6 +146,16 @@ namespace JetpackJoyride.Properties {
         internal static System.Drawing.Bitmap running2 {
             get {
                 object obj = ResourceManager.GetObject("running2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap slowing_rise {
+            get {
+                object obj = ResourceManager.GetObject("slowing_rise", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

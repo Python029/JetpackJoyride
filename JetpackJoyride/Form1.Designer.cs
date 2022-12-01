@@ -65,7 +65,7 @@
             this.txtStart.BackColor = System.Drawing.Color.Transparent;
             this.txtStart.Font = new System.Drawing.Font("New Athletic M54", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtStart.ForeColor = System.Drawing.SystemColors.Control;
-            this.txtStart.Location = new System.Drawing.Point(334, 469);
+            this.txtStart.Location = new System.Drawing.Point(334, 493);
             this.txtStart.Name = "txtStart";
             this.txtStart.Size = new System.Drawing.Size(313, 38);
             this.txtStart.TabIndex = 5;
@@ -82,11 +82,12 @@
             this.lblScore.BackColor = System.Drawing.Color.Transparent;
             this.lblScore.Font = new System.Drawing.Font("New Athletic M54", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblScore.Location = new System.Drawing.Point(24, 8);
+            this.lblScore.Location = new System.Drawing.Point(24, 6);
             this.lblScore.Name = "lblScore";
             this.lblScore.Size = new System.Drawing.Size(117, 44);
             this.lblScore.TabIndex = 8;
             this.lblScore.Text = "0000m";
+            this.lblScore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblHighscore
             // 
@@ -103,7 +104,7 @@
             // 
             // tmrScore
             // 
-            this.tmrScore.Interval = 400;
+            this.tmrScore.Interval = 250;
             this.tmrScore.Tick += new System.EventHandler(this.tmrScore_Tick);
             // 
             // pnHigh
@@ -118,10 +119,10 @@
             // pbScore
             // 
             this.pbScore.BackColor = System.Drawing.Color.Transparent;
-            this.pbScore.Image = global::JetpackJoyride.Properties.Resources.High;
+            this.pbScore.Image = global::JetpackJoyride.Properties.Resources._227297_jj1;
             this.pbScore.Location = new System.Drawing.Point(0, 0);
             this.pbScore.Name = "pbScore";
-            this.pbScore.Size = new System.Drawing.Size(155, 61);
+            this.pbScore.Size = new System.Drawing.Size(155, 55);
             this.pbScore.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbScore.TabIndex = 7;
             this.pbScore.TabStop = false;
@@ -142,10 +143,10 @@
             this.pbLogo.BackColor = System.Drawing.Color.Transparent;
             this.pbLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pbLogo.Image = global::JetpackJoyride.Properties.Resources.JetpackJoyride;
-            this.pbLogo.Location = new System.Drawing.Point(170, 118);
+            this.pbLogo.Location = new System.Drawing.Point(197, 177);
             this.pbLogo.Name = "pbLogo";
-            this.pbLogo.Size = new System.Drawing.Size(624, 348);
-            this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbLogo.Size = new System.Drawing.Size(561, 313);
+            this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbLogo.TabIndex = 4;
             this.pbLogo.TabStop = false;
             // 
