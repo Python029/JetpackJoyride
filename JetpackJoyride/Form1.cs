@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,6 +26,8 @@ namespace JetpackJoyride
         bool go = false;
         bool grav = false;
         bool ground = true;
+        bool alive = true;
+        bool deadbounce = false;
         #endregion
         #region Integers/Doubles
         int bgMove = 4;
@@ -39,17 +42,18 @@ namespace JetpackJoyride
         int fly = 8;
         int slowfly = 0;
         int slowfall = 0;
+        int bounce = 0;
         double distance = 0;
+        int slide = 0;
         #endregion
         #region Objects
         PictureBox zap1 = new PictureBox();
         PictureBox zap2 = new PictureBox();
         PictureBox zap3 = new PictureBox();
         #endregion
-        string score = "";
         private void Form1_Load(object sender, EventArgs e)
         {
-            this.SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
+            this.SetStyle(ControlStyles.DoubleBuffer, true);
             this.SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
             bg1.Location = new Point(956, -28);
             bg2.Location = new Point(1460, -28);
@@ -115,20 +119,24 @@ namespace JetpackJoyride
 
         private void tmrAnimate_Tick(object sender, EventArgs e)
         {
-            Barry();
-            if(go)
+            if(alive)
             {
-                BackgroundMove();           
-                ZapperAnimation();
-                if (grav)
+                Barry();
+                if (go)
                 {
-                    FlyUp();
+                    BackgroundMove();
+                    ZapperAnimation();
+                    if (grav)
+                    {
+                        FlyUp();
+                    }
+                    else if (grav == false && ground == false)
+                    {
+                        Gravity();
+                    }
                 }
-                else if(grav==false&& ground==false)
-                {
-                    Gravity();
-                }
-            }         
+            }
+            Death();
             //TransparentBG();
         }
         #region Background
@@ -218,6 +226,56 @@ namespace JetpackJoyride
             }
         }
         #endregion
+        private void Death()
+        {   if(alive)
+            {
+                for(int i= 0; i < ZapList.Count; i++)
+                {
+                    alive = false;
+                }
+            }
+        else if(alive==false)
+        {
+                if(ground == false && deadbounce == false)
+                {
+                    Gravity();                    
+                }
+                else if(ground && deadbounce)
+                {
+                    bounce++;
+                    if(bounce < 10)
+                    {
+                        pbBarry.Top -= fly/2;
+                    }
+                    else if(bounce >= 10 && bounce<20)
+                    {
+                        pbBarry.Top -= fly / 4;
+                    }
+                    else if (bounce >= 20 && bounce < 30)
+                    {
+                        pbBarry.Top += fly / 4;
+                    }
+                    else if (bounce >= 30 && pbBarry.Location.Y<548)
+                    {
+                        pbBarry.Top += fly / 2;
+                    }
+                    if(pbBarry.Location.Y>=548)
+                    {
+                        slide++;
+                        if (bounce < 10)
+                        {
+                            bgMove /= 2;
+                            pbBarry.Image = Properties.Resources.slide;
+                        }
+                        else if (bounce >= 10 && bounce < 20)
+                        {
+                            bgMove /= 2;
+                        }
+                        
+                    }
+                }
+            }
+        }
         private void Score()
         {
             distance++;
@@ -336,6 +394,12 @@ namespace JetpackJoyride
             {
                 grav=true;
             }
+            if(e.KeyCode ==Keys.Escape)
+            {
+                tmrAnimate.Enabled=false;
+                tmrScore.Enabled = false;
+                tmrUpdate.Enabled = false;
+            }
         }
         private void Form1_KeyUp(object sender, KeyEventArgs e)
         {
@@ -361,6 +425,10 @@ namespace JetpackJoyride
             if(pbBarry.Location.Y>=548 && go)
             {
                 pbBarry.Location = new Point(pbBarry.Location.X, 548); ground = true;
+                if(alive==false)
+                {
+                    deadbounce = true;
+                }
             }
         }
         private void tmrScore_Tick(object sender, EventArgs e)
