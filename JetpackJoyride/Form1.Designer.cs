@@ -163,9 +163,9 @@
             // bg3
             // 
             this.bg3.Image = global::JetpackJoyride.Properties.Resources.background;
-            this.bg3.Location = new System.Drawing.Point(929, 0);
+            this.bg3.Location = new System.Drawing.Point(929, -12);
             this.bg3.Name = "bg3";
-            this.bg3.Size = new System.Drawing.Size(508, 720);
+            this.bg3.Size = new System.Drawing.Size(508, 713);
             this.bg3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.bg3.TabIndex = 2;
             this.bg3.TabStop = false;
@@ -175,7 +175,7 @@
             this.bg2.Image = global::JetpackJoyride.Properties.Resources.background;
             this.bg2.Location = new System.Drawing.Point(506, 0);
             this.bg2.Name = "bg2";
-            this.bg2.Size = new System.Drawing.Size(508, 720);
+            this.bg2.Size = new System.Drawing.Size(508, 713);
             this.bg2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.bg2.TabIndex = 1;
             this.bg2.TabStop = false;
@@ -185,7 +185,7 @@
             this.bg1.Image = global::JetpackJoyride.Properties.Resources.background;
             this.bg1.Location = new System.Drawing.Point(0, 0);
             this.bg1.Name = "bg1";
-            this.bg1.Size = new System.Drawing.Size(508, 720);
+            this.bg1.Size = new System.Drawing.Size(508, 713);
             this.bg1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.bg1.TabIndex = 0;
             this.bg1.TabStop = false;

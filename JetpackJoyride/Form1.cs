@@ -28,6 +28,7 @@ namespace JetpackJoyride
         bool ground = true;
         bool alive = true;
         bool deadbounce = false;
+        bool deadslide=false;
         #endregion
         #region Integers/Doubles
         int bgMove = 4;
@@ -55,9 +56,9 @@ namespace JetpackJoyride
         {
             this.SetStyle(ControlStyles.DoubleBuffer, true);
             this.SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
-            bg1.Location = new Point(956, -28);
-            bg2.Location = new Point(1460, -28);
-            bg3.Location = new Point(1964, -28);
+            bg1.Location = new Point(956, -12);
+            bg2.Location = new Point(1460, -12);
+            bg3.Location = new Point(1964, -12);
             pbBarry.Location = new Point(-80,pbBarry.Location.Y);
             z_animate = rnd.Next(0, 19);
             ZapperAnimation();
@@ -81,7 +82,7 @@ namespace JetpackJoyride
             zap1.BackColor = Color.Transparent;
             zap1.Image = Properties.Resources.zapper;
             zap1.BackgroundImage=null;
-            zap1.SizeMode = PictureBoxSizeMode.CenterImage;
+            zap1.SizeMode = PictureBoxSizeMode.AutoSize;
             this.Controls.Add(zap1);
             zap1.Location = new Point(1173, zapperY1);
             zap1.BringToFront();
@@ -94,7 +95,7 @@ namespace JetpackJoyride
             zap2.BackColor = Color.Transparent;
             zap2.Image = Properties.Resources.zapper;
             zap2.BackgroundImage = null;            
-            zap2.SizeMode = PictureBoxSizeMode.CenterImage;
+            zap2.SizeMode = PictureBoxSizeMode.AutoSize;
             this.Controls.Add(zap2);
             zap2.Location = new Point(1681, zapperY2);
             zap2.BringToFront();
@@ -107,7 +108,7 @@ namespace JetpackJoyride
             zap3.BackColor = Color.Transparent;
             zap3.Image = Properties.Resources.zapper;
             zap3.BackgroundImage = null;        
-            zap3.SizeMode = PictureBoxSizeMode.CenterImage;
+            zap3.SizeMode = PictureBoxSizeMode.AutoSize;
             this.Controls.Add(zap3);
             zap3.Location = new Point(2189, zapperY3);
             zap3.BringToFront();
@@ -136,7 +137,10 @@ namespace JetpackJoyride
                     }
                 }
             }
-            Death();
+            if(alive==false)
+            {
+                Death();
+            }
             //TransparentBG();
         }
         #region Background
@@ -145,7 +149,7 @@ namespace JetpackJoyride
             //Hallway Background Reset
             for (int i = 0; i < bgList.Count; i++)
             {
-                if (bgList[i].Location.X <= -504) { bgList[i].Location = new Point(1008, -28); }
+                if (bgList[i].Location.X <= -504) { bgList[i].Location = new Point(1008, -12); }
                 bgList[i].Left -= bgMove;
             }
         }
@@ -171,26 +175,26 @@ namespace JetpackJoyride
             {
                 pbBarry.Image = Properties.Resources.slowing_rise;
                 slowfly++;
-                if (pbBarry.Location.Y > 70)
+                if (pbBarry.Location.Y > 107)
                 { pbBarry.Top -= fly/4; }
-                else if (pbBarry.Location.Y <= 70)
-                { pbBarry.Location = new Point(pbBarry.Location.X, 70); }
+                else if (pbBarry.Location.Y <= 107)
+                { pbBarry.Location = new Point(pbBarry.Location.X, 107); }
             }
             else if (slowfly >=9 && slowfly<18)
             {
                 slowfly++;
                 pbBarry.Image = Properties.Resources.rising;
-                if (pbBarry.Location.Y > 70)
+                if (pbBarry.Location.Y > 107)
                 { pbBarry.Top -= fly/2; }
-                else if (pbBarry.Location.Y <= 70)
-                { pbBarry.Location = new Point(pbBarry.Location.X, 70); }
+                else if (pbBarry.Location.Y <= 107)
+                { pbBarry.Location = new Point(pbBarry.Location.X, 107); }
             }
             else if(slowfly>=18)
             {
-                if (pbBarry.Location.Y > 70)
+                if (pbBarry.Location.Y > 107)
                 { pbBarry.Top -= fly; }
-                else if (pbBarry.Location.Y <= 70)
-                { pbBarry.Location = new Point(pbBarry.Location.X, 70); }
+                else if (pbBarry.Location.Y <= 107)
+                { pbBarry.Location = new Point(pbBarry.Location.X, 107); }
             }
         }
         private void Gravity()
@@ -202,7 +206,7 @@ namespace JetpackJoyride
                 if (pbBarry.Location.Y < 548)
                 { 
                     pbBarry.Top += fly/4;
-                    pbBarry.Image = Properties.Resources.falling;
+                    if (alive) { pbBarry.Image = Properties.Resources.falling; }               
                 }
                 else if (pbBarry.Location.Y >= 548)
                 { 
@@ -226,53 +230,88 @@ namespace JetpackJoyride
             }
         }
         #endregion
-        private void Death()
-        {   if(alive)
+        private void ZapperCollision()
+        {
+            if (alive)
             {
-                for(int i= 0; i < ZapList.Count; i++)
+                for (int i = 0; i < ZapList.Count; i++)
                 {
-                    alive = false;
+                    if (pbBarry.Bounds.IntersectsWith(ZapList[i].Bounds))
+                    {
+                        pbBarry.Image = Properties.Resources.hitzap;
+                        alive = false;
+                        //For Testing Zapper Collision
+                        /*ZapList[i].BackColor= Color.White;
+                        tmrAnimate.Enabled = false;
+                        tmrUpdate.Enabled = false;*/
+                    }
                 }
             }
-        else if(alive==false)
+        }
+        private void Death()
         {
-                if(ground == false && deadbounce == false)
+            if (pbBarry.Location.Y >= 548&&deadslide)
+            {
+                deadslide = true;
+                pbBarry.Image = Properties.Resources.slide;
+            }
+            if (ground == false && deadbounce == false && deadslide == false)
+            {
+                Gravity();
+            }
+            else if (ground && deadbounce)
+            {
+                pbBarry.Image = Properties.Resources.slide;
+                bounce++;
+                if (bounce < 15)
                 {
-                    Gravity();                    
+                    pbBarry.Top -= fly / 2;
                 }
-                else if(ground && deadbounce)
+                else if (bounce >= 15 && bounce < 30)
                 {
-                    bounce++;
-                    if(bounce < 10)
-                    {
-                        pbBarry.Top -= fly/2;
-                    }
-                    else if(bounce >= 10 && bounce<20)
-                    {
-                        pbBarry.Top -= fly / 4;
-                    }
-                    else if (bounce >= 20 && bounce < 30)
-                    {
-                        pbBarry.Top += fly / 4;
-                    }
-                    else if (bounce >= 30 && pbBarry.Location.Y<548)
-                    {
-                        pbBarry.Top += fly / 2;
-                    }
-                    if(pbBarry.Location.Y>=548)
-                    {
-                        slide++;
-                        if (bounce < 10)
-                        {
-                            bgMove /= 2;
-                            pbBarry.Image = Properties.Resources.slide;
-                        }
-                        else if (bounce >= 10 && bounce < 20)
-                        {
-                            bgMove /= 2;
-                        }
-                        
-                    }
+                    pbBarry.Top -= fly / 4;
+                }
+                else if (bounce >= 30 && bounce < 45)
+                {
+                    pbBarry.Top += fly / 4;
+                }
+                else if (bounce >= 45 && pbBarry.Location.Y < 548)
+                {
+                    pbBarry.Top += fly / 2;
+                }
+                if (pbBarry.Location.Y >= 548 && deadslide == false)
+                {
+                    deadslide = true;
+                    deadbounce = false;
+                }
+
+            }
+            if (deadslide)
+            {
+                if (pbBarry.Location.Y < 580)
+                {
+                    pbBarry.Top += 4;
+
+                }
+                slide++;
+                if (slide < 10)
+                {
+                    tmrScore.Interval = 375;
+                    bgMove = 2;
+
+                }
+                else if (slide >= 10 && slide < 20)
+                {
+                    tmrScore.Interval = 500;
+                    bgMove = 1;
+                }
+                else if (slide >= 20)
+                {
+                    pbBarry.Image = Properties.Resources.death;
+                    bgMove = 0;
+                    tmrAnimate.Enabled = false;
+                    tmrScore.Enabled = false;
+                    tmrUpdate.Enabled = false;
                 }
             }
         }
@@ -322,19 +361,19 @@ namespace JetpackJoyride
         {        
             if (bg1.Location.X<=-504)
             {
-                zapperY1 = rnd.Next(88, 338);              
+                zapperY1 = rnd.Next(125, 338);              
                 zap1.Location = new Point(1225, zapperY1);
                 zap1.Parent = bg1;
             }
             else if (bg2.Location.X <= -504)
             {
-                zapperY2 = rnd.Next(88, 338);               
+                zapperY2 = rnd.Next(125, 338);               
                 zap2.Location = new Point(1225, zapperY2);
                 zap2.Parent = bg2;
             }
             else if (bg3.Location.X <= -504)
             {
-                zapperY3 = rnd.Next(88, 338);                
+                zapperY3 = rnd.Next(125, 338);                
                 zap3.Location = new Point(1225, zapperY3);
                 zap3.Parent = bg3;
             }
@@ -415,6 +454,7 @@ namespace JetpackJoyride
                 BackgroundReset();
                 ResetZappers();
                 ZapperMovement();
+                ZapperCollision();
             }      
             if(pbBarry.Location.X>260 && go==false && start)
             {
