@@ -193,9 +193,9 @@ namespace JetpackJoyride.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap zapper {
+        internal static System.Drawing.Bitmap zapperH1 {
             get {
-                object obj = ResourceManager.GetObject("zapper", resourceCulture);
+                object obj = ResourceManager.GetObject("zapperH1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -203,9 +203,9 @@ namespace JetpackJoyride.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap zapper2 {
+        internal static System.Drawing.Bitmap zapperH2 {
             get {
-                object obj = ResourceManager.GetObject("zapper2", resourceCulture);
+                object obj = ResourceManager.GetObject("zapperH2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -213,9 +213,9 @@ namespace JetpackJoyride.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap zapper3 {
+        internal static System.Drawing.Bitmap zapperH3 {
             get {
-                object obj = ResourceManager.GetObject("zapper3", resourceCulture);
+                object obj = ResourceManager.GetObject("zapperH3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -223,9 +223,49 @@ namespace JetpackJoyride.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap zapper4 {
+        internal static System.Drawing.Bitmap zapperH4 {
             get {
-                object obj = ResourceManager.GetObject("zapper4", resourceCulture);
+                object obj = ResourceManager.GetObject("zapperH4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap zapperV1 {
+            get {
+                object obj = ResourceManager.GetObject("zapperV1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap zapperV2 {
+            get {
+                object obj = ResourceManager.GetObject("zapperV2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap zapperV3 {
+            get {
+                object obj = ResourceManager.GetObject("zapperV3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap zapperV4 {
+            get {
+                object obj = ResourceManager.GetObject("zapperV4", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

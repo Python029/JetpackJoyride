@@ -112,6 +112,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Barry_Steakfries.ico" />
+    <None Include="Resources\zapperH4.png" />
+    <None Include="Resources\zapperH3.png" />
+    <None Include="Resources\zapperH2.png" />
+    <None Include="Resources\zapperH1.png" />
     <None Include="Resources\hitzap.png" />
     <None Include="Resources\slide.png" />
     <None Include="Resources\death.png" />
