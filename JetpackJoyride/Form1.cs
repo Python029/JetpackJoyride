@@ -20,6 +20,7 @@ namespace JetpackJoyride
         List<PictureBox> ZapListH = new List<PictureBox>();
         Random rnd = new Random();
         Form2 f2 = new Form2();
+        Login lg = new Login();
         AboutBox1 a1 = new AboutBox1();
         #region Booleans
         bool start = false;
@@ -56,6 +57,7 @@ namespace JetpackJoyride
         #endregion
         private void Form1_Load(object sender, EventArgs e)
         {
+            lg.ShowDialog();
             this.SetStyle(ControlStyles.DoubleBuffer, true);
             this.SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
             bg1.Location = new Point(956, -12);
@@ -382,13 +384,13 @@ namespace JetpackJoyride
                         zap_tb++;
                     }
                     //Horizontal Zappers
-                    if (zapperY1 < 145)
+                    if (zapperY1 < 150)
                     {
-                        zap4.Location = new Point(1134, 520);
+                        zap4.Location = new Point(1134, 510);
                     }
-                    else if (zapperY1 > 318)
+                    else if (zapperY1 > 313)
                     {
-                        zap4.Location = new Point(1134, 90);
+                        zap4.Location = new Point(1134, 100);
                     }
                     else
                     {
@@ -402,13 +404,13 @@ namespace JetpackJoyride
                         zapperY1 = rnd.Next(125, 338);
                     }
                     //Horizontal Zappers
-                    if (zapperY1 < 145)
+                    if (zapperY1 < 150)
                     {
-                        zap4.Location = new Point(1134, 520);
+                        zap4.Location = new Point(1134, 510);
                     }
-                    else if (zapperY1 > 318)
+                    else if (zapperY1 > 313)
                     {
-                        zap4.Location = new Point(1134, 90);
+                        zap4.Location = new Point(1134, 100);
                     }
                     else
                     {
@@ -428,13 +430,13 @@ namespace JetpackJoyride
                         zap_tb++;
                     }
                     //Horizontal Zappers
-                    if (zapperY2 < 145)
+                    if (zapperY2 < 150)
                     {
-                        zap5.Location = new Point(1134, 520);
+                        zap5.Location = new Point(1134, 510);
                     }
-                    else if (zapperY2 > 318)
+                    else if (zapperY2 > 313)
                     {
-                        zap5.Location = new Point(1134, 90);
+                        zap5.Location = new Point(1134, 100);
                     }
                     else
                     {
@@ -448,13 +450,13 @@ namespace JetpackJoyride
                         zapperY2 = rnd.Next(125, 338); 
                     }
                     //Horizontal Zappers
-                    if (zapperY2 < 145)
+                    if (zapperY2 < 150)
                     {
-                        zap5.Location = new Point(1134, 520);
+                        zap5.Location = new Point(1134, 510);
                     }
-                    else if (zapperY2 > 318)
+                    else if (zapperY2 > 313)
                     {
-                        zap5.Location = new Point(1134, 90);
+                        zap5.Location = new Point(1134, 100);
                     }
                     else
                     {
@@ -473,13 +475,13 @@ namespace JetpackJoyride
                         zap_tb++;
                     }
                     //Horizontal Zappers
-                    if (zapperY3 < 145)
+                    if (zapperY3 < 150)
                     {
-                        zap6.Location = new Point(1134, 520);
+                        zap6.Location = new Point(1134, 510);
                     }
-                    else if (zapperY3 > 318)
+                    else if (zapperY3 > 313)
                     {
-                        zap6.Location = new Point(1134, 90);
+                        zap6.Location = new Point(1134, 100);
                     }
                     else
                     {
@@ -493,13 +495,13 @@ namespace JetpackJoyride
                         zapperY3 = rnd.Next(125, 338);
                     }
                     //Horizontal Zappers
-                    if (zapperY3 < 145)
+                    if (zapperY3 < 150)
                     {
-                        zap6.Location = new Point(1134, 520);
+                        zap6.Location = new Point(1134, 510);
                     }
-                    else if (zapperY3 > 318)
+                    else if (zapperY3 > 313)
                     {
-                        zap6.Location = new Point(1134, 90);
+                        zap6.Location = new Point(1134, 100);
                     }
                     else
                     {

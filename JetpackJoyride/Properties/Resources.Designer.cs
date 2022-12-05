@@ -143,6 +143,86 @@ namespace JetpackJoyride.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap labelbg {
+            get {
+                object obj = ResourceManager.GetObject("labelbg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap LoginCreatebg {
+            get {
+                object obj = ResourceManager.GetObject("LoginCreatebg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap LoginPanelbg {
+            get {
+                object obj = ResourceManager.GetObject("LoginPanelbg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap LoginPassbg {
+            get {
+                object obj = ResourceManager.GetObject("LoginPassbg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap LoginPassbg2 {
+            get {
+                object obj = ResourceManager.GetObject("LoginPassbg2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap LoginTextbg {
+            get {
+                object obj = ResourceManager.GetObject("LoginTextbg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap LoginUserbg {
+            get {
+                object obj = ResourceManager.GetObject("LoginUserbg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap LoginUserbg2 {
+            get {
+                object obj = ResourceManager.GetObject("LoginUserbg2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap rising {
             get {
                 object obj = ResourceManager.GetObject("rising", resourceCulture);
@@ -186,6 +266,16 @@ namespace JetpackJoyride.Properties {
         internal static System.Drawing.Bitmap slowing_rise {
             get {
                 object obj = ResourceManager.GetObject("slowing_rise", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap wp3804050 {
+            get {
+                object obj = ResourceManager.GetObject("wp3804050", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

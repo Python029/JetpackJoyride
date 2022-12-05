@@ -67,6 +67,12 @@
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AboutBox1.resx">
@@ -77,6 +83,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -112,6 +121,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Barry_Steakfries.ico" />
+    <None Include="Resources\LoginPassbg2.png" />
+    <None Include="Resources\LoginPassbg.png" />
+    <None Include="Resources\LoginUserbg2.png" />
+    <None Include="Resources\LoginUserbg1.png" />
+    <None Include="Resources\LoginUserbg.png" />
+    <None Include="Resources\LoginCreatebg.png" />
+    <None Include="Resources\LoginTextbg.png" />
+    <None Include="Resources\LoginPanelbg.png" />
+    <None Include="Resources\labelbg.png" />
+    <None Include="Resources\wp3804050.jpg" />
     <None Include="Resources\zapperH4.png" />
     <None Include="Resources\zapperH3.png" />
     <None Include="Resources\zapperH2.png" />

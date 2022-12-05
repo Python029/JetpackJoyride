@@ -118,67 +118,94 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="zapperV3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\zapper3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="running1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\running1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="_227297_jj1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\227297-jj1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="JetpackJoyride" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\JetpackJoyride.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="running2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\running2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="background" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="zapperV2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\zapper2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="bgstart1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\jetpack2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="zapperV1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\zapper.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="zapperV4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\zapper4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="bgstart2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\jetpack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="falling" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\falling.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="slide" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\slide.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="rising" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\rising.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="slowing_rise" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\slowing rise.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="death" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\death.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="falling" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\falling.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="hitzap" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\hitzap.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="slide" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\slide.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="running2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\running2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="zapperH1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\zapperH1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="LoginPassbg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LoginPassbg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="zapperH2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\zapperH2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="LoginPanelbg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LoginPanelbg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LoginUserbg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LoginUserbg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LoginTextbg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LoginTextbg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="JetpackJoyride" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\JetpackJoyride.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="slowing_rise" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\slowing rise.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="zapperH3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\zapperH3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="zapperV4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\zapper4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="zapperH4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\zapperH4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="zapperV1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\zapper.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="zapperH2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\zapperH2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="zapperV2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\zapper2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="zapperH1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\zapperH1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LoginUserbg2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LoginUserbg2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="zapperV3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\zapper3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bgstart2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\jetpack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="running1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\running1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bgstart1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\jetpack2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="death" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\death.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_227297_jj1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\227297-jj1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wp3804050" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wp3804050.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="labelbg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\labelbg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LoginCreatebg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LoginCreatebg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LoginPassbg2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LoginPassbg2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
