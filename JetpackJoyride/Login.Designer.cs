@@ -34,15 +34,17 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnLogin = new System.Windows.Forms.Button();
+            this.btnCreate = new System.Windows.Forms.Button();
             this.btnGuest = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtUCreate = new System.Windows.Forms.TextBox();
+            this.txtULogin = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtPLogin = new System.Windows.Forms.TextBox();
+            this.txtPCreate = new System.Windows.Forms.TextBox();
+            this.ckLoginShow = new System.Windows.Forms.CheckBox();
+            this.ckCreateShow = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // lbLogin
@@ -106,30 +108,31 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Username:";
             // 
-            // button1
+            // btnLogin
             // 
-            this.button1.Font = new System.Drawing.Font("Hurme Geometric Sans 1", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(123, 264);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(145, 69);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Login";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnLogin.Font = new System.Drawing.Font("Hurme Geometric Sans 1", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.Location = new System.Drawing.Point(123, 264);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(145, 69);
+            this.btnLogin.TabIndex = 7;
+            this.btnLogin.Text = "Login";
+            this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
-            // button3
+            // btnCreate
             // 
-            this.button3.Font = new System.Drawing.Font("Hurme Geometric Sans 1", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(517, 260);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(190, 73);
-            this.button3.TabIndex = 9;
-            this.button3.Text = "Create Account";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnCreate.Font = new System.Drawing.Font("Hurme Geometric Sans 1", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCreate.Location = new System.Drawing.Point(517, 260);
+            this.btnCreate.Name = "btnCreate";
+            this.btnCreate.Size = new System.Drawing.Size(190, 73);
+            this.btnCreate.TabIndex = 9;
+            this.btnCreate.Text = "Create Account";
+            this.btnCreate.UseVisualStyleBackColor = true;
             // 
             // btnGuest
             // 
             this.btnGuest.Font = new System.Drawing.Font("Hurme Geometric Sans 1", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuest.Location = new System.Drawing.Point(329, 356);
+            this.btnGuest.Location = new System.Drawing.Point(331, 356);
             this.btnGuest.Name = "btnGuest";
             this.btnGuest.Size = new System.Drawing.Size(154, 73);
             this.btnGuest.TabIndex = 10;
@@ -137,25 +140,25 @@
             this.btnGuest.UseVisualStyleBackColor = true;
             this.btnGuest.Click += new System.EventHandler(this.btnGuest_Click);
             // 
-            // textBox3
+            // txtUCreate
             // 
-            this.textBox3.Font = new System.Drawing.Font("Hurme Geometric Sans 1", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(589, 112);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(184, 41);
-            this.textBox3.TabIndex = 13;
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtUCreate.Font = new System.Drawing.Font("Hurme Geometric Sans 1", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUCreate.Location = new System.Drawing.Point(589, 112);
+            this.txtUCreate.Multiline = true;
+            this.txtUCreate.Name = "txtUCreate";
+            this.txtUCreate.Size = new System.Drawing.Size(184, 41);
+            this.txtUCreate.TabIndex = 13;
+            this.txtUCreate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox2
+            // txtULogin
             // 
-            this.textBox2.Font = new System.Drawing.Font("Hurme Geometric Sans 1", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(179, 112);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(184, 41);
-            this.textBox2.TabIndex = 17;
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtULogin.Font = new System.Drawing.Font("Hurme Geometric Sans 1", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtULogin.Location = new System.Drawing.Point(179, 112);
+            this.txtULogin.Multiline = true;
+            this.txtULogin.Name = "txtULogin";
+            this.txtULogin.Size = new System.Drawing.Size(184, 41);
+            this.txtULogin.TabIndex = 17;
+            this.txtULogin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label3
             // 
@@ -183,25 +186,47 @@
             this.label4.TabIndex = 15;
             this.label4.Text = "Password:";
             // 
-            // textBox5
+            // txtPLogin
             // 
-            this.textBox5.Font = new System.Drawing.Font("Hurme Geometric Sans 1", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(179, 185);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(184, 41);
-            this.textBox5.TabIndex = 19;
-            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtPLogin.Font = new System.Drawing.Font("Hurme Geometric Sans 1", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPLogin.Location = new System.Drawing.Point(179, 185);
+            this.txtPLogin.Multiline = true;
+            this.txtPLogin.Name = "txtPLogin";
+            this.txtPLogin.PasswordChar = '●';
+            this.txtPLogin.Size = new System.Drawing.Size(184, 41);
+            this.txtPLogin.TabIndex = 19;
+            this.txtPLogin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox1
+            // txtPCreate
             // 
-            this.textBox1.Font = new System.Drawing.Font("Hurme Geometric Sans 1", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(589, 185);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(184, 41);
-            this.textBox1.TabIndex = 20;
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtPCreate.Font = new System.Drawing.Font("Hurme Geometric Sans 1", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPCreate.Location = new System.Drawing.Point(589, 185);
+            this.txtPCreate.Multiline = true;
+            this.txtPCreate.Name = "txtPCreate";
+            this.txtPCreate.Size = new System.Drawing.Size(184, 41);
+            this.txtPCreate.TabIndex = 20;
+            this.txtPCreate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // ckLoginShow
+            // 
+            this.ckLoginShow.AutoSize = true;
+            this.ckLoginShow.Location = new System.Drawing.Point(215, 232);
+            this.ckLoginShow.Name = "ckLoginShow";
+            this.ckLoginShow.Size = new System.Drawing.Size(102, 17);
+            this.ckLoginShow.TabIndex = 21;
+            this.ckLoginShow.Text = "Show Password";
+            this.ckLoginShow.UseVisualStyleBackColor = true;
+            this.ckLoginShow.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ckLoginShow_MouseDown);
+            // 
+            // ckCreateShow
+            // 
+            this.ckCreateShow.AutoSize = true;
+            this.ckCreateShow.Location = new System.Drawing.Point(625, 232);
+            this.ckCreateShow.Name = "ckCreateShow";
+            this.ckCreateShow.Size = new System.Drawing.Size(102, 17);
+            this.ckCreateShow.TabIndex = 22;
+            this.ckCreateShow.Text = "Show Password";
+            this.ckCreateShow.UseVisualStyleBackColor = true;
             // 
             // Login
             // 
@@ -210,15 +235,17 @@
             this.BackgroundImage = global::JetpackJoyride.Properties.Resources.wp3804050;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 441);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.ckCreateShow);
+            this.Controls.Add(this.ckLoginShow);
+            this.Controls.Add(this.txtPCreate);
+            this.Controls.Add(this.txtPLogin);
+            this.Controls.Add(this.txtULogin);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtUCreate);
             this.Controls.Add(this.btnGuest);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnCreate);
+            this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
@@ -230,6 +257,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Login_FormClosing);
+            this.Load += new System.EventHandler(this.Login_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -242,14 +270,16 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.Button btnCreate;
         private System.Windows.Forms.Button btnGuest;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtUCreate;
+        private System.Windows.Forms.TextBox txtULogin;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtPLogin;
+        private System.Windows.Forms.TextBox txtPCreate;
+        private System.Windows.Forms.CheckBox ckLoginShow;
+        private System.Windows.Forms.CheckBox ckCreateShow;
     }
 }
