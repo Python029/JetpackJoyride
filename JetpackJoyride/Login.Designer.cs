@@ -45,6 +45,8 @@
             this.txtPCreate = new System.Windows.Forms.TextBox();
             this.ckLoginShow = new System.Windows.Forms.CheckBox();
             this.ckCreateShow = new System.Windows.Forms.CheckBox();
+            this.btnLoginHelp = new System.Windows.Forms.Button();
+            this.btnCreateHelp = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lbLogin
@@ -128,6 +130,7 @@
             this.btnCreate.TabIndex = 9;
             this.btnCreate.Text = "Create Account";
             this.btnCreate.UseVisualStyleBackColor = true;
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // btnGuest
             // 
@@ -142,7 +145,7 @@
             // 
             // txtUCreate
             // 
-            this.txtUCreate.Font = new System.Drawing.Font("Hurme Geometric Sans 1", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUCreate.Font = new System.Drawing.Font("Hurme Geometric Sans 1", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUCreate.Location = new System.Drawing.Point(589, 112);
             this.txtUCreate.Multiline = true;
             this.txtUCreate.Name = "txtUCreate";
@@ -152,7 +155,8 @@
             // 
             // txtULogin
             // 
-            this.txtULogin.Font = new System.Drawing.Font("Hurme Geometric Sans 1", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtULogin.BackColor = System.Drawing.SystemColors.Window;
+            this.txtULogin.Font = new System.Drawing.Font("Hurme Geometric Sans 1", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtULogin.Location = new System.Drawing.Point(179, 112);
             this.txtULogin.Multiline = true;
             this.txtULogin.Name = "txtULogin";
@@ -188,8 +192,9 @@
             // 
             // txtPLogin
             // 
-            this.txtPLogin.Font = new System.Drawing.Font("Hurme Geometric Sans 1", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPLogin.Font = new System.Drawing.Font("Hurme Geometric Sans 1", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPLogin.Location = new System.Drawing.Point(179, 185);
+            this.txtPLogin.MaxLength = 8;
             this.txtPLogin.Multiline = true;
             this.txtPLogin.Name = "txtPLogin";
             this.txtPLogin.PasswordChar = '●';
@@ -199,8 +204,9 @@
             // 
             // txtPCreate
             // 
-            this.txtPCreate.Font = new System.Drawing.Font("Hurme Geometric Sans 1", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPCreate.Font = new System.Drawing.Font("Hurme Geometric Sans 1", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPCreate.Location = new System.Drawing.Point(589, 185);
+            this.txtPCreate.MaxLength = 8;
             this.txtPCreate.Multiline = true;
             this.txtPCreate.Name = "txtPCreate";
             this.txtPCreate.Size = new System.Drawing.Size(184, 41);
@@ -228,6 +234,28 @@
             this.ckCreateShow.Text = "Show Password";
             this.ckCreateShow.UseVisualStyleBackColor = true;
             // 
+            // btnLoginHelp
+            // 
+            this.btnLoginHelp.Font = new System.Drawing.Font("Hurme Geometric Sans 1", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLoginHelp.Location = new System.Drawing.Point(123, 339);
+            this.btnLoginHelp.Name = "btnLoginHelp";
+            this.btnLoginHelp.Size = new System.Drawing.Size(145, 40);
+            this.btnLoginHelp.TabIndex = 23;
+            this.btnLoginHelp.Text = "Help";
+            this.btnLoginHelp.UseVisualStyleBackColor = true;
+            this.btnLoginHelp.Click += new System.EventHandler(this.btnLoginHelp_Click);
+            // 
+            // btnCreateHelp
+            // 
+            this.btnCreateHelp.Font = new System.Drawing.Font("Hurme Geometric Sans 1", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCreateHelp.Location = new System.Drawing.Point(517, 339);
+            this.btnCreateHelp.Name = "btnCreateHelp";
+            this.btnCreateHelp.Size = new System.Drawing.Size(190, 40);
+            this.btnCreateHelp.TabIndex = 24;
+            this.btnCreateHelp.Text = "Help";
+            this.btnCreateHelp.UseVisualStyleBackColor = true;
+            this.btnCreateHelp.Click += new System.EventHandler(this.btnCreateHelp_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -235,6 +263,8 @@
             this.BackgroundImage = global::JetpackJoyride.Properties.Resources.wp3804050;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 441);
+            this.Controls.Add(this.btnCreateHelp);
+            this.Controls.Add(this.btnLoginHelp);
             this.Controls.Add(this.ckCreateShow);
             this.Controls.Add(this.ckLoginShow);
             this.Controls.Add(this.txtPCreate);
@@ -281,5 +311,7 @@
         private System.Windows.Forms.TextBox txtPCreate;
         private System.Windows.Forms.CheckBox ckLoginShow;
         private System.Windows.Forms.CheckBox ckCreateShow;
+        private System.Windows.Forms.Button btnLoginHelp;
+        private System.Windows.Forms.Button btnCreateHelp;
     }
 }

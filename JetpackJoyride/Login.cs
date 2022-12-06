@@ -26,13 +26,18 @@ namespace JetpackJoyride
         bool pe = false;
         int ui = 0;
         int pi = 0;
-        bool show = false;
+        bool Lshow = false;
+        bool Cshow=false;
         bool theme = true;
         string user = "";
         string pass = "";
-        string path = "";
+        string LoginPath = "J:\\Computer Science Testing\\Silvera_JetpackJoyride\\JetpackJoyrideLogin.csv.csv";
+        string HomeLoginPath = "C:\\Users\\Silve\\OneDrive\\Documents\\JetpackJoyrideLogin.csv";
+        string ScorePath = "J:\\Computer Science Testing\\Silvera_JetpackJoyride\\JetpackJoyrideScores.csv";
+        string HomeScorePath = "C:\\Users\\Silve\\OneDrive\\Documents\\JetpackJoyrideScores.csv";
         private void Login_Load(object sender, EventArgs e)
         {
+            ReadCSVFile();
             ShowHide();
         }
         private void btnGuest_Click(object sender, EventArgs e)
@@ -46,7 +51,7 @@ namespace JetpackJoyride
         }
         private void ReadCSVFile()
         {
-            string[] credentials = File.ReadAllLines(path);
+            string[] credentials = File.ReadAllLines(HomeLoginPath);
             for (int i = 0; i < credentials.Length; i++)
             {
                 string[] rowdata = credentials[i].Split(',');
@@ -58,18 +63,29 @@ namespace JetpackJoyride
         private void ShowHide()
         {
             //Login
-            if (show == false)
+            if (Lshow == false)
             {
                 txtPLogin.PasswordChar = '●';
-                show = true;
+                Lshow = true;
             }
-            else if (show)
+            else if (Lshow)
             {
                 txtPLogin.PasswordChar = '\0';
-                show = false;
+                Lshow = false;
                 
             }
             //Create
+            if (Cshow == false)
+            {
+                txtPCreate.PasswordChar = '●';
+                Cshow = true;
+            }
+            else if (Cshow)
+            {
+                txtPCreate.PasswordChar = '\0';
+                Cshow = false;
+
+            }
         }
         private void Login_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -78,16 +94,120 @@ namespace JetpackJoyride
                 Application.Exit();
             }
         }
-
-       
-
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            for (int i = 0; i < username.Count; i++)
+            {
+                if (txtULogin.Text == username[i])
+                {
+                    u = true;
+                    ui = i;
+                }
+                else if (u == false)
+                {
+                    u = false;
+                }
+            }
+            for (int i = 0; i < password.Count; i++)
+            {
+                if (txtPLogin.Text == password[i])
+                {
+                    p = true;
+                    pi = i;
+                }
+                else if (p == false)
+                {
+                    p = false;
+                }
+            }
+            if (u && p && ui == pi)
+            {
+                txtULogin.BackColor = Color.ForestGreen;
+                txtPLogin.BackColor = Color.ForestGreen;
+                Properties.Settings.Default.Username = txtULogin.Text;
+                Properties.Settings.Default.Save();
+                MessageBox.Show($"Welcome Back, {Properties.Settings.Default.Username}.","Login Sucessful");
+                close = false;
+                this.Close();
+            }
+            else if (u && p && ui != pi)
+            {
+                txtULogin.BackColor = Color.Gold;
+                txtPLogin.BackColor = Color.Gold;
+            }
+            else if (u && p == false)
+            {
+                txtULogin.BackColor = Color.ForestGreen;
+                txtPLogin.BackColor = Color.FromArgb(194, 41, 46);
+            }
+            else if (u == false && p)
+            {
+                txtULogin.BackColor = Color.FromArgb(194, 41, 46);
+                txtPLogin.BackColor = Color.ForestGreen;
+            }
+            else if (u == false && p == false)
+            {
+                txtULogin.BackColor = Color.FromArgb(194,41,46);
+                txtPLogin.BackColor = Color.FromArgb(194, 41, 46);
+            }
+        }
+        private void btnCreate_Click(object sender, EventArgs e)
+        {
+            user = txtULogin.Text;
+            pass = txtPLogin.Text;
+            for (int i = 0; i < pass.Length; i++)
+            {
+                if (pass == password[i])
+                {
+                    pe = true;
+                }
+                else
+                {
+                    pe = false;
+                }
+            }
+            for (int i = 0; i < user.Length; i++)
+            {
+                if (user == username[i])
+                {
+                    ue = true;
+                }
+                else
+                {
+                    ue = false;
+                }
+            }
+            if (ue && pe)
+            {
 
+            }
+            if (pe && ue == false)
+            {
+
+            }
+            else if (ue && pe == false)
+            {
+
+            }
+            else if (ue == false && pe == false)
+            {
+                username.Add(user);
+                password.Add(pass);
+                string newuser = ($"{user},{pass}\n");
+                File.AppendAllText(path, newuser);
+            }
         }
         private void ckLoginShow_MouseDown(object sender, MouseEventArgs e)
         {
             ShowHide();
+        }
+        private void btnLoginHelp_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("●If the username box turns red and the password box is green, the username is not correct, but the password is.\n\n●If the password box turns red and the username box is green, the password is not correct, but the username is.\n\n●If both turn red, then the account does not exist and should be created.\n\n●If both boxes turn yellow, then there is a mismatch between an existing username and password.\n\n●Max Length for a password is 8 characters.", "Login Help",MessageBoxButtons.OK,MessageBoxIcon.Information);
+        }
+        private void btnCreateHelp_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("●If the username box turns red and the password box is green, the username already exists, but the password can be used.\n\n●If the password box turns red and the username box is green, the password already exists, but the username can be used.\n\n●If both turn red, then you may login with the credentials you used.\n\n●Max Length for a password is 8 characters.", "Login Help", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
