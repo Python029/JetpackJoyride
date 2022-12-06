@@ -95,12 +95,12 @@
             this.lblHighscore.BackColor = System.Drawing.Color.Transparent;
             this.lblHighscore.Font = new System.Drawing.Font("New Athletic M54", 18.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHighscore.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(69)))), ((int)(((byte)(97)))));
-            this.lblHighscore.Location = new System.Drawing.Point(770, 482);
+            this.lblHighscore.Location = new System.Drawing.Point(774, 482);
             this.lblHighscore.Name = "lblHighscore";
             this.lblHighscore.Size = new System.Drawing.Size(80, 29);
             this.lblHighscore.TabIndex = 9;
             this.lblHighscore.Text = "0000M";
-            this.lblHighscore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblHighscore.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // tmrScore
             // 
@@ -110,11 +110,11 @@
             // pnHigh
             // 
             this.pnHigh.BackColor = System.Drawing.Color.Transparent;
-            this.pnHigh.Location = new System.Drawing.Point(764, 456);
+            this.pnHigh.Location = new System.Drawing.Point(764, 458);
             this.pnHigh.Name = "pnHigh";
             this.pnHigh.Size = new System.Drawing.Size(88, 55);
             this.pnHigh.TabIndex = 10;
-            this.pnHigh.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnHigh_MouseClick);
+            this.pnHigh.Click += new System.EventHandler(this.pnHigh_Click);
             // 
             // pbScore
             // 

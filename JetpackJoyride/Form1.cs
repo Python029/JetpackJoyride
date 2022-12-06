@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+
 namespace JetpackJoyride
 {
     public partial class Form1 : Form
@@ -19,6 +21,8 @@ namespace JetpackJoyride
         List<PictureBox> bgList = new List<PictureBox>();
         List<PictureBox> ZapListV = new List<PictureBox>();
         List<PictureBox> ZapListH = new List<PictureBox>();
+        List<string> username = new List<string>();
+        List<int> scores = new List<int>();
         Random rnd = new Random();
         Form2 f2 = new Form2();
         Login lg = new Login();
@@ -64,8 +68,13 @@ namespace JetpackJoyride
         private void Form1_Load(object sender, EventArgs e)
         {
             lg.ShowDialog();
+            ReadCSV();
+            InitialHS();
             this.SetStyle(ControlStyles.DoubleBuffer, true);
             this.SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
+            this.SetStyle(ControlStyles.UserPaint, true);
+            this.SetStyle(ControlStyles.AllPaintingInWmPaint, true);
+            this.UpdateStyles();
             bg1.Location = new Point(956, -12);
             bg2.Location = new Point(1460, -12);
             bg3.Location = new Point(1964, -12);
@@ -156,6 +165,16 @@ namespace JetpackJoyride
             ZapListH.Add(zap6);
             #endregion
             #endregion
+        }
+        private void ReadCSV()
+        {
+            string[] Leaderboard = File.ReadAllLines(ScorePath);
+            for (int i = 0; i < Leaderboard.Length; i++)
+            {
+                string[] rowdata = Leaderboard[i].Split(',');
+                username.Add(rowdata[0]);
+                scores.Add(Int32.Parse(rowdata[1]));
+            }
         }
         private void tmrAnimate_Tick(object sender, EventArgs e)
         {
@@ -351,6 +370,24 @@ namespace JetpackJoyride
                     break;
                 case 4:
                     lblScore.Text = $"{Math.Round(distance, 0)}M";
+                    break;
+            }
+        }
+        private void InitialHS()
+        {
+            switch (scores[0].ToString().Length)
+            {
+                case 1:
+                    lblHighscore.Text = $"000{scores[0]}M";
+                    break;
+                case 2:
+                    lblHighscore.Text = $"00{scores[0]}M";
+                    break;
+                case 3:
+                    lblHighscore.Text = $"0{scores[0]}M";
+                    break;
+                case 4:
+                    lblHighscore.Text = $"{scores[0]}M";
                     break;
             }
         }
@@ -652,16 +689,21 @@ namespace JetpackJoyride
         }
         private void pnHigh_MouseClick(object sender, MouseEventArgs e)
         {
-            if (start == false && go == false)
-            {
-                f2.ShowDialog();
-            }
+            
         }     
         private void pnInfo_Click(object sender, EventArgs e)
         {
             if (start == false && go == false)
             {
                 a1.ShowDialog();
+            }
+        }
+
+        private void pnHigh_Click(object sender, EventArgs e)
+        {
+            if (start == false && go == false)
+            {
+                f2.ShowDialog();
             }
         }
     }

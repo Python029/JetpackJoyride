@@ -50,7 +50,7 @@ namespace JetpackJoyride
         }
         private void ReadCSVFile()
         {
-            string[] credentials = File.ReadAllLines(HomeLoginPath);
+            string[] credentials = File.ReadAllLines(LoginPath);
             for (int i = 0; i < credentials.Length; i++)
             {
                 string[] rowdata = credentials[i].Split(',');
@@ -94,115 +94,121 @@ namespace JetpackJoyride
         }
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < username.Count; i++)
+            if (txtULogin.Text.Length > 0 && txtPLogin.Text.Length > 0)
             {
-                if (txtULogin.Text == username[i])
+                for (int i = 0; i < username.Count; i++)
                 {
-                    u = true;
-                    ui = i;
+                    if (txtULogin.Text == username[i])
+                    {
+                        u = true;
+                        ui = i;
+                    }
+                    else if (u == false)
+                    {
+                        u = false;
+                    }
                 }
-                else if (u == false)
+                for (int i = 0; i < password.Count; i++)
                 {
-                    u = false;
+                    if (txtPLogin.Text == password[i])
+                    {
+                        p = true;
+                        pi = i;
+                    }
+                    else if (p == false)
+                    {
+                        p = false;
+                    }
                 }
-            }
-            for (int i = 0; i < password.Count; i++)
-            {
-                if (txtPLogin.Text == password[i])
+                if (u && p && ui == pi)
                 {
-                    p = true;
-                    pi = i;
+                    txtULogin.BackColor = Color.ForestGreen;
+                    txtPLogin.BackColor = Color.ForestGreen;
+                    Properties.Settings.Default.Username = txtULogin.Text;
+                    Properties.Settings.Default.Save();
+                    MessageBox.Show($"Welcome Back, {Properties.Settings.Default.Username}.", "Login Sucessful");
+                    close = false;
+                    this.Close();
                 }
-                else if (p == false)
+                else if (u && p && ui != pi)
                 {
-                    p = false;
+                    txtULogin.BackColor = Color.Gold;
+                    txtPLogin.BackColor = Color.Gold;
                 }
-            }
-            if (u && p && ui == pi)
-            {
-                txtULogin.BackColor = Color.ForestGreen;
-                txtPLogin.BackColor = Color.ForestGreen;
-                Properties.Settings.Default.Username = txtULogin.Text;
-                Properties.Settings.Default.Save();
-                MessageBox.Show($"Welcome Back, {Properties.Settings.Default.Username}.","Login Sucessful");
-                close = false;
-                this.Close();
-            }
-            else if (u && p && ui != pi)
-            {
-                txtULogin.BackColor = Color.Gold;
-                txtPLogin.BackColor = Color.Gold;
-            }
-            else if (u && p == false)
-            {
-                txtULogin.BackColor = Color.ForestGreen;
-                txtPLogin.BackColor = Color.FromArgb(194, 41, 46);
-            }
-            else if (u == false && p)
-            {
-                txtULogin.BackColor = Color.FromArgb(194, 41, 46);
-                txtPLogin.BackColor = Color.ForestGreen;
-            }
-            else if (u == false && p == false)
-            {
-                txtULogin.BackColor = Color.FromArgb(194,41,46);
-                txtPLogin.BackColor = Color.FromArgb(194, 41, 46);
+                else if (u && p == false)
+                {
+                    txtULogin.BackColor = Color.ForestGreen;
+                    txtPLogin.BackColor = Color.FromArgb(194, 41, 46);
+                }
+                else if (u == false && p)
+                {
+                    txtULogin.BackColor = Color.FromArgb(194, 41, 46);
+                    txtPLogin.BackColor = Color.ForestGreen;
+                }
+                else if (u == false && p == false)
+                {
+                    txtULogin.BackColor = Color.FromArgb(194, 41, 46);
+                    txtPLogin.BackColor = Color.FromArgb(194, 41, 46);
+                }
             }
         }
         private void btnCreate_Click(object sender, EventArgs e)
         {
-            user = txtUCreate.Text;
-            pass = txtPCreate.Text;
-            for (int i = 0; i < username.Count; i++)
+            if (txtUCreate.Text.Length > 0 && txtPCreate.Text.Length > 0)
             {
-                if (txtUCreate.Text.ToLower() == username[i].ToLower())
+                user = txtUCreate.Text;
+                pass = txtPCreate.Text;
+                for (int i = 0; i < username.Count; i++)
                 {
-                    ue = true;
+                    if (txtUCreate.Text.ToLower() == username[i].ToLower())
+                    {
+                        ue = true;
+                    }
+                    else if (ue == false)
+                    {
+                        ue = false;
+                    }
                 }
-                else if (ue == false)
+                for (int i = 0; i < password.Count; i++)
                 {
-                    ue = false;
+                    if (txtPCreate.Text.ToLower() == password[i].ToLower())
+                    {
+                        pe = true;
+                    }
+                    else if (pe == false)
+                    {
+                        pe = false;
+                    }
                 }
-            }
-            for (int i = 0; i < password.Count; i++)
-            {
-                if (txtPCreate.Text.ToLower() == password[i].ToLower())
+                if (ue && pe)
                 {
-                    pe = true;
+                    txtUCreate.BackColor = Color.FromArgb(194, 41, 46);
+                    txtPCreate.BackColor = Color.FromArgb(194, 41, 46);
                 }
-                else if (pe == false)
+                if (pe && ue == false)
                 {
-                    pe = false;
+                    txtUCreate.BackColor = Color.ForestGreen;
+                    txtPCreate.BackColor = Color.FromArgb(194, 41, 46);
                 }
-            }
-            if (ue && pe)
-            {
-                txtUCreate.BackColor = Color.FromArgb(194, 41, 46);
-                txtPCreate.BackColor = Color.FromArgb(194, 41, 46);
-            }
-            if (pe && ue == false)
-            {
-                txtUCreate.BackColor = Color.ForestGreen;
-                txtPCreate.BackColor = Color.FromArgb(194, 41, 46);
-            }
-            else if (ue && pe == false)
-            {
-                txtUCreate.BackColor = Color.FromArgb(194, 41, 46);
-                txtPCreate.BackColor = Color.ForestGreen;
-            }
-            else if (ue == false && pe == false)
-            {
-                txtUCreate.BackColor = Color.ForestGreen;
-                txtPCreate.BackColor = Color.ForestGreen;
-                Properties.Settings.Default.Username = txtUCreate.Text;
-                Properties.Settings.Default.Save();
-                MessageBox.Show($"Welcome, {Properties.Settings.Default.Username}.", "Account Sucessfully Created");
-                username.Add(user);
-                password.Add(pass);
-                string newuser = ($"{user},{pass}\n");
-                File.AppendAllText(HomeLoginPath, newuser);
-                close = false;
-                this.Close();
+                else if (ue && pe == false)
+                {
+                    txtUCreate.BackColor = Color.FromArgb(194, 41, 46);
+                    txtPCreate.BackColor = Color.ForestGreen;
+                }
+                else if (ue == false && pe == false)
+                {
+                    txtUCreate.BackColor = Color.ForestGreen;
+                    txtPCreate.BackColor = Color.ForestGreen;
+                    Properties.Settings.Default.Username = txtUCreate.Text;
+                    Properties.Settings.Default.Save();
+                    MessageBox.Show($"Welcome, {Properties.Settings.Default.Username}.", "Account Sucessfully Created");
+                    username.Add(user);
+                    password.Add(pass);
+                    string newuser = ($"{user},{pass}\n");
+                    File.AppendAllText(LoginPath, newuser);
+                    close = false;
+                    this.Close();
+                }
             }
         }
         private void ckLoginShow_MouseDown(object sender, MouseEventArgs e)
