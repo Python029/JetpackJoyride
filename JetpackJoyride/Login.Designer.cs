@@ -116,7 +116,7 @@
             this.btnLogin.Location = new System.Drawing.Point(123, 264);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(145, 69);
-            this.btnLogin.TabIndex = 7;
+            this.btnLogin.TabIndex = 5;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
@@ -127,7 +127,7 @@
             this.btnCreate.Location = new System.Drawing.Point(517, 260);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(190, 73);
-            this.btnCreate.TabIndex = 9;
+            this.btnCreate.TabIndex = 6;
             this.btnCreate.Text = "Create Account";
             this.btnCreate.UseVisualStyleBackColor = true;
             this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
@@ -147,22 +147,26 @@
             // 
             this.txtUCreate.Font = new System.Drawing.Font("Hurme Geometric Sans 1", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUCreate.Location = new System.Drawing.Point(589, 112);
+            this.txtUCreate.MaxLength = 11;
             this.txtUCreate.Multiline = true;
             this.txtUCreate.Name = "txtUCreate";
             this.txtUCreate.Size = new System.Drawing.Size(184, 41);
-            this.txtUCreate.TabIndex = 13;
+            this.txtUCreate.TabIndex = 3;
             this.txtUCreate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtUCreate.TextChanged += new System.EventHandler(this.txtUCreate_TextChanged);
             // 
             // txtULogin
             // 
             this.txtULogin.BackColor = System.Drawing.SystemColors.Window;
             this.txtULogin.Font = new System.Drawing.Font("Hurme Geometric Sans 1", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtULogin.Location = new System.Drawing.Point(179, 112);
+            this.txtULogin.MaxLength = 11;
             this.txtULogin.Multiline = true;
             this.txtULogin.Name = "txtULogin";
             this.txtULogin.Size = new System.Drawing.Size(184, 41);
-            this.txtULogin.TabIndex = 17;
+            this.txtULogin.TabIndex = 1;
             this.txtULogin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtULogin.TextChanged += new System.EventHandler(this.txtULogin_TextChanged);
             // 
             // label3
             // 
@@ -197,10 +201,11 @@
             this.txtPLogin.MaxLength = 8;
             this.txtPLogin.Multiline = true;
             this.txtPLogin.Name = "txtPLogin";
-            this.txtPLogin.PasswordChar = '●';
             this.txtPLogin.Size = new System.Drawing.Size(184, 41);
-            this.txtPLogin.TabIndex = 19;
+            this.txtPLogin.TabIndex = 2;
             this.txtPLogin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtPLogin.TextChanged += new System.EventHandler(this.txtPLogin_TextChanged);
+            this.txtPLogin.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPLogin_KeyDown);
             // 
             // txtPCreate
             // 
@@ -210,29 +215,42 @@
             this.txtPCreate.Multiline = true;
             this.txtPCreate.Name = "txtPCreate";
             this.txtPCreate.Size = new System.Drawing.Size(184, 41);
-            this.txtPCreate.TabIndex = 20;
+            this.txtPCreate.TabIndex = 4;
             this.txtPCreate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtPCreate.TextChanged += new System.EventHandler(this.txtPCreate_TextChanged);
+            this.txtPCreate.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPCreate_KeyDown);
             // 
             // ckLoginShow
             // 
             this.ckLoginShow.AutoSize = true;
+            this.ckLoginShow.BackColor = System.Drawing.Color.Transparent;
+            this.ckLoginShow.BackgroundImage = global::JetpackJoyride.Properties.Resources.PassCheckbg;
+            this.ckLoginShow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ckLoginShow.Font = new System.Drawing.Font("Hurme Geometric Sans 1", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckLoginShow.ForeColor = System.Drawing.Color.White;
             this.ckLoginShow.Location = new System.Drawing.Point(215, 232);
             this.ckLoginShow.Name = "ckLoginShow";
-            this.ckLoginShow.Size = new System.Drawing.Size(102, 17);
+            this.ckLoginShow.Size = new System.Drawing.Size(107, 18);
             this.ckLoginShow.TabIndex = 21;
             this.ckLoginShow.Text = "Show Password";
-            this.ckLoginShow.UseVisualStyleBackColor = true;
+            this.ckLoginShow.UseVisualStyleBackColor = false;
             this.ckLoginShow.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ckLoginShow_MouseDown);
             // 
             // ckCreateShow
             // 
             this.ckCreateShow.AutoSize = true;
+            this.ckCreateShow.BackColor = System.Drawing.Color.Transparent;
+            this.ckCreateShow.BackgroundImage = global::JetpackJoyride.Properties.Resources.PassCheckbg;
+            this.ckCreateShow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ckCreateShow.Font = new System.Drawing.Font("Hurme Geometric Sans 1", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckCreateShow.ForeColor = System.Drawing.Color.White;
             this.ckCreateShow.Location = new System.Drawing.Point(625, 232);
             this.ckCreateShow.Name = "ckCreateShow";
-            this.ckCreateShow.Size = new System.Drawing.Size(102, 17);
+            this.ckCreateShow.Size = new System.Drawing.Size(107, 18);
             this.ckCreateShow.TabIndex = 22;
             this.ckCreateShow.Text = "Show Password";
-            this.ckCreateShow.UseVisualStyleBackColor = true;
+            this.ckCreateShow.UseVisualStyleBackColor = false;
+            this.ckCreateShow.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ckCreateShow_MouseDown);
             // 
             // btnLoginHelp
             // 

@@ -145,14 +145,20 @@
   <data name="LoginTextbg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LoginTextbg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="JetpackJoyride" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\JetpackJoyride.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="slowing_rise" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\slowing rise.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="LoginPassbg2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LoginPassbg2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="zapperH3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\zapperH3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="JetpackJoyride" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\JetpackJoyride.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="zapperV4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\zapper4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -171,9 +177,6 @@
   </data>
   <data name="zapperH1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\zapperH1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="background" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="LoginUserbg2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LoginUserbg2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -205,7 +208,7 @@
   <data name="LoginCreatebg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LoginCreatebg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="LoginPassbg2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LoginPassbg2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="PassCheckbg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PassCheckbg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Drawing;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -47,6 +48,10 @@ namespace JetpackJoyride
         double distance = 0;
         int slide = 0;
         #endregion
+        #region Strings
+        string ScorePath = "J:\\Computer Science Testing\\Silvera_JetpackJoyride\\JetpackJoyrideScores.csv";
+        string HomeScorePath = "C:\\Users\\Silve\\OneDrive\\Documents\\JetpackJoyrideScores.csv";
+        #endregion
         #region Objects
         PictureBox zap1 = new PictureBox();
         PictureBox zap2 = new PictureBox();
@@ -55,6 +60,7 @@ namespace JetpackJoyride
         PictureBox zap5 = new PictureBox();
         PictureBox zap6 = new PictureBox();
         #endregion
+
         private void Form1_Load(object sender, EventArgs e)
         {
             lg.ShowDialog();

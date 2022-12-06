@@ -121,6 +121,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Barry_Steakfries.ico" />
+    <None Include="Resources\PassCheckbg.png" />
     <None Include="Resources\LoginPassbg2.png" />
     <None Include="Resources\LoginPassbg.png" />
     <None Include="Resources\LoginUserbg2.png" />
@@ -141,7 +142,6 @@
     <None Include="Resources\rising.png" />
     <None Include="Resources\slowing rise.png" />
     <None Include="Resources\falling.png" />
-    <None Include="Resources\High.png" />
     <None Include="Resources\running1.png" />
     <None Include="Resources\running2.png" />
     <None Include="Resources\zapper.png" />
