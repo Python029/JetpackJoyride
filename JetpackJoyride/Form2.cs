@@ -25,21 +25,21 @@ namespace JetpackJoyride
         string ScorePath = "J:\\Computer Science Testing\\Silvera_JetpackJoyride\\JetpackJoyrideScores.csv";
         string HomeScorePath = "C:\\Users\\Silve\\OneDrive\\Documents\\JetpackJoyrideScores.csv";
         private void Form2_Load(object sender, EventArgs e)
-        {
-            
+        {         
             ReadCSV();
             Highscores();
             InitializeDataGridView();
             DateTime now = DateTime.Now;
             date = now.ToString();
-            
         }
         private void InitializeDataGridView()
         {
+            dgvLeaderboard.Visible = true;
             // Initialize basic DataGridView properties.
             dgvLeaderboard.Dock = DockStyle.Fill;
             dgvLeaderboard.BackgroundColor = Color.LightGray;
             dgvLeaderboard.BorderStyle = BorderStyle.Fixed3D;
+            
 
             // Set property values appropriate for read-only display and 
             // limited interactivity. 
@@ -56,6 +56,7 @@ namespace JetpackJoyride
             dgvLeaderboard.AllowUserToResizeRows = false;
             dgvLeaderboard.RowHeadersWidthSizeMode =
                 DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dgvLeaderboard.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
             // Set the selection background color for all the cells.
             dgvLeaderboard.DefaultCellStyle.SelectionBackColor = Color.White;
@@ -84,7 +85,7 @@ namespace JetpackJoyride
         }
         private void ReadCSV()
         {
-            string[] Leaderboard = File.ReadAllLines(ScorePath);
+            string[] Leaderboard = File.ReadAllLines(HomeScorePath);
             for (int i = 0; i < Leaderboard.Length; i++)
             {
                 string[] rowdata = Leaderboard[i].Split(',');

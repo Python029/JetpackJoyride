@@ -56,7 +56,7 @@
             this.dgvLeaderboard.Location = new System.Drawing.Point(0, 0);
             this.dgvLeaderboard.Name = "dgvLeaderboard";
             this.dgvLeaderboard.ReadOnly = true;
-            this.dgvLeaderboard.Size = new System.Drawing.Size(461, 254);
+            this.dgvLeaderboard.Size = new System.Drawing.Size(466, 254);
             this.dgvLeaderboard.TabIndex = 0;
             // 
             // Ranks
@@ -127,7 +127,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(461, 254);
+            this.ClientSize = new System.Drawing.Size(466, 254);
             this.Controls.Add(this.dgvLeaderboard);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form2";

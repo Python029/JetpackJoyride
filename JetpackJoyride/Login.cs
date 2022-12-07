@@ -51,12 +51,21 @@ namespace JetpackJoyride
         }
         private void ReadCSVFile()
         {
-            string[] credentials = File.ReadAllLines(LoginPath);
+            string[] credentials = File.ReadAllLines(HomeLoginPath);
             for (int i = 0; i < credentials.Length; i++)
             {
                 string[] rowdata = credentials[i].Split(',');
                 username.Add(rowdata[0]);
-                password.Add(rowdata[1]);
+                if (username[0] == "")
+                {
+                    username.Clear();
+                    File.WriteAllText(HomeLoginPath, string.Empty);
+                    break;
+                }
+                else if (username[0] != "")
+                {
+                    password.Add(rowdata[1]);
+                }              
             }
 
         }
@@ -95,64 +104,72 @@ namespace JetpackJoyride
         }
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (txtULogin.Text.Length > 0 && txtPLogin.Text.Length > 0)
+            if(username.Count== 0)
             {
-                for (int i = 0; i < username.Count; i++)
+                MessageBox.Show("There are no existing accounts. Please create one instead.","Login Database Empty",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
+            else if(username.Count>0)
+            {
+                if (txtULogin.Text.Length > 0 && txtPLogin.Text.Length > 0)
                 {
-                    if (txtULogin.Text == username[i])
+                    for (int i = 0; i < username.Count; i++)
                     {
-                        u = true;
-                        ui = i;
+                        if (txtULogin.Text == username[i])
+                        {
+                            u = true;
+                            ui = i;
+                        }
+                        else if (u == false)
+                        {
+                            u = false;
+                        }
                     }
-                    else if (u == false)
+                    for (int i = 0; i < password.Count; i++)
                     {
-                        u = false;
+                        if (txtPLogin.Text == password[i])
+                        {
+                            p = true;
+                            pi = i;
+                        }
+                        else if (p == false)
+                        {
+                            p = false;
+                        }
                     }
-                }
-                for (int i = 0; i < password.Count; i++)
-                {
-                    if (txtPLogin.Text == password[i])
+                    if (u && p && ui == pi)
                     {
-                        p = true;
-                        pi = i;
+                        txtULogin.BackColor = Color.ForestGreen;
+                        txtPLogin.BackColor = Color.ForestGreen;
+                        Properties.Settings.Default.Username = txtULogin.Text;
+                        Properties.Settings.Default.Guest = false;
+                        Properties.Settings.Default.Save();
+                        MessageBox.Show($"Welcome Back, {Properties.Settings.Default.Username}.", "Login Sucessful");
+                        close = false;
+                        this.Close();
                     }
-                    else if (p == false)
+                    else if (u && p && ui != pi)
                     {
-                        p = false;
+                        txtULogin.BackColor = Color.Gold;
+                        txtPLogin.BackColor = Color.Gold;
                     }
-                }
-                if (u && p && ui == pi)
-                {
-                    txtULogin.BackColor = Color.ForestGreen;
-                    txtPLogin.BackColor = Color.ForestGreen;
-                    Properties.Settings.Default.Username = txtULogin.Text;
-                    Properties.Settings.Default.Guest = false;
-                    Properties.Settings.Default.Save();
-                    MessageBox.Show($"Welcome Back, {Properties.Settings.Default.Username}.", "Login Sucessful");
-                    close = false;
-                    this.Close();
-                }
-                else if (u && p && ui != pi)
-                {
-                    txtULogin.BackColor = Color.Gold;
-                    txtPLogin.BackColor = Color.Gold;
-                }
-                else if (u && p == false)
-                {
-                    txtULogin.BackColor = Color.ForestGreen;
-                    txtPLogin.BackColor = Color.FromArgb(194, 41, 46);
-                }
-                else if (u == false && p)
-                {
-                    txtULogin.BackColor = Color.FromArgb(194, 41, 46);
-                    txtPLogin.BackColor = Color.ForestGreen;
-                }
-                else if (u == false && p == false)
-                {
-                    txtULogin.BackColor = Color.FromArgb(194, 41, 46);
-                    txtPLogin.BackColor = Color.FromArgb(194, 41, 46);
+                    else if (u && p == false)
+                    {
+                        txtULogin.BackColor = Color.ForestGreen;
+                        txtPLogin.BackColor = Color.FromArgb(194, 41, 46);
+                    }
+                    else if (u == false && p)
+                    {
+                        txtULogin.BackColor = Color.FromArgb(194, 41, 46);
+                        txtPLogin.BackColor = Color.ForestGreen;
+                    }
+                    else if (u == false && p == false)
+                    {
+                        txtULogin.BackColor = Color.FromArgb(194, 41, 46);
+                        txtPLogin.BackColor = Color.FromArgb(194, 41, 46);
+                    }
                 }
             }
+           
         }
         private void btnCreate_Click(object sender, EventArgs e)
         {
@@ -208,7 +225,7 @@ namespace JetpackJoyride
                     username.Add(user);
                     password.Add(pass);
                     string newuser = ($"{user},{pass}\n");
-                    File.AppendAllText(LoginPath, newuser);
+                    File.AppendAllText(HomeLoginPath, newuser);
                     close = false;
                     this.Close();
                 }
