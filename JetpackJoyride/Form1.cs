@@ -357,6 +357,12 @@ namespace JetpackJoyride
                     {
                         Highscore();
                     }
+                    else if(Properties.Settings.Default.Guest)
+                    {
+                        DialogResult dialogResult = MessageBox.Show("You did not create an account, so your score was not saved.\n\nWould you like to play again?\nIf you would like to create an account and play again, click yes. If not, click No.","Play Again?", MessageBoxButtons.YesNo);
+                        if(dialogResult== DialogResult.Yes) { Application.Restart(); }
+                        else if (dialogResult == DialogResult.No) { Application.Exit(); }
+                    }
                 }
             }
         }
