@@ -26,14 +26,65 @@ namespace JetpackJoyride
         string HomeScorePath = "C:\\Users\\Silve\\OneDrive\\Documents\\JetpackJoyrideScores.csv";
         private void Form2_Load(object sender, EventArgs e)
         {
+            
             ReadCSV();
             Highscores();
+            InitializeDataGridView();
             DateTime now = DateTime.Now;
             date = now.ToString();
+            
+        }
+        private void InitializeDataGridView()
+        {
+            // Initialize basic DataGridView properties.
+            dgvLeaderboard.Dock = DockStyle.Fill;
+            dgvLeaderboard.BackgroundColor = Color.LightGray;
+            dgvLeaderboard.BorderStyle = BorderStyle.Fixed3D;
+
+            // Set property values appropriate for read-only display and 
+            // limited interactivity. 
+            dgvLeaderboard.AllowUserToAddRows = false;
+            dgvLeaderboard.AllowUserToDeleteRows = false;
+            dgvLeaderboard.AllowUserToOrderColumns = false;
+            dgvLeaderboard.ReadOnly = true;
+            dgvLeaderboard.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvLeaderboard.MultiSelect = false;
+            dgvLeaderboard.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
+            dgvLeaderboard.AllowUserToResizeColumns = false;
+            dgvLeaderboard.ColumnHeadersHeightSizeMode =
+                DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dgvLeaderboard.AllowUserToResizeRows = false;
+            dgvLeaderboard.RowHeadersWidthSizeMode =
+                DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+
+            // Set the selection background color for all the cells.
+            dgvLeaderboard.DefaultCellStyle.SelectionBackColor = Color.White;
+            dgvLeaderboard.DefaultCellStyle.SelectionForeColor = Color.Black;
+
+            // Set RowHeadersDefaultCellStyle.SelectionBackColor so that its default
+            // value won't override DataGridView.DefaultCellStyle.SelectionBackColor.
+            dgvLeaderboard.RowHeadersDefaultCellStyle.SelectionBackColor = Color.Empty;
+
+            // Set the background color for all rows and for alternating rows. 
+            // The value for alternating rows overrides the value for all rows. 
+            dgvLeaderboard.RowsDefaultCellStyle.BackColor = Color.FromArgb(255, 150, 150);
+            dgvLeaderboard.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(255, 72, 72);
+
+
+            // Set the row and column header styles.
+            dgvLeaderboard.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dgvLeaderboard.ColumnHeadersDefaultCellStyle.BackColor = Color.Black;
+            dgvLeaderboard.RowHeadersDefaultCellStyle.BackColor = Color.Black;
+
+            
+
+            // Attach a handler to the CellFormatting event.
+            //dgvLeaderboard.CellFormatting += new(;
+            //DataGridViewCellFormattingEventHandler(dgvLeaderboard_CellFormatting);
         }
         private void ReadCSV()
         {
-            string[] Leaderboard = File.ReadAllLines(HomeScorePath);
+            string[] Leaderboard = File.ReadAllLines(ScorePath);
             for (int i = 0; i < Leaderboard.Length; i++)
             {
                 string[] rowdata = Leaderboard[i].Split(',');
@@ -47,7 +98,7 @@ namespace JetpackJoyride
             dgvLeaderboard.Rows.Clear();
             for(int i = 0; i < username.Count; i++)
             {
-                dgvLeaderboard.Rows.Add((i+1).ToString(), username[i], scores[i], time[i]);
+                dgvLeaderboard.Rows.Add((i+1).ToString(), username[i], $"{scores[i]} m", time[i]);
             }           
         }
     }

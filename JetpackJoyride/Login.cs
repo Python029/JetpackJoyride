@@ -28,7 +28,6 @@ namespace JetpackJoyride
         int pi = 0;
         bool Lshow = false;
         bool Cshow=false;
-        bool theme = true;
         string user = "";
         string pass = "";
         string LoginPath = "J:\\Computer Science Testing\\Silvera_JetpackJoyride\\JetpackJoyrideLogin.csv";
@@ -52,7 +51,7 @@ namespace JetpackJoyride
         }
         private void ReadCSVFile()
         {
-            string[] credentials = File.ReadAllLines(HomeLoginPath);
+            string[] credentials = File.ReadAllLines(LoginPath);
             for (int i = 0; i < credentials.Length; i++)
             {
                 string[] rowdata = credentials[i].Split(',');
@@ -209,7 +208,7 @@ namespace JetpackJoyride
                     username.Add(user);
                     password.Add(pass);
                     string newuser = ($"{user},{pass}\n");
-                    File.AppendAllText(HomeLoginPath, newuser);
+                    File.AppendAllText(LoginPath, newuser);
                     close = false;
                     this.Close();
                 }
