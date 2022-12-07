@@ -125,7 +125,6 @@
     <None Include="Resources\LoginPassbg2.png" />
     <None Include="Resources\LoginPassbg.png" />
     <None Include="Resources\LoginUserbg2.png" />
-    <None Include="Resources\LoginUserbg1.png" />
     <None Include="Resources\LoginUserbg.png" />
     <None Include="Resources\LoginCreatebg.png" />
     <None Include="Resources\LoginTextbg.png" />

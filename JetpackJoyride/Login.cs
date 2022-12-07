@@ -44,13 +44,15 @@ namespace JetpackJoyride
             DialogResult dialogResult = MessageBox.Show("If you continue as a guest, any scores you accumulate will not be saved.\nIf you want to create an account, click Cancel. Otherwise click Ok", "Are you sure you want to continue?", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
             if (dialogResult == DialogResult.OK)
             {
+                Properties.Settings.Default.Guest = true;
+                Properties.Settings.Default.Save();
                 close = false;
                 this.Close();
             }
         }
         private void ReadCSVFile()
         {
-            string[] credentials = File.ReadAllLines(LoginPath);
+            string[] credentials = File.ReadAllLines(HomeLoginPath);
             for (int i = 0; i < credentials.Length; i++)
             {
                 string[] rowdata = credentials[i].Split(',');
@@ -125,6 +127,7 @@ namespace JetpackJoyride
                     txtULogin.BackColor = Color.ForestGreen;
                     txtPLogin.BackColor = Color.ForestGreen;
                     Properties.Settings.Default.Username = txtULogin.Text;
+                    Properties.Settings.Default.Guest = false;
                     Properties.Settings.Default.Save();
                     MessageBox.Show($"Welcome Back, {Properties.Settings.Default.Username}.", "Login Sucessful");
                     close = false;
@@ -200,12 +203,13 @@ namespace JetpackJoyride
                     txtUCreate.BackColor = Color.ForestGreen;
                     txtPCreate.BackColor = Color.ForestGreen;
                     Properties.Settings.Default.Username = txtUCreate.Text;
+                    Properties.Settings.Default.Guest = false;
                     Properties.Settings.Default.Save();
                     MessageBox.Show($"Welcome, {Properties.Settings.Default.Username}.", "Account Sucessfully Created");
                     username.Add(user);
                     password.Add(pass);
                     string newuser = ($"{user},{pass}\n");
-                    File.AppendAllText(LoginPath, newuser);
+                    File.AppendAllText(HomeLoginPath, newuser);
                     close = false;
                     this.Close();
                 }

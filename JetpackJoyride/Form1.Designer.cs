@@ -104,13 +104,13 @@
             // 
             // tmrScore
             // 
-            this.tmrScore.Interval = 250;
+            this.tmrScore.Interval = 10;
             this.tmrScore.Tick += new System.EventHandler(this.tmrScore_Tick);
             // 
             // pnHigh
             // 
             this.pnHigh.BackColor = System.Drawing.Color.Transparent;
-            this.pnHigh.Location = new System.Drawing.Point(764, 458);
+            this.pnHigh.Location = new System.Drawing.Point(764, 456);
             this.pnHigh.Name = "pnHigh";
             this.pnHigh.Size = new System.Drawing.Size(88, 55);
             this.pnHigh.TabIndex = 10;

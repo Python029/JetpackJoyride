@@ -23,6 +23,7 @@ namespace JetpackJoyride
         List<PictureBox> ZapListH = new List<PictureBox>();
         List<string> username = new List<string>();
         List<int> scores = new List<int>();
+        List<string> time = new List<string>();
         Random rnd = new Random();
         Form2 f2 = new Form2();
         Login lg = new Login();
@@ -49,7 +50,7 @@ namespace JetpackJoyride
         int slowfall = 0;
         int bounce = 0;
         int zap_tb = 0;
-        double distance = 0;
+        int distance = 0;
         int slide = 0;
         #endregion
         #region Strings
@@ -168,12 +169,13 @@ namespace JetpackJoyride
         }
         private void ReadCSV()
         {
-            string[] Leaderboard = File.ReadAllLines(ScorePath);
+            string[] Leaderboard = File.ReadAllLines(HomeScorePath);
             for (int i = 0; i < Leaderboard.Length; i++)
             {
                 string[] rowdata = Leaderboard[i].Split(',');
                 username.Add(rowdata[0]);
                 scores.Add(Int32.Parse(rowdata[1]));
+                time.Add(rowdata[2]);
             }
         }
         private void tmrAnimate_Tick(object sender, EventArgs e)
@@ -351,6 +353,241 @@ namespace JetpackJoyride
                     tmrAnimate.Enabled = false;
                     tmrScore.Enabled = false;
                     tmrUpdate.Enabled = false;
+                    if (Properties.Settings.Default.Guest == false)
+                    {
+                        Highscore();
+                    }
+                }
+            }
+        }
+        private void Highscore()
+        {
+            if (username.Count >= 3)
+            {
+                //First Place
+                if (distance >= scores[0])
+                {
+                    scores.Insert(0, distance);
+                    username.Insert(0, Properties.Settings.Default.Username);
+                    DateTime now = DateTime.Now;
+                    string date = now.ToString();
+                    time.Insert(0, date);
+                    File.WriteAllText(HomeScorePath, string.Empty);
+                    for (int i = 0; i < username.Count; i++)
+                    {
+                        string score = ($"{username[i]},{scores[i]},{time[i]}\n");
+                        File.AppendAllText(HomeScorePath, score);
+                    }
+                    DialogResult dialogResult = MessageBox.Show($"Congrats, {Properties.Settings.Default.Username}, you achieved a new high score.\nWould you like to view the leaderboard?", "New Highscore", MessageBoxButtons.YesNo);
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        f2.ShowDialog();
+                    }
+                    else if (dialogResult == DialogResult.No)
+                    {
+                        DialogResult dialogResult2 = MessageBox.Show($"Would you like to play again?", "Play Again?", MessageBoxButtons.YesNo);
+                        if (dialogResult2 == DialogResult.Yes)
+                        {
+                            Application.Restart();
+                        }
+                        else if (dialogResult2 == DialogResult.No)
+                        {
+                            Application.Exit();
+                        }
+                    }
+                }
+                //Second Place
+                else if (distance >= scores[1] && distance < scores[0])
+                {
+                    scores.Insert(1, distance);
+                    username.Insert(1, Properties.Settings.Default.Username);
+                    DateTime now = DateTime.Now;
+                    string date = now.ToString();
+                    time.Insert(1, date);
+                    File.WriteAllText(HomeScorePath, string.Empty);
+                    for (int i = 0; i < username.Count; i++)
+                    {
+                        string score = ($"{username[i]},{scores[i]},{time[i]}\n");
+                        File.AppendAllText(HomeScorePath, score);
+                    }
+                    DialogResult dialogResult = MessageBox.Show($"Congrats, {Properties.Settings.Default.Username}, you achieved the second highest score.\nWould you like to view the leaderboard?", "New Score", MessageBoxButtons.YesNo);
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        f2.ShowDialog();
+                    }
+                    else if (dialogResult == DialogResult.No)
+                    {
+                        DialogResult dialogResult2 = MessageBox.Show($"Would you like to play again?", "Play Again?", MessageBoxButtons.YesNo);
+                        if (dialogResult2 == DialogResult.Yes)
+                        {
+                            Application.Restart();
+                        }
+                        else if (dialogResult2 == DialogResult.No)
+                        {
+                            Application.Exit();
+                        }
+                    }
+                }
+                //Third Place
+                else if (distance >= scores[2] && distance < scores[1])
+                {
+                    scores.Insert(2, distance);
+                    username.Insert(2, Properties.Settings.Default.Username);
+                    DateTime now = DateTime.Now;
+                    string date = now.ToString();
+                    time.Insert(2, date);
+                    File.WriteAllText(HomeScorePath, string.Empty);
+                    for (int i = 0; i < username.Count; i++)
+                    {
+                        string score = ($"{username[i]},{scores[i]},{time[i]}\n");
+                        File.AppendAllText(HomeScorePath, score);
+                    }
+                    DialogResult dialogResult = MessageBox.Show($"Congrats, {Properties.Settings.Default.Username}, you achieved the third highest score.\nWould you like to view the leaderboard?", "New Score", MessageBoxButtons.YesNo);
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        f2.ShowDialog();
+                    }
+                    else if (dialogResult == DialogResult.No)
+                    {
+                        DialogResult dialogResult2 = MessageBox.Show($"Would you like to play again?", "Play Again?", MessageBoxButtons.YesNo);
+                        if (dialogResult2 == DialogResult.Yes)
+                        {
+                            Application.Restart();
+                        }
+                        else if (dialogResult2 == DialogResult.No)
+                        {
+                            Application.Exit();
+                        }
+                    }
+                }
+
+            }
+            else if (username.Count == 2)
+            {
+                //First Place
+                if (distance >= scores[0])
+                {
+                    scores.Insert(0, distance);
+                    username.Insert(0, Properties.Settings.Default.Username);
+                    DateTime now = DateTime.Now;
+                    string date = now.ToString();
+                    time.Insert(0, date);
+                    File.WriteAllText(HomeScorePath, string.Empty);
+                    for (int i = 0; i < username.Count; i++)
+                    {
+                        string score = ($"{username[i]},{scores[i]},{time[i]}\n");
+                        File.AppendAllText(HomeScorePath, score);
+                    }
+                    DialogResult dialogResult = MessageBox.Show($"Congrats, {Properties.Settings.Default.Username}, you achieved a new high score.\nWould you like to view the leaderboard?", "New Highscore", MessageBoxButtons.YesNo);
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        f2.ShowDialog();
+                    }
+                    else if (dialogResult == DialogResult.No)
+                    {
+                        DialogResult dialogResult2 = MessageBox.Show($"Would you like to play again?", "Play Again?", MessageBoxButtons.YesNo);
+                        if (dialogResult2 == DialogResult.Yes)
+                        {
+                            Application.Restart();
+                        }
+                        else if (dialogResult2 == DialogResult.No)
+                        {
+                            Application.Exit();
+                        }
+                    }
+                }
+                //Second Place
+                else if (distance >= scores[1] && distance < scores[0])
+                {
+                    scores.Insert(1, distance);
+                    username.Insert(1, Properties.Settings.Default.Username);
+                    DateTime now = DateTime.Now;
+                    string date = now.ToString();
+                    time.Insert(1, date);
+                    File.WriteAllText(HomeScorePath, string.Empty);
+                    for (int i = 0; i < username.Count; i++)
+                    {
+                        string score = ($"{username[i]},{scores[i]},{time[i]}\n");
+                        File.AppendAllText(HomeScorePath, score);
+                    }
+                    DialogResult dialogResult = MessageBox.Show($"Congrats, {Properties.Settings.Default.Username}, you achieved the second highest score.\nWould you like to view the leaderboard?", "New Score", MessageBoxButtons.YesNo);
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        f2.ShowDialog();
+                    }
+                    else if (dialogResult == DialogResult.No)
+                    {
+                        DialogResult dialogResult2 = MessageBox.Show($"Would you like to play again?", "Play Again?", MessageBoxButtons.YesNo);
+                        if (dialogResult2 == DialogResult.Yes)
+                        {
+                            Application.Restart();
+                        }
+                        else if (dialogResult2 == DialogResult.No)
+                        {
+                            Application.Exit();
+                        }
+                    }
+                }
+            }
+            else if (username.Count == 1)
+            {
+                //First Place
+                if (distance >= scores[0])
+                {
+                    scores.Insert(0, distance);
+                    username.Insert(0, Properties.Settings.Default.Username);
+                    DateTime now = DateTime.Now;
+                    string date = now.ToString();
+                    time.Insert(0, date);
+                    File.WriteAllText(HomeScorePath, string.Empty);
+                    for (int i = 0; i < username.Count; i++)
+                    {
+                        string score = ($"{username[i]},{scores[i]},{time[i]}\n");
+                        File.AppendAllText(HomeScorePath, score);
+                    }
+                    DialogResult dialogResult = MessageBox.Show($"Congrats, {Properties.Settings.Default.Username}, you achieved a new high score.\nWould you like to view the leaderboard?", "New Highscore", MessageBoxButtons.YesNo);
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        f2.ShowDialog();
+                    }
+                    else if (dialogResult == DialogResult.No)
+                    {
+                        DialogResult dialogResult2 = MessageBox.Show($"Would you like to play again?", "Play Again?", MessageBoxButtons.YesNo);
+                        if (dialogResult2 == DialogResult.Yes)
+                        {
+                            Application.Restart();
+                        }
+                        else if (dialogResult2 == DialogResult.No)
+                        {
+                            Application.Exit();
+                        }
+                    }
+                }
+            }
+            else if (username.Count == 0)
+            {
+                //First Place            
+                DateTime now = DateTime.Now;
+                string date = now.ToString();
+                time.Insert(0, date);
+                string score = ($"{Properties.Settings.Default.Username},{distance},{date}\n");
+                File.AppendAllText(HomeScorePath, score);
+                DialogResult dialogResult = MessageBox.Show($"Congrats, {Properties.Settings.Default.Username}, you achieved a new high score.\nWould you like to view the leaderboard?", "New Highscore", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    f2.ShowDialog();
+                }
+                else if (dialogResult == DialogResult.No)
+                {
+                    DialogResult dialogResult2 = MessageBox.Show($"Would you like to play again?", "Play Again?", MessageBoxButtons.YesNo);
+                    if (dialogResult2 == DialogResult.Yes)
+                    {
+                        Application.Restart();
+                    }
+                    else if (dialogResult2 == DialogResult.No)
+                    {
+                        Application.Exit();
+                    }
                 }
             }
         }
@@ -360,16 +597,16 @@ namespace JetpackJoyride
             switch(distance.ToString().Length)
             {
                 case 1:
-                    lblScore.Text = $"000{Math.Round(distance,0)}M";
+                    lblScore.Text = $"000{distance}M";
                     break;
                 case 2:
-                    lblScore.Text = $"00{Math.Round(distance, 0)}M";
+                    lblScore.Text = $"00{distance}M";
                     break;
                 case 3:
-                    lblScore.Text = $"0{Math.Round(distance, 0)}M";
+                    lblScore.Text = $"0{distance}M";
                     break;
                 case 4:
-                    lblScore.Text = $"{Math.Round(distance, 0)}M";
+                    lblScore.Text = $"{distance}M";
                     break;
             }
         }
@@ -686,11 +923,7 @@ namespace JetpackJoyride
         private void tmrScore_Tick(object sender, EventArgs e)
         {
             Score();
-        }
-        private void pnHigh_MouseClick(object sender, MouseEventArgs e)
-        {
-            
-        }     
+        }   
         private void pnInfo_Click(object sender, EventArgs e)
         {
             if (start == false && go == false)
