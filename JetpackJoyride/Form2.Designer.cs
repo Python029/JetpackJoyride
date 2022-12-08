@@ -35,11 +35,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.dgvLeaderboard = new System.Windows.Forms.DataGridView();
+            this.tmrUpdateScores = new System.Windows.Forms.Timer(this.components);
             this.Ranks = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Usernames = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Score = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.When = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tmrUpdateScores = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvLeaderboard)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,8 +58,14 @@
             this.dgvLeaderboard.Location = new System.Drawing.Point(0, 0);
             this.dgvLeaderboard.Name = "dgvLeaderboard";
             this.dgvLeaderboard.ReadOnly = true;
-            this.dgvLeaderboard.Size = new System.Drawing.Size(492, 254);
+            this.dgvLeaderboard.Size = new System.Drawing.Size(488, 254);
             this.dgvLeaderboard.TabIndex = 0;
+            // 
+            // tmrUpdateScores
+            // 
+            this.tmrUpdateScores.Enabled = true;
+            this.tmrUpdateScores.Interval = 5000;
+            this.tmrUpdateScores.Tick += new System.EventHandler(this.tmrUpdateScores_Tick);
             // 
             // Ranks
             // 
@@ -110,6 +116,7 @@
             // When
             // 
             this.When.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle4.Format = "g";
             dataGridViewCellStyle4.NullValue = null;
@@ -122,17 +129,11 @@
             this.When.ReadOnly = true;
             this.When.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // tmrUpdateScores
-            // 
-            this.tmrUpdateScores.Enabled = true;
-            this.tmrUpdateScores.Interval = 5000;
-            this.tmrUpdateScores.Tick += new System.EventHandler(this.tmrUpdateScores_Tick);
-            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(492, 254);
+            this.ClientSize = new System.Drawing.Size(488, 254);
             this.Controls.Add(this.dgvLeaderboard);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form2";
@@ -147,10 +148,10 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvLeaderboard;
+        private System.Windows.Forms.Timer tmrUpdateScores;
         private System.Windows.Forms.DataGridViewTextBoxColumn Ranks;
         private System.Windows.Forms.DataGridViewTextBoxColumn Usernames;
         private System.Windows.Forms.DataGridViewTextBoxColumn Score;
         private System.Windows.Forms.DataGridViewTextBoxColumn When;
-        private System.Windows.Forms.Timer tmrUpdateScores;
     }
 }

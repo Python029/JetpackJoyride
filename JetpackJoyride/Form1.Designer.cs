@@ -104,7 +104,6 @@
             // 
             // tmrScore
             // 
-            this.tmrScore.Interval = 10;
             this.tmrScore.Tick += new System.EventHandler(this.tmrScore_Tick);
             // 
             // pnHigh
@@ -222,6 +221,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Jetpack Joyride";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
             ((System.ComponentModel.ISupportInitialize)(this.pbScore)).EndInit();

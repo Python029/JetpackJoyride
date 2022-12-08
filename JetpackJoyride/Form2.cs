@@ -89,13 +89,22 @@ namespace JetpackJoyride
         }
         private void ReadCSV()
         {
-            string[] Leaderboard = File.ReadAllLines(HomeScorePath);
+            string[] Leaderboard = File.ReadAllLines(ScorePath);
             for (int i = 0; i < Leaderboard.Length; i++)
             {
                 string[] rowdata = Leaderboard[i].Split(',');
                 username.Add(rowdata[0]);
-                scores.Add(Int32.Parse(rowdata[1]));
-                time.Add(rowdata[2]);
+                if (username[0] == "")
+                {
+                    username.Clear();
+                    File.WriteAllText(ScorePath, string.Empty);
+                    break;
+                }
+                else if (username[0] != "")
+                {
+                    scores.Add(Int32.Parse(rowdata[1]));
+                    time.Add(rowdata[2]);
+                }
             }
         }
         private void Highscores()
