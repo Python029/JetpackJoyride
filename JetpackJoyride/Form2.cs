@@ -25,7 +25,11 @@ namespace JetpackJoyride
         string ScorePath = "J:\\Computer Science Testing\\Silvera_JetpackJoyride\\JetpackJoyrideScores.csv";
         string HomeScorePath = "C:\\Users\\Silve\\OneDrive\\Documents\\JetpackJoyrideScores.csv";
         private void Form2_Load(object sender, EventArgs e)
-        {         
+        {
+            MessageBox.Show("The leaderboard updates every 5 seconds, so your score may not show up immediately.");
+            username.Clear();
+            scores.Clear();
+            time.Clear();
             ReadCSV();
             Highscores();
             InitializeDataGridView();
@@ -101,6 +105,15 @@ namespace JetpackJoyride
             {
                 dgvLeaderboard.Rows.Add((i+1).ToString(), username[i], $"{scores[i]} m", time[i]);
             }           
+        }
+
+        private void tmrUpdateScores_Tick(object sender, EventArgs e)
+        {
+            username.Clear();
+            scores.Clear();
+            time.Clear();
+            ReadCSV();
+            Highscores();
         }
     }
 }
