@@ -51,7 +51,7 @@ namespace JetpackJoyride
         }
         private void ReadCSVFile()
         {
-            string[] credentials = File.ReadAllLines(HomeLoginPath);
+            string[] credentials = File.ReadAllLines(LoginPath);
             for (int i = 0; i < credentials.Length; i++)
             {
                 string[] rowdata = credentials[i].Split(',');
@@ -59,7 +59,7 @@ namespace JetpackJoyride
                 if (username[0] == "")
                 {
                     username.Clear();
-                    File.WriteAllText(HomeLoginPath, string.Empty);
+                    File.WriteAllText(LoginPath, string.Empty);
                     break;
                 }
                 else if (username[0] != "")
@@ -225,7 +225,7 @@ namespace JetpackJoyride
                     username.Add(user);
                     password.Add(pass);
                     string newuser = ($"{user},{pass}\n");
-                    File.AppendAllText(HomeLoginPath, newuser);
+                    File.AppendAllText(LoginPath, newuser);
                     close = false;
                     this.Close();
                 }
