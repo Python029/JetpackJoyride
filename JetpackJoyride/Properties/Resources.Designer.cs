@@ -293,6 +293,26 @@ namespace JetpackJoyride.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ZapHBottom {
+            get {
+                object obj = ResourceManager.GetObject("ZapHBottom", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ZapHTop {
+            get {
+                object obj = ResourceManager.GetObject("ZapHTop", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap zapperH1 {
             get {
                 object obj = ResourceManager.GetObject("zapperH1", resourceCulture);

@@ -121,6 +121,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Barry_Steakfries.ico" />
+    <None Include="Resources\ZapHBottom.png" />
+    <None Include="Resources\ZapHTop.png" />
     <None Include="Resources\PassCheckbg.png" />
     <None Include="Resources\LoginPassbg2.png" />
     <None Include="Resources\LoginPassbg.png" />
