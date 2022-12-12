@@ -51,21 +51,28 @@ namespace JetpackJoyride
         }
         private void ReadCSVFile()
         {
-            string[] credentials = File.ReadAllLines(HomeLoginPath);
-            for (int i = 0; i < credentials.Length; i++)
+            try
             {
-                string[] rowdata = credentials[i].Split(',');
-                username.Add(rowdata[0]);
-                if (username[0] == "")
+                string[] credentials = File.ReadAllLines(LoginPath);
+                for (int i = 0; i < credentials.Length; i++)
                 {
-                    username.Clear();
-                    File.WriteAllText(HomeLoginPath, string.Empty);
-                    break;
+                    string[] rowdata = credentials[i].Split(',');
+                    username.Add(rowdata[0]);
+                    if (username[0] == "")
+                    {
+                        username.Clear();
+                        File.WriteAllText(LoginPath, string.Empty);
+                        break;
+                    }
+                    else if (username[0] != "")
+                    {
+                        password.Add(rowdata[1]);
+                    }
                 }
-                else if (username[0] != "")
-                {
-                    password.Add(rowdata[1]);
-                }              
+            }
+            catch
+            {
+                MessageBox.Show("The file containing all login credentials cannot be accessed.","File Inaccessible", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
@@ -225,7 +232,7 @@ namespace JetpackJoyride
                     username.Add(user);
                     password.Add(pass);
                     string newuser = ($"{user},{pass}\n");
-                    File.AppendAllText(HomeLoginPath, newuser);
+                    File.AppendAllText(LoginPath, newuser);
                     close = false;
                     this.Close();
                 }

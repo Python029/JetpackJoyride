@@ -89,22 +89,29 @@ namespace JetpackJoyride
         }
         private void ReadCSV()
         {
-            string[] Leaderboard = File.ReadAllLines(HomeScorePath);
-            for (int i = 0; i < Leaderboard.Length; i++)
+            try
             {
-                string[] rowdata = Leaderboard[i].Split(',');
-                username.Add(rowdata[0]);
-                if (username[0] == "")
+                string[] Leaderboard = File.ReadAllLines(ScorePath);
+                for (int i = 0; i < Leaderboard.Length; i++)
                 {
-                    username.Clear();
-                    File.WriteAllText(HomeScorePath, string.Empty);
-                    break;
+                    string[] rowdata = Leaderboard[i].Split(',');
+                    username.Add(rowdata[0]);
+                    if (username[0] == "")
+                    {
+                        username.Clear();
+                        File.WriteAllText(ScorePath, string.Empty);
+                        break;
+                    }
+                    else if (username[0] != "")
+                    {
+                        scores.Add(Int32.Parse(rowdata[1]));
+                        time.Add(rowdata[2]);
+                    }
                 }
-                else if (username[0] != "")
-                {
-                    scores.Add(Int32.Parse(rowdata[1]));
-                    time.Add(rowdata[2]);
-                }
+            }
+            catch
+            {
+                MessageBox.Show("The file containing all scores cannot be accessed.", "File Inaccessible", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void Highscores()
