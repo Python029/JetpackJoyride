@@ -72,8 +72,7 @@ namespace JetpackJoyride
             ReadCSV();
             if(username.Count>0)
             {
-                InitialHS();
-                
+                InitialHS();            
             }          
             this.SetStyle(ControlStyles.DoubleBuffer, true);
             this.SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
@@ -101,19 +100,18 @@ namespace JetpackJoyride
             }
             #region Initial Zappers
             #region Zapper 1
-            zapperY1 = rnd.Next(88, 338);
+            zapperY1 = rnd.Next(88, 339);
             zap1.BackColor = Color.Transparent;
             zap1.Image = Properties.Resources.zapperV1;
-            zap1.BackgroundImage=null;
+            TransparentBG1();
             zap1.SizeMode = PictureBoxSizeMode.AutoSize;
             this.Controls.Add(zap1);
             zap1.Location = new Point(1173, zapperY1);
             zap1.BringToFront();
-            //zap1.Parent = bg1;
             ZapListV.Add(zap1);
             #endregion
             #region Zapper 2
-            zapperY2 = rnd.Next(88, 338);
+            zapperY2 = rnd.Next(88, 339);
             zap2.BackColor = Color.Transparent;
             zap2.Image = Properties.Resources.zapperV1;
             zap2.BackgroundImage = null;            
@@ -121,11 +119,10 @@ namespace JetpackJoyride
             this.Controls.Add(zap2);
             zap2.Location = new Point(1681, zapperY2);
             zap2.BringToFront();
-            //zap2.Parent = bg2;
             ZapListV.Add(zap2);
             #endregion
             #region Zapper 3
-            zapperY3 = rnd.Next(88, 338);
+            zapperY3 = rnd.Next(88, 339);
             zap3.BackColor = Color.Transparent;
             zap3.Image = Properties.Resources.zapperV1;
             zap3.BackgroundImage = null;        
@@ -133,7 +130,6 @@ namespace JetpackJoyride
             this.Controls.Add(zap3);
             zap3.Location = new Point(2189, zapperY3);
             zap3.BringToFront();
-            //zap3.Parent = bg3;
             ZapListV.Add(zap3);
             #endregion
             #region Zapper 4
@@ -144,7 +140,6 @@ namespace JetpackJoyride
             this.Controls.Add(zap4);
             zap4.Location = new Point(zap1.Location.X-91, 740);
             zap4.BringToFront();
-            //zap4.Parent = bg1;
             ZapListH.Add(zap4);
             #endregion
             #region Zapper 5
@@ -155,7 +150,6 @@ namespace JetpackJoyride
             this.Controls.Add(zap5);
             zap5.Location = new Point(zap2.Location.X - 91, 740);
             zap5.BringToFront();
-            //zap4.Parent = bg1;
             ZapListH.Add(zap5);
             #endregion
             #region Zapper 6
@@ -166,7 +160,6 @@ namespace JetpackJoyride
             this.Controls.Add(zap6);
             zap6.Location = new Point(zap3.Location.X - 91, 740);
             zap6.BringToFront();
-            //zap4.Parent = bg1;
             ZapListH.Add(zap6);
             #endregion
             #endregion
@@ -174,7 +167,7 @@ namespace JetpackJoyride
         }
         private void ReadCSV()
         {
-            string[] Leaderboard = File.ReadAllLines(ScorePath);
+            string[] Leaderboard = File.ReadAllLines(HomeScorePath);
             for (int i = 0; i < Leaderboard.Length; i++)
             {
                 string[] rowdata = Leaderboard[i].Split(',');
@@ -211,7 +204,6 @@ namespace JetpackJoyride
             {
                 Death();
             }
-            //TransparentBG();
         }
         #region Background
         private void BackgroundReset()
@@ -388,11 +380,11 @@ namespace JetpackJoyride
                     DateTime now = DateTime.Now;
                     string date = now.ToString();
                     time.Insert(0, date);
-                    File.WriteAllText(ScorePath, string.Empty);
+                    File.WriteAllText(HomeScorePath, string.Empty);
                     for (int i = 0; i < username.Count; i++)
                     {
                         string score = ($"{username[i]},{scores[i]},{time[i]}\n");
-                        File.AppendAllText(ScorePath, score);
+                        File.AppendAllText(HomeScorePath, score);
                     }
                     DialogResult dialogResult = MessageBox.Show($"Congrats, {Properties.Settings.Default.Username}, you achieved a new high score.\nWould you like to view the leaderboard?", "New Highscore", MessageBoxButtons.YesNo);
                     if (dialogResult == DialogResult.Yes)
@@ -420,11 +412,11 @@ namespace JetpackJoyride
                     DateTime now = DateTime.Now;
                     string date = now.ToString();
                     time.Insert(1, date);
-                    File.WriteAllText(ScorePath, string.Empty);
+                    File.WriteAllText(HomeScorePath, string.Empty);
                     for (int i = 0; i < username.Count; i++)
                     {
                         string score = ($"{username[i]},{scores[i]},{time[i]}\n");
-                        File.AppendAllText(ScorePath, score);
+                        File.AppendAllText(HomeScorePath, score);
                     }
                     DialogResult dialogResult = MessageBox.Show($"Congrats, {Properties.Settings.Default.Username}, you achieved the second highest score.\nWould you like to view the leaderboard?", "New Score", MessageBoxButtons.YesNo);
                     if (dialogResult == DialogResult.Yes)
@@ -452,11 +444,11 @@ namespace JetpackJoyride
                     DateTime now = DateTime.Now;
                     string date = now.ToString();
                     time.Insert(2, date);
-                    File.WriteAllText(ScorePath, string.Empty);
+                    File.WriteAllText(HomeScorePath, string.Empty);
                     for (int i = 0; i < username.Count; i++)
                     {
                         string score = ($"{username[i]},{scores[i]},{time[i]}\n");
-                        File.AppendAllText(ScorePath, score);
+                        File.AppendAllText(HomeScorePath, score);
                     }
                     DialogResult dialogResult = MessageBox.Show($"Congrats, {Properties.Settings.Default.Username}, you achieved the third highest score.\nWould you like to view the leaderboard?", "New Score", MessageBoxButtons.YesNo);
                     if (dialogResult == DialogResult.Yes)
@@ -487,11 +479,11 @@ namespace JetpackJoyride
                     DateTime now = DateTime.Now;
                     string date = now.ToString();
                     time.Insert(0, date);
-                    File.WriteAllText(ScorePath, string.Empty);
+                    File.WriteAllText(HomeScorePath, string.Empty);
                     for (int i = 0; i < username.Count; i++)
                     {
                         string score = ($"{username[i]},{scores[i]},{time[i]}\n");
-                        File.AppendAllText(ScorePath, score);
+                        File.AppendAllText(HomeScorePath, score);
                     }
                     DialogResult dialogResult = MessageBox.Show($"Congrats, {Properties.Settings.Default.Username}, you achieved a new high score.\nWould you like to view the leaderboard?", "New Highscore", MessageBoxButtons.YesNo);
                     if (dialogResult == DialogResult.Yes)
@@ -519,11 +511,11 @@ namespace JetpackJoyride
                     DateTime now = DateTime.Now;
                     string date = now.ToString();
                     time.Insert(1, date);
-                    File.WriteAllText(ScorePath, string.Empty);
+                    File.WriteAllText(HomeScorePath, string.Empty);
                     for (int i = 0; i < username.Count; i++)
                     {
                         string score = ($"{username[i]},{scores[i]},{time[i]}\n");
-                        File.AppendAllText(ScorePath, score);
+                        File.AppendAllText(HomeScorePath, score);
                     }
                     DialogResult dialogResult = MessageBox.Show($"Congrats, {Properties.Settings.Default.Username}, you achieved the second highest score.\nWould you like to view the leaderboard?", "New Score", MessageBoxButtons.YesNo);
                     if (dialogResult == DialogResult.Yes)
@@ -551,11 +543,11 @@ namespace JetpackJoyride
                     DateTime now = DateTime.Now;
                     string date = now.ToString();
                     time.Insert(2, date);
-                    File.WriteAllText(ScorePath, string.Empty);
+                    File.WriteAllText(HomeScorePath, string.Empty);
                     for (int i = 0; i < username.Count; i++)
                     {
                         string score = ($"{username[i]},{scores[i]},{time[i]}\n");
-                        File.AppendAllText(ScorePath, score);
+                        File.AppendAllText(HomeScorePath, score);
                     }
                     DialogResult dialogResult = MessageBox.Show($"Congrats, {Properties.Settings.Default.Username}, you achieved the third highest score.\nWould you like to view the leaderboard?", "New Score", MessageBoxButtons.YesNo);
                     if (dialogResult == DialogResult.Yes)
@@ -586,11 +578,11 @@ namespace JetpackJoyride
                     DateTime now = DateTime.Now;
                     string date = now.ToString();
                     time.Insert(0, date);
-                    File.WriteAllText(ScorePath, string.Empty);
+                    File.WriteAllText(HomeScorePath, string.Empty);
                     for (int i = 0; i < username.Count; i++)
                     {
                         string score = ($"{username[i]},{scores[i]},{time[i]}\n");
-                        File.AppendAllText(ScorePath, score);
+                        File.AppendAllText(HomeScorePath, score);
                     }
                     DialogResult dialogResult = MessageBox.Show($"Congrats, {Properties.Settings.Default.Username}, you achieved a new high score.\nWould you like to view the leaderboard?", "New Highscore", MessageBoxButtons.YesNo);
                     if (dialogResult == DialogResult.Yes)
@@ -618,11 +610,11 @@ namespace JetpackJoyride
                     DateTime now = DateTime.Now;
                     string date = now.ToString();
                     time.Insert(1, date);
-                    File.WriteAllText(ScorePath, string.Empty);
+                    File.WriteAllText(HomeScorePath, string.Empty);
                     for (int i = 0; i < username.Count; i++)
                     {
                         string score = ($"{username[i]},{scores[i]},{time[i]}\n");
-                        File.AppendAllText(ScorePath, score);
+                        File.AppendAllText(HomeScorePath, score);
                     }
                     DialogResult dialogResult = MessageBox.Show($"Congrats, {Properties.Settings.Default.Username}, you achieved the second highest score.\nWould you like to view the leaderboard?", "New Score", MessageBoxButtons.YesNo);
                     if (dialogResult == DialogResult.Yes)
@@ -650,8 +642,8 @@ namespace JetpackJoyride
                 string date = now.ToString();
                 time.Insert(0, date);
                 string score = ($"{Properties.Settings.Default.Username},{distance},{date}\n");
-                File.WriteAllText(ScorePath, string.Empty);
-                File.AppendAllText(ScorePath, score);
+                File.WriteAllText(HomeScorePath, string.Empty);
+                File.AppendAllText(HomeScorePath, score);
                 DialogResult dialogResult = MessageBox.Show($"Congrats, {Properties.Settings.Default.Username}, you achieved a new high score.\nWould you like to view the leaderboard?", "New Highscore", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
@@ -743,381 +735,384 @@ namespace JetpackJoyride
             switch(zapperY1)
             {
                 case 125:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap125;
                     break;
                 case 126:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap126;
                     break;
                 case 127:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap127;
                     break;
                 case 128:
-
-                  break;
+                    zap1.BackgroundImage = Properties.Resources.Zap128;
+                    break;
                 case 129:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap129;
                     break;
                 case 130:
-
-                  break;
+                    zap1.BackgroundImage = Properties.Resources.Zap130;
+                    break;
                 case 131:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap131;
                     break;
                 case 132:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap132;
                     break;
                 case 133:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap133;
                     break;
                 case 134:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap134;
                     break;
                 case 135:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap135;
                     break;
                 case 136:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap136;
                     break;
                 case 137:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap137;
                     break;
                 case 138:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap138;
                     break;
                 case 139:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap139;
                     break;
                 case 140:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap140;
                     break;
                 case 141:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap141;
                     break;
                 case 142:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap142;
                     break;
                 case 143:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap143;
                     break;
                 case 144:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap144;
                     break;
                 case 145:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap145;
                     break;
                 case 146:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap146;
                     break;
                 case 147:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap147;
                     break;
                 case 148:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap148;
                     break;
                 case 149:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap149;
                     break;
                 case 150:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap150;
                     break;
                 case 151:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap151;
                     break;
                 case 152:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap152;
                     break;
                 case 153:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap153;
                     break;
                 case 154:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap154;
                     break;
                 case 155:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap155;
                     break;
                 case 156:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap156;
                     break;
                 case 157:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap157;
                     break;
                 case 158:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap158;
                     break;
                 case 159:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap159;
                     break;
                 case 160:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap160;
                     break;
                 case 161:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap161;
                     break;
                 case 162:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap162;
                     break;
                 case 163:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap163;
                     break;
                 case 164:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap164;
                     break;
                 case 165:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap165;
                     break;
                 case 166:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap166;
                     break;
                 case 167:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap167;
                     break;
                 case 168:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap168;
                     break;
                 case 169:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap169;
                     break;
                 case 170:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap170;
+                    break;
+                case 171:
+                    zap1.BackgroundImage = Properties.Resources.Zap171;
                     break;
                 case 172:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap172;
                     break;
                 case 173:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap173;
                     break;
                 case 174:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap174;
                     break;
                 case 175:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap175;
                     break;
                 case 176:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap176;
                     break;
                 case 177:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap177;
                     break;
                 case 178:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap178;
                     break;
                 case 179:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap179;
                     break;
                 case 180:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap180;
                     break;
                 case 181:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap181;
                     break;
                 case 182:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap182;
                     break;
                 case 183:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap183;
                     break;
                 case 184:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap184;
                     break;
                 case 185:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap185;
                     break;
                 case 186:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap186;
                     break;
                 case 187:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap187;
                     break;
                 case 188:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap188;
                     break;
                 case 189:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap189;
                     break;
                 case 190:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap190;
                     break;
                 case 191:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap191;
                     break;
                 case 192:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap192;
                     break;
                 case 193:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap193;
                     break;
                 case 194:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap194;
                     break;
                 case 195:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap195;
                     break;
                 case 196:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap196;
                     break;
                 case 197:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap197;
                     break;
                 case 198:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap198;
                     break;
                 case 199:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap199;
                     break;
                 case 200:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap200;
                     break;
                 case 201:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap200;
                     break;
                 case 202:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap200;
                     break;
                 case 203:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap200;
                     break;
                 case 204:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap200;
                     break;
                 case 205:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap200;
                     break;
                 case 206:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap206;
                     break;
                 case 207:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap207;
                     break;
                 case 208:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap208;
                     break;
                 case 209:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap209;
                     break;
                 case 210:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap210;
                     break;
                 case 211:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap211;
                     break;
                 case 212:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap212;
                     break;
                 case 213:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap213;
                     break;
                 case 214:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap214;
                     break;
                 case 215:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap215;
                     break;
                 case 216:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap216;
                     break;
                 case 217:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap217;
                     break;
                 case 218:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap218;
                     break;
                 case 219:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap219;
                     break;
                 case 220:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap220;
                     break;
                 case 221:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap221;
                     break;
                 case 222:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap222;
                     break;
                 case 223:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap223;
                     break;
                 case 224:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap224;
                     break;
                 case 225:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap225;
                     break;
                 case 226:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap226;
                     break;
                 case 227:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap227;
                     break;
                 case 228:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap228;
                     break;
                 case 229:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap229;
                     break;
                 case 230:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap230;
                     break;
                 case 231:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap231;
                     break;
                 case 232:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap232;
                     break;
                 case 233:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap233;
                     break;
                 case 234:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap234;
                     break;
                 case 235:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap235;
                     break;
                 case 236:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap236;
                     break;
                 case 237:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap237;
                     break;
                 case 238:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap238;
                     break;
                 case 239:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap239;
                     break;
                 case 240:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap240;
                     break;
                 case 241:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap241;
                     break;
                 case 242:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap242;
                     break;
                 case 243:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap243;
                     break;
                 case 244:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap244;
                     break;
                 case 245:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap245;
                     break;
                 case 246:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap246;
                     break;
                 case 247:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap247;
                     break;
                 case 248:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap248;
                     break;
                 case 249:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap249;
                     break;
                 case 250:
-
+                    zap1.BackgroundImage = Properties.Resources.Zap250;
                     break;
-                case 251:
+                /* 251:
 
                     break;
                 case 252:
@@ -1380,8 +1375,8 @@ namespace JetpackJoyride
                     break;
                 case 338:
 
-                    break;
-
+                    break;*/
+            
             }
         }
         private void TransparentBG2()
@@ -1396,7 +1391,7 @@ namespace JetpackJoyride
         {        
             if (bg1.Location.X<=-504)
             {
-                zapperY1 = rnd.Next(125, 338);
+                zapperY1 = rnd.Next(125, 339);
                 if (zap_tb<2)
                 {
                     
@@ -1425,7 +1420,7 @@ namespace JetpackJoyride
                 {
                     while(zapperY1 > 173 && zapperY1 < 290)
                     {
-                        zapperY1 = rnd.Next(125, 338);
+                        zapperY1 = rnd.Next(125, 339);
                     }
                     //Horizontal Zappers
                     if (zapperY1 < 150)
@@ -1445,11 +1440,12 @@ namespace JetpackJoyride
                     }
                 }
                 zap1.Location = new Point(1225, zapperY1);
+                TransparentBG1();
 
             }
             else if (bg2.Location.X <= -504)
             {
-                zapperY2 = rnd.Next(125, 338);
+                zapperY2 = rnd.Next(125, 339);
                 if (zap_tb < 2)
                 {
                     if (zapperY2 > 173 && zapperY2 < 290)
@@ -1477,7 +1473,7 @@ namespace JetpackJoyride
                 {
                     while (zapperY2 > 173 && zapperY2 < 290)
                     {
-                        zapperY2 = rnd.Next(125, 338); 
+                        zapperY2 = rnd.Next(125, 339); 
                     }
                     //Horizontal Zappers
                     if (zapperY2 < 150)
@@ -1500,7 +1496,7 @@ namespace JetpackJoyride
             }
             else if (bg3.Location.X <= -504)
             {
-                zapperY3 = rnd.Next(125, 338);
+                zapperY3 = rnd.Next(125, 339);
                 if (zap_tb < 2)
                 {
                     if (zapperY3 > 173 && zapperY3 < 290)
@@ -1528,7 +1524,7 @@ namespace JetpackJoyride
                 {
                     while (zapperY3 > 173 && zapperY3 < 290)
                     {
-                        zapperY3 = rnd.Next(125, 338);
+                        zapperY3 = rnd.Next(125, 339);
                     }
                     //Horizontal Zappers
                     if (zapperY3 < 150)
@@ -1655,7 +1651,7 @@ namespace JetpackJoyride
                 BackgroundReset();
                 ResetZappers();
                 ZapperMovement();
-                ZapperCollision();
+                //ZapperCollision();
             }      
             if(pbBarry.Location.X>260 && go==false && start)
             {

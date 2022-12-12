@@ -89,7 +89,7 @@ namespace JetpackJoyride
         }
         private void ReadCSV()
         {
-            string[] Leaderboard = File.ReadAllLines(ScorePath);
+            string[] Leaderboard = File.ReadAllLines(HomeScorePath);
             for (int i = 0; i < Leaderboard.Length; i++)
             {
                 string[] rowdata = Leaderboard[i].Split(',');
@@ -97,7 +97,7 @@ namespace JetpackJoyride
                 if (username[0] == "")
                 {
                     username.Clear();
-                    File.WriteAllText(ScorePath, string.Empty);
+                    File.WriteAllText(HomeScorePath, string.Empty);
                     break;
                 }
                 else if (username[0] != "")
