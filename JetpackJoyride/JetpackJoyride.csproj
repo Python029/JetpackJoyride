@@ -111,6 +111,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\HurmeGeometricSans3 Black.otf" />
     <None Include="Resources\JetpackJoyride.png" />
   </ItemGroup>
   <ItemGroup>
@@ -121,6 +122,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Barry_Steakfries.ico" />
+    <None Include="Resources\New Athletic M54.ttf" />
     <None Include="Zap BG%27s\Zap338.png" />
     <None Include="Zap BG%27s\Zap337.png" />
     <None Include="Zap BG%27s\Zap336.png" />

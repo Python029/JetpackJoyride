@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
-            this.lbLogin = new System.Windows.Forms.Label();
-            this.lbCreate = new System.Windows.Forms.Label();
+            this.lblLogin = new System.Windows.Forms.Label();
+            this.lblCreate = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -49,31 +49,31 @@
             this.btnCreateHelp = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // lbLogin
+            // lblLogin
             // 
-            this.lbLogin.AutoSize = true;
-            this.lbLogin.BackColor = System.Drawing.Color.Transparent;
-            this.lbLogin.Font = new System.Drawing.Font("Hurme Geometric Sans 1", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbLogin.ForeColor = System.Drawing.Color.White;
-            this.lbLogin.Image = global::JetpackJoyride.Properties.Resources.LoginTextbg;
-            this.lbLogin.Location = new System.Drawing.Point(146, 30);
-            this.lbLogin.Name = "lbLogin";
-            this.lbLogin.Size = new System.Drawing.Size(110, 45);
-            this.lbLogin.TabIndex = 0;
-            this.lbLogin.Text = "Login";
+            this.lblLogin.AutoSize = true;
+            this.lblLogin.BackColor = System.Drawing.Color.Transparent;
+            this.lblLogin.Font = new System.Drawing.Font("Hurme Geometric Sans 1", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLogin.ForeColor = System.Drawing.Color.White;
+            this.lblLogin.Image = global::JetpackJoyride.Properties.Resources.LoginTextbg;
+            this.lblLogin.Location = new System.Drawing.Point(146, 30);
+            this.lblLogin.Name = "lblLogin";
+            this.lblLogin.Size = new System.Drawing.Size(110, 45);
+            this.lblLogin.TabIndex = 0;
+            this.lblLogin.Text = "Login";
             // 
-            // lbCreate
+            // lblCreate
             // 
-            this.lbCreate.AutoSize = true;
-            this.lbCreate.BackColor = System.Drawing.Color.Transparent;
-            this.lbCreate.Font = new System.Drawing.Font("Hurme Geometric Sans 1", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCreate.ForeColor = System.Drawing.Color.White;
-            this.lbCreate.Image = global::JetpackJoyride.Properties.Resources.LoginCreatebg;
-            this.lbCreate.Location = new System.Drawing.Point(448, 30);
-            this.lbCreate.Name = "lbCreate";
-            this.lbCreate.Size = new System.Drawing.Size(333, 45);
-            this.lbCreate.TabIndex = 1;
-            this.lbCreate.Text = "Create an Account";
+            this.lblCreate.AutoSize = true;
+            this.lblCreate.BackColor = System.Drawing.Color.Transparent;
+            this.lblCreate.Font = new System.Drawing.Font("Hurme Geometric Sans 1", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCreate.ForeColor = System.Drawing.Color.White;
+            this.lblCreate.Image = global::JetpackJoyride.Properties.Resources.LoginCreatebg;
+            this.lblCreate.Location = new System.Drawing.Point(448, 30);
+            this.lblCreate.Name = "lblCreate";
+            this.lblCreate.Size = new System.Drawing.Size(333, 45);
+            this.lblCreate.TabIndex = 1;
+            this.lblCreate.Text = "Create an Account";
             // 
             // panel1
             // 
@@ -297,8 +297,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.lbCreate);
-            this.Controls.Add(this.lbLogin);
+            this.Controls.Add(this.lblCreate);
+            this.Controls.Add(this.lblLogin);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Login";
@@ -313,8 +313,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lbLogin;
-        private System.Windows.Forms.Label lbCreate;
+        private System.Windows.Forms.Label lblLogin;
+        private System.Windows.Forms.Label lblCreate;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;

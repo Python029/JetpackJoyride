@@ -121,6 +121,16 @@ namespace JetpackJoyride.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] GeometricSans {
+            get {
+                object obj = ResourceManager.GetObject("GeometricSans", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap hitzap {
@@ -217,6 +227,16 @@ namespace JetpackJoyride.Properties {
             get {
                 object obj = ResourceManager.GetObject("LoginUserbg2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] New_Athletic_M54 {
+            get {
+                object obj = ResourceManager.GetObject("New_Athletic_M54", resourceCulture);
+                return ((byte[])(obj));
             }
         }
         

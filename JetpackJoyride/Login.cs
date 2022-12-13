@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using JetpackJoyride.Properties;
+using System.Runtime.InteropServices;
+using System.Drawing.Text;
 
 namespace JetpackJoyride
 {
@@ -20,6 +23,7 @@ namespace JetpackJoyride
         bool close = true;
         List<string> username = new List<string>();
         List<string> password = new List<string>();
+        PrivateFontCollection pfc = new PrivateFontCollection();
         bool u = false;
         bool p = false;
         bool ue=false;
@@ -34,6 +38,7 @@ namespace JetpackJoyride
         string HomeLoginPath = "C:\\Users\\Silve\\OneDrive\\Documents\\JetpackJoyrideLogin.csv";
         private void Login_Load(object sender, EventArgs e)
         {
+            CustomFont();
             ReadCSVFile();
             ShowHideLogin();
             ShowHideCreate();
@@ -49,11 +54,32 @@ namespace JetpackJoyride
                 this.Close();
             }
         }
+        private void CustomFont()
+        {
+            int fontLength = Resources.GeometricSans.Length;
+            byte[] fontdata = Resources.GeometricSans;
+            IntPtr data = Marshal.AllocCoTaskMem(fontLength);
+            Marshal.Copy(fontdata, 0, data, fontLength);
+            pfc.AddMemoryFont(data, fontLength);
+            lblLogin.Font = new Font(pfc.Families[0], lblLogin.Font.Size);
+            lblCreate.Font = new Font(pfc.Families[0], lblCreate.Font.Size);
+            label1.Font = new Font(pfc.Families[0], label1.Font.Size);
+            label2.Font = new Font(pfc.Families[0], label2.Font.Size);
+            label3.Font = new Font(pfc.Families[0], label3.Font.Size);
+            label4.Font = new Font(pfc.Families[0], label4.Font.Size);
+            ckLoginShow.Font = new Font(pfc.Families[0], ckLoginShow.Font.Size);
+            ckCreateShow.Font = new Font(pfc.Families[0], ckCreateShow.Font.Size);
+            btnLogin.Font = new Font(pfc.Families[0], btnLogin.Font.Size);
+            btnLoginHelp.Font = new Font(pfc.Families[0], btnLoginHelp.Font.Size);
+            btnCreate.Font = new Font(pfc.Families[0], btnCreate.Font.Size);
+            btnCreateHelp.Font = new Font(pfc.Families[0], btnCreateHelp.Font.Size);
+            btnGuest.Font = new Font(pfc.Families[0], btnGuest.Font.Size);
+        }
         private void ReadCSVFile()
         {
             try
             {
-                string[] credentials = File.ReadAllLines(HomeLoginPath);
+                string[] credentials = File.ReadAllLines(LoginPath);
                 for (int i = 0; i < credentials.Length; i++)
                 {
                     string[] rowdata = credentials[i].Split(',');
@@ -61,7 +87,7 @@ namespace JetpackJoyride
                     if (username[0] == "")
                     {
                         username.Clear();
-                        File.WriteAllText(HomeLoginPath, string.Empty);
+                        File.WriteAllText(LoginPath, string.Empty);
                         break;
                     }
                     else if (username[0] != "")
@@ -232,7 +258,7 @@ namespace JetpackJoyride
                     username.Add(user);
                     password.Add(pass);
                     string newuser = ($"{user},{pass}\n");
-                    File.AppendAllText(HomeLoginPath, newuser);
+                    File.AppendAllText(LoginPath, newuser);
                     close = false;
                     this.Close();
                 }
