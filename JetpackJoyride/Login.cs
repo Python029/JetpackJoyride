@@ -53,7 +53,7 @@ namespace JetpackJoyride
         {
             try
             {
-                string[] credentials = File.ReadAllLines(LoginPath);
+                string[] credentials = File.ReadAllLines(HomeLoginPath);
                 for (int i = 0; i < credentials.Length; i++)
                 {
                     string[] rowdata = credentials[i].Split(',');
@@ -61,7 +61,7 @@ namespace JetpackJoyride
                     if (username[0] == "")
                     {
                         username.Clear();
-                        File.WriteAllText(LoginPath, string.Empty);
+                        File.WriteAllText(HomeLoginPath, string.Empty);
                         break;
                     }
                     else if (username[0] != "")
@@ -232,7 +232,7 @@ namespace JetpackJoyride
                     username.Add(user);
                     password.Add(pass);
                     string newuser = ($"{user},{pass}\n");
-                    File.AppendAllText(LoginPath, newuser);
+                    File.AppendAllText(HomeLoginPath, newuser);
                     close = false;
                     this.Close();
                 }
