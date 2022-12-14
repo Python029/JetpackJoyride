@@ -1402,10 +1402,10 @@ namespace JetpackJoyride
                 barryRun++;
                 switch (barryRun)
                 {
-                    case 7:
+                    case 6:
                         pbBarry.Image = Resources.running2;
                         break;
-                    case 14:
+                    case 12:
                         pbBarry.Image = Resources.running1;
                         barryRun = 0;
                         break;
