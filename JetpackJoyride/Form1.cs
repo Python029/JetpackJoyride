@@ -367,7 +367,6 @@ namespace JetpackJoyride
                 {
                     tmrScore.Interval = 375;
                     bgMove = 2;
-
                 }
                 else if (slide >= 20 && slide < 30)
                 {
@@ -390,7 +389,7 @@ namespace JetpackJoyride
                     else if(Settings.Default.Guest)
                     {
                         DialogResult dialogResult = MessageBox.Show("You did not create an account, so your score was not saved.\n\nWould you like to play again?\nIf you would like to create an account and play again, click Yes. If not, click No.","Play Again?", MessageBoxButtons.YesNo);
-                        if(dialogResult== DialogResult.Yes) { Application.Restart(); Settings.Default.Again = true; Settings.Default.Save(); }
+                        if(dialogResult== DialogResult.Yes) { Application.Restart(); Settings.Default.Reset(); Settings.Default.Save(); }
                         else if (dialogResult == DialogResult.No) { Application.Exit(); Settings.Default.Reset(); Settings.Default.Save(); }
                     }
                 }
