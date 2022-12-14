@@ -156,7 +156,7 @@
             // 
             // txtUCreate
             // 
-            this.txtUCreate.Font = new System.Drawing.Font("Josefin Sans", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUCreate.Font = new System.Drawing.Font("Mundial Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUCreate.Location = new System.Drawing.Point(589, 112);
             this.txtUCreate.MaxLength = 11;
             this.txtUCreate.Multiline = true;
@@ -169,7 +169,7 @@
             // txtULogin
             // 
             this.txtULogin.BackColor = System.Drawing.SystemColors.Window;
-            this.txtULogin.Font = new System.Drawing.Font("Josefin Sans", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtULogin.Font = new System.Drawing.Font("Mundial Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtULogin.Location = new System.Drawing.Point(179, 112);
             this.txtULogin.MaxLength = 11;
             this.txtULogin.Multiline = true;
@@ -211,7 +211,7 @@
             // 
             // txtPLogin
             // 
-            this.txtPLogin.Font = new System.Drawing.Font("Josefin Sans", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPLogin.Font = new System.Drawing.Font("Mundial Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPLogin.Location = new System.Drawing.Point(179, 185);
             this.txtPLogin.MaxLength = 8;
             this.txtPLogin.Multiline = true;
@@ -224,7 +224,7 @@
             // 
             // txtPCreate
             // 
-            this.txtPCreate.Font = new System.Drawing.Font("Josefin Sans", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPCreate.Font = new System.Drawing.Font("Mundial Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPCreate.Location = new System.Drawing.Point(589, 185);
             this.txtPCreate.MaxLength = 8;
             this.txtPCreate.Multiline = true;

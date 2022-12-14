@@ -79,7 +79,7 @@ namespace JetpackJoyride
         {
             try
             {
-                string[] credentials = File.ReadAllLines(HomeLoginPath);
+                string[] credentials = File.ReadAllLines(LoginPath);
                 for (int i = 0; i < credentials.Length; i++)
                 {
                     string[] rowdata = credentials[i].Split(',');
@@ -87,7 +87,7 @@ namespace JetpackJoyride
                     if (username[0] == "")
                     {
                         username.Clear();
-                        File.WriteAllText(HomeLoginPath, string.Empty);
+                        File.WriteAllText(LoginPath, string.Empty);
                         break;
                     }
                     else if (username[0] != "")
@@ -258,7 +258,7 @@ namespace JetpackJoyride
                     username.Add(user);
                     password.Add(pass);
                     string newuser = ($"{user},{pass}\n");
-                    File.AppendAllText(HomeLoginPath, newuser);
+                    File.AppendAllText(LoginPath, newuser);
                     close = false;
                     this.Close();
                 }
@@ -270,11 +270,11 @@ namespace JetpackJoyride
         }
         private void btnLoginHelp_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("●If the username box turns red and the password box is green, the username is not correct, but the password is.\n\n●If the password box turns red and the username box is green, the password is not correct, but the username is.\n\n●If both turn red, then the account does not exist and should be created.\n\n●If both boxes turn yellow, then there is a mismatch between an existing username and password.\n\n●Max Length for a username is 11 characters.\n●Max Length for a password is 8 characters.", "Login Help",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            MessageBox.Show("●If the username box turns red and the password box is green, the username is not correct, but the password is.\n\n●If the password box turns red and the username box is green, the password is not correct, but the username is.\n\n●If both turn red, then the account does not exist and should be created.\n\n●If both boxes turn yellow, then there is a mismatch between an existing username and password.\n\n●Username and Password must each include at least 1 letter each.\n\n●Max Length for a username is 11 characters.\n●Max Length for a password is 8 characters.", "Login Help",MessageBoxButtons.OK,MessageBoxIcon.Information);
         }
         private void btnCreateHelp_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("●If the username box turns red and the password box is green, the username already exists, but the password can be used.\n\n●If the password box turns red and the username box is green, the password already exists, but the username can be used.\n\n●If both turn red, then you may login with the credentials you used.\n\n●Max Length for a username is 11 characters.\n●Max Length for a password is 8 characters.", "Login Help", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("●If the username box turns red and the password box is green, the username already exists, but the password can be used.\n\n●If the password box turns red and the username box is green, the password already exists, but the username can be used.\n\n●If both turn red, then you may login with the credentials you used.\n\n●Username and Password must each include at least 1 letter each.\n\n●Max Length for a username is 11 characters.\n●Max Length for a password is 8 characters.", "Login Help", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         private void ckCreateShow_MouseDown(object sender, MouseEventArgs e)
         {

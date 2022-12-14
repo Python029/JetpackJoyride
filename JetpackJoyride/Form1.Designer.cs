@@ -37,6 +37,9 @@
             this.lblHighscore = new System.Windows.Forms.Label();
             this.tmrScore = new System.Windows.Forms.Timer(this.components);
             this.pnHigh = new System.Windows.Forms.Panel();
+            this.pnInfo = new System.Windows.Forms.Panel();
+            this.pnE1 = new System.Windows.Forms.Panel();
+            this.pnE2 = new System.Windows.Forms.Panel();
             this.pbScore = new System.Windows.Forms.PictureBox();
             this.pbBarry = new System.Windows.Forms.PictureBox();
             this.pbLogo = new System.Windows.Forms.PictureBox();
@@ -44,7 +47,6 @@
             this.bg3 = new System.Windows.Forms.PictureBox();
             this.bg2 = new System.Windows.Forms.PictureBox();
             this.bg1 = new System.Windows.Forms.PictureBox();
-            this.pnInfo = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pbScore)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBarry)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
@@ -117,6 +119,33 @@
             this.pnHigh.Size = new System.Drawing.Size(88, 55);
             this.pnHigh.TabIndex = 10;
             this.pnHigh.Click += new System.EventHandler(this.pnHigh_Click);
+            // 
+            // pnInfo
+            // 
+            this.pnInfo.BackColor = System.Drawing.Color.Transparent;
+            this.pnInfo.Location = new System.Drawing.Point(379, 108);
+            this.pnInfo.Name = "pnInfo";
+            this.pnInfo.Size = new System.Drawing.Size(204, 70);
+            this.pnInfo.TabIndex = 11;
+            this.pnInfo.Click += new System.EventHandler(this.pnInfo_Click);
+            // 
+            // pnE1
+            // 
+            this.pnE1.BackColor = System.Drawing.Color.Transparent;
+            this.pnE1.Location = new System.Drawing.Point(54, 548);
+            this.pnE1.Name = "pnE1";
+            this.pnE1.Size = new System.Drawing.Size(69, 42);
+            this.pnE1.TabIndex = 12;
+            this.pnE1.Click += new System.EventHandler(this.pnE1_Click);
+            // 
+            // pnE2
+            // 
+            this.pnE2.BackColor = System.Drawing.Color.Transparent;
+            this.pnE2.Location = new System.Drawing.Point(109, 464);
+            this.pnE2.Name = "pnE2";
+            this.pnE2.Size = new System.Drawing.Size(82, 78);
+            this.pnE2.TabIndex = 13;
+            this.pnE2.Click += new System.EventHandler(this.pnE2_Click);
             // 
             // pbScore
             // 
@@ -192,20 +221,13 @@
             this.bg1.TabIndex = 0;
             this.bg1.TabStop = false;
             // 
-            // pnInfo
-            // 
-            this.pnInfo.BackColor = System.Drawing.Color.Transparent;
-            this.pnInfo.Location = new System.Drawing.Point(379, 108);
-            this.pnInfo.Name = "pnInfo";
-            this.pnInfo.Size = new System.Drawing.Size(204, 70);
-            this.pnInfo.TabIndex = 11;
-            this.pnInfo.Click += new System.EventHandler(this.pnInfo_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(986, 692);
+            this.Controls.Add(this.pnE2);
+            this.Controls.Add(this.pnE1);
             this.Controls.Add(this.pnInfo);
             this.Controls.Add(this.pnHigh);
             this.Controls.Add(this.lblHighscore);
@@ -219,6 +241,7 @@
             this.Controls.Add(this.bg2);
             this.Controls.Add(this.bg1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.HelpButton = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -256,6 +279,8 @@
         private System.Windows.Forms.Timer tmrScore;
         private System.Windows.Forms.Panel pnHigh;
         private System.Windows.Forms.Panel pnInfo;
+        private System.Windows.Forms.Panel pnE1;
+        private System.Windows.Forms.Panel pnE2;
     }
 }
 
