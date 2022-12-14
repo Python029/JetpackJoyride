@@ -7,7 +7,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Jetpack Joyride")]
-[assembly: AssemblyDescription("This is a remake of the popular mobile game Jetpack Joyride. This was coded in C#.")]
+[assembly: AssemblyDescription("This is a remake of the popular mobile game Jetpack Joyride. This took around 3 weeks to make and was coded in C#.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Python Inc.")]
 [assembly: AssemblyProduct("JetpackJoyride")]

@@ -391,7 +391,7 @@ namespace JetpackJoyride
                     {
                         DialogResult dialogResult = MessageBox.Show("You did not create an account, so your score was not saved.\n\nWould you like to play again?\nIf you would like to create an account and play again, click Yes. If not, click No.","Play Again?", MessageBoxButtons.YesNo);
                         if(dialogResult== DialogResult.Yes) { Application.Restart(); Settings.Default.Again = true; Settings.Default.Save(); }
-                        else if (dialogResult == DialogResult.No) { Application.Exit(); Settings.Default.Again = false; Settings.Default.Save(); }
+                        else if (dialogResult == DialogResult.No) { Application.Exit(); Settings.Default.Reset(); Settings.Default.Save(); }
                     }
                 }
             }
@@ -427,7 +427,7 @@ namespace JetpackJoyride
                         else if (dialogResult2 == DialogResult.No)
                         {
                             Application.Exit();
-                            Settings.Default.Again = false; Settings.Default.Save();
+                            Settings.Default.Reset(); Settings.Default.Save();
                         }
                     }
                     else if (dialogResult == DialogResult.No)
@@ -441,7 +441,7 @@ namespace JetpackJoyride
                         else if (dialogResult2 == DialogResult.No)
                         {
                             Application.Exit();
-                            Settings.Default.Again = false; Settings.Default.Save();
+                            Settings.Default.Reset(); Settings.Default.Save();
                         }
                     }
                 }
@@ -472,7 +472,7 @@ namespace JetpackJoyride
                         else if (dialogResult2 == DialogResult.No)
                         {
                             Application.Exit();
-                            Settings.Default.Again = false; Settings.Default.Save();
+                            Settings.Default.Reset(); Settings.Default.Save();
                         }
                     }
                     else if (dialogResult == DialogResult.No)
@@ -486,7 +486,7 @@ namespace JetpackJoyride
                         else if (dialogResult2 == DialogResult.No)
                         {
                             Application.Exit();
-                            Settings.Default.Again = false; Settings.Default.Save();
+                            Settings.Default.Reset(); Settings.Default.Save();
                         }
                     }
                 }
@@ -517,7 +517,7 @@ namespace JetpackJoyride
                         else if (dialogResult2 == DialogResult.No)
                         {
                             Application.Exit();
-                            Settings.Default.Again = false; Settings.Default.Save();
+                            Settings.Default.Reset(); Settings.Default.Save();
                         }
                     }
                     else if (dialogResult == DialogResult.No)
@@ -531,7 +531,7 @@ namespace JetpackJoyride
                         else if (dialogResult2 == DialogResult.No)
                         {
                             Application.Exit();
-                            Settings.Default.Again = false; Settings.Default.Save();
+                            Settings.Default.Reset(); Settings.Default.Save();
                         }
                     }
                 }
@@ -562,7 +562,7 @@ namespace JetpackJoyride
                         else if (dialogResult2 == DialogResult.No)
                         {
                             Application.Exit();
-                            Settings.Default.Again = false; Settings.Default.Save();
+                            Settings.Default.Reset(); Settings.Default.Save();
                         }
                     }
                     else if (dialogResult == DialogResult.No)
@@ -576,7 +576,7 @@ namespace JetpackJoyride
                         else if (dialogResult2 == DialogResult.No)
                         {
                             Application.Exit();
-                            Settings.Default.Again = false; Settings.Default.Save();
+                            Settings.Default.Reset(); Settings.Default.Save();
                         }
                     }
                 }
@@ -607,7 +607,7 @@ namespace JetpackJoyride
                         else if (dialogResult2 == DialogResult.No)
                         {
                             Application.Exit();
-                            Settings.Default.Again = false; Settings.Default.Save();
+                            Settings.Default.Reset(); Settings.Default.Save();
                         }
                     }
                     else if (dialogResult == DialogResult.No)
@@ -621,7 +621,7 @@ namespace JetpackJoyride
                         else if (dialogResult2 == DialogResult.No)
                         {
                             Application.Exit();
-                            Settings.Default.Again = false; Settings.Default.Save();
+                            Settings.Default.Reset(); Settings.Default.Save();
                         }
                     }
                 }
@@ -641,7 +641,7 @@ namespace JetpackJoyride
                         else if (dialogResult2 == DialogResult.No)
                         {
                             Application.Exit();
-                            Settings.Default.Again = false; Settings.Default.Save();
+                            Settings.Default.Reset(); Settings.Default.Save();
                         }
                     }
                     else if (dialogResult == DialogResult.No)
@@ -655,7 +655,7 @@ namespace JetpackJoyride
                         else if (dialogResult2 == DialogResult.No)
                         {
                             Application.Exit();
-                            Settings.Default.Again = false; Settings.Default.Save();
+                            Settings.Default.Reset(); Settings.Default.Save();
                         }
                     }
                 }
@@ -689,7 +689,7 @@ namespace JetpackJoyride
                         else if (dialogResult2 == DialogResult.No)
                         {
                             Application.Exit();
-                            Settings.Default.Again = false; Settings.Default.Save();
+                            Settings.Default.Reset(); Settings.Default.Save();
                         }
                     }
                     else if (dialogResult == DialogResult.No)
@@ -703,7 +703,7 @@ namespace JetpackJoyride
                         else if (dialogResult2 == DialogResult.No)
                         {
                             Application.Exit();
-                            Settings.Default.Again = false; Settings.Default.Save();
+                            Settings.Default.Reset(); Settings.Default.Save();
                         }
                     }
                 }
@@ -734,7 +734,7 @@ namespace JetpackJoyride
                         else if (dialogResult2 == DialogResult.No)
                         {
                             Application.Exit();
-                            Settings.Default.Again = false; Settings.Default.Save();
+                            Settings.Default.Reset(); Settings.Default.Save();
                         }
                     }
                     else if (dialogResult == DialogResult.No)
@@ -748,7 +748,7 @@ namespace JetpackJoyride
                         else if (dialogResult2 == DialogResult.No)
                         {
                             Application.Exit();
-                            Settings.Default.Again = false; Settings.Default.Save();
+                            Settings.Default.Reset(); Settings.Default.Save();
                         }
                     }
                 }
@@ -779,7 +779,7 @@ namespace JetpackJoyride
                         else if (dialogResult2 == DialogResult.No)
                         {
                             Application.Exit();
-                            Settings.Default.Again = false; Settings.Default.Save();
+                            Settings.Default.Reset(); Settings.Default.Save();
                         }
                     }
                     else if (dialogResult == DialogResult.No)
@@ -793,7 +793,7 @@ namespace JetpackJoyride
                         else if (dialogResult2 == DialogResult.No)
                         {
                             Application.Exit();
-                            Settings.Default.Again = false; Settings.Default.Save();
+                            Settings.Default.Reset(); Settings.Default.Save();
                         }
                     }
                 }
@@ -824,7 +824,7 @@ namespace JetpackJoyride
                         else if (dialogResult2 == DialogResult.No)
                         {
                             Application.Exit();
-                            Settings.Default.Again = false; Settings.Default.Save();
+                            Settings.Default.Reset(); Settings.Default.Save();
                         }
                     }
                     else if (dialogResult == DialogResult.No)
@@ -838,7 +838,7 @@ namespace JetpackJoyride
                         else if (dialogResult2 == DialogResult.No)
                         {
                             Application.Exit();
-                            Settings.Default.Again = false; Settings.Default.Save();
+                            Settings.Default.Reset(); Settings.Default.Save();
                         }
                     }
                 }
@@ -869,7 +869,7 @@ namespace JetpackJoyride
                         else if (dialogResult2 == DialogResult.No)
                         {
                             Application.Exit();
-                            Settings.Default.Again = false; Settings.Default.Save();
+                            Settings.Default.Reset(); Settings.Default.Save();
                         }
                     }
                     else if (dialogResult == DialogResult.No)
@@ -883,7 +883,7 @@ namespace JetpackJoyride
                         else if (dialogResult2 == DialogResult.No)
                         {
                             Application.Exit();
-                            Settings.Default.Again = false; Settings.Default.Save();
+                            Settings.Default.Reset(); Settings.Default.Save();
                         }
                     }
                 }
@@ -917,7 +917,7 @@ namespace JetpackJoyride
                         else if (dialogResult2 == DialogResult.No)
                         {
                             Application.Exit();
-                            Settings.Default.Again = false; Settings.Default.Save();
+                            Settings.Default.Reset(); Settings.Default.Save();
                         }
                     }
                     else if (dialogResult == DialogResult.No)
@@ -931,7 +931,7 @@ namespace JetpackJoyride
                         else if (dialogResult2 == DialogResult.No)
                         {
                             Application.Exit();
-                            Settings.Default.Again = false; Settings.Default.Save();
+                            Settings.Default.Reset(); Settings.Default.Save();
                         }
                     }
                 }
@@ -962,7 +962,7 @@ namespace JetpackJoyride
                         else if (dialogResult2 == DialogResult.No)
                         {
                             Application.Exit();
-                            Settings.Default.Again = false; Settings.Default.Save();
+                            Settings.Default.Reset(); Settings.Default.Save();
                         }
                     }
                     else if (dialogResult == DialogResult.No)
@@ -976,7 +976,7 @@ namespace JetpackJoyride
                         else if (dialogResult2 == DialogResult.No)
                         {
                             Application.Exit();
-                            Settings.Default.Again = false; Settings.Default.Save();
+                            Settings.Default.Reset(); Settings.Default.Save();
                         }
                     }
                 }
@@ -1007,7 +1007,7 @@ namespace JetpackJoyride
                         else if (dialogResult2 == DialogResult.No)
                         {
                             Application.Exit();
-                            Settings.Default.Again = false; Settings.Default.Save();
+                            Settings.Default.Reset(); Settings.Default.Save();
                         }
                     }
                     else if (dialogResult == DialogResult.No)
@@ -1021,7 +1021,7 @@ namespace JetpackJoyride
                         else if (dialogResult2 == DialogResult.No)
                         {
                             Application.Exit();
-                            Settings.Default.Again = false; Settings.Default.Save();
+                            Settings.Default.Reset(); Settings.Default.Save();
                         }
                     }
                 }
@@ -1052,7 +1052,7 @@ namespace JetpackJoyride
                         else if (dialogResult2 == DialogResult.No)
                         {
                             Application.Exit();
-                            Settings.Default.Again = false; Settings.Default.Save();
+                            Settings.Default.Reset(); Settings.Default.Save();
                         }
                     }
                     else if (dialogResult == DialogResult.No)
@@ -1066,7 +1066,7 @@ namespace JetpackJoyride
                         else if (dialogResult2 == DialogResult.No)
                         {
                             Application.Exit();
-                            Settings.Default.Again = false; Settings.Default.Save();
+                            Settings.Default.Reset(); Settings.Default.Save();
                         }
                     }
                 }
@@ -1100,7 +1100,7 @@ namespace JetpackJoyride
                         else if (dialogResult2 == DialogResult.No)
                         {
                             Application.Exit();
-                            Settings.Default.Again = false; Settings.Default.Save();
+                            Settings.Default.Reset(); Settings.Default.Save();
                         }
                     }
                     else if (dialogResult == DialogResult.No)
@@ -1114,7 +1114,7 @@ namespace JetpackJoyride
                         else if (dialogResult2 == DialogResult.No)
                         {
                             Application.Exit();
-                            Settings.Default.Again = false; Settings.Default.Save();
+                            Settings.Default.Reset(); Settings.Default.Save();
                         }
                     }
                 }
@@ -1145,7 +1145,7 @@ namespace JetpackJoyride
                         else if (dialogResult2 == DialogResult.No)
                         {
                             Application.Exit();
-                            Settings.Default.Again = false; Settings.Default.Save();
+                            Settings.Default.Reset(); Settings.Default.Save();
                         }
                     }
                     else if (dialogResult == DialogResult.No)
@@ -1159,7 +1159,7 @@ namespace JetpackJoyride
                         else if (dialogResult2 == DialogResult.No)
                         {
                             Application.Exit();
-                            Settings.Default.Again = false; Settings.Default.Save();
+                            Settings.Default.Reset(); Settings.Default.Save();
                         }
                     }
                 }
@@ -1190,7 +1190,7 @@ namespace JetpackJoyride
                         else if (dialogResult2 == DialogResult.No)
                         {
                             Application.Exit();
-                            Settings.Default.Again = false; Settings.Default.Save();
+                            Settings.Default.Reset(); Settings.Default.Save();
                         }
                     }
                     else if (dialogResult == DialogResult.No)
@@ -1204,7 +1204,7 @@ namespace JetpackJoyride
                         else if (dialogResult2 == DialogResult.No)
                         {
                             Application.Exit();
-                            Settings.Default.Again = false; Settings.Default.Save();
+                            Settings.Default.Reset(); Settings.Default.Save();
                         }
                     }
                 }
@@ -1238,7 +1238,7 @@ namespace JetpackJoyride
                         else if (dialogResult2 == DialogResult.No)
                         {
                             Application.Exit();
-                            Settings.Default.Again = false; Settings.Default.Save();
+                            Settings.Default.Reset(); Settings.Default.Save();
                         }
                     }
                     else if (dialogResult == DialogResult.No)
@@ -1252,7 +1252,7 @@ namespace JetpackJoyride
                         else if (dialogResult2 == DialogResult.No)
                         {
                             Application.Exit();
-                            Settings.Default.Again = false; Settings.Default.Save();
+                            Settings.Default.Reset(); Settings.Default.Save();
                         }
                     }
                 }
@@ -1283,7 +1283,7 @@ namespace JetpackJoyride
                         else if (dialogResult2 == DialogResult.No)
                         {
                             Application.Exit();
-                            Settings.Default.Again = false; Settings.Default.Save();
+                            Settings.Default.Reset(); Settings.Default.Save();
                         }
                     }
                     else if (dialogResult == DialogResult.No)
@@ -1297,7 +1297,7 @@ namespace JetpackJoyride
                         else if (dialogResult2 == DialogResult.No)
                         {
                             Application.Exit();
-                            Settings.Default.Again = false; Settings.Default.Save();
+                            Settings.Default.Reset(); Settings.Default.Save();
                         }
                     }
                 }
@@ -1324,7 +1324,7 @@ namespace JetpackJoyride
                     else if (dialogResult2 == DialogResult.No)
                     {
                         Application.Exit();
-                        Settings.Default.Again = false; Settings.Default.Save();
+                        Settings.Default.Reset(); Settings.Default.Save();
                     }
                 }
                 else if (dialogResult == DialogResult.No)
@@ -1338,7 +1338,7 @@ namespace JetpackJoyride
                     else if (dialogResult2 == DialogResult.No)
                     {
                         Application.Exit();
-                        Settings.Default.Again = false; Settings.Default.Save();
+                        Settings.Default.Reset(); Settings.Default.Save();
                     }
                 }
             }
@@ -3625,7 +3625,7 @@ namespace JetpackJoyride
                 BackgroundReset();
                 ResetZappers();
                 ZapperMovement();
-                //ZapperCollision();
+                ZapperCollision();
             }      
             if(pbBarry.Location.X>260 && go==false && start)
             {

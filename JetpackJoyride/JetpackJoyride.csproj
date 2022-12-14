@@ -124,6 +124,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Barry_Steakfries.ico" />
+    <None Include="Resources\Barry_Steakfries.ico" />
     <None Include="Resources\JetpackJoyrideMainTheme.wav" />
     <None Include="Resources\JJStartingTheme.wav" />
     <None Include="Resources\New Athletic M54.ttf" />
