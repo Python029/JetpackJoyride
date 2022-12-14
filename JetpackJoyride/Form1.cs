@@ -78,7 +78,7 @@ namespace JetpackJoyride
         {
             if(Settings.Default.Again==false) {lg.ShowDialog();}
             SoundPlayer player = new SoundPlayer(Resources.JJStartingTheme);
-            player.Play();
+            player.PlayLooping();
             CustomFont();
             ReadCSV();            
             if (username.Count>0)

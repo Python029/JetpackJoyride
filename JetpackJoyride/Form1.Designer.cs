@@ -240,7 +240,7 @@
             this.Controls.Add(this.bg3);
             this.Controls.Add(this.bg2);
             this.Controls.Add(this.bg1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.HelpButton = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
