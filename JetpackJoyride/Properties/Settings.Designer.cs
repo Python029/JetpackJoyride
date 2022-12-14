@@ -46,5 +46,17 @@ namespace JetpackJoyride.Properties {
                 this["Guest"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool Again {
+            get {
+                return ((bool)(this["Again"]));
+            }
+            set {
+                this["Again"] = value;
+            }
+        }
     }
 }

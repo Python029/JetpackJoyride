@@ -1,9 +1,12 @@
-﻿using System;
+﻿using JetpackJoyride.Properties;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Reflection;
+using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -21,7 +24,7 @@ namespace JetpackJoyride
             this.labelCompanyName.Text = AssemblyCompany;
             this.textBoxDescription.Text = AssemblyDescription;
         }
-
+        PrivateFontCollection pfc = new PrivateFontCollection();
         #region Assembly Attribute Accessors
 
         public string AssemblyTitle
@@ -101,5 +104,15 @@ namespace JetpackJoyride
             }
         }
         #endregion
+
+        private void AboutBox1_Load(object sender, EventArgs e)
+        {
+            int fontLength = Resources.New_Athletic_M54.Length;
+            byte[] fontdata = Resources.New_Athletic_M54;
+            IntPtr data = Marshal.AllocCoTaskMem(fontLength);
+            Marshal.Copy(fontdata, 0, data, fontLength);
+            pfc.AddMemoryFont(data, fontLength);
+            labelProductName.Font = new Font(pfc.Families[0], labelProductName.Font.Size);
+        }
     }
 }

@@ -58,9 +58,11 @@
             this.lblLogin.Image = global::JetpackJoyride.Properties.Resources.LoginTextbg;
             this.lblLogin.Location = new System.Drawing.Point(146, 30);
             this.lblLogin.Name = "lblLogin";
-            this.lblLogin.Size = new System.Drawing.Size(110, 45);
+            this.lblLogin.Size = new System.Drawing.Size(106, 53);
             this.lblLogin.TabIndex = 0;
             this.lblLogin.Text = "Login";
+            this.lblLogin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblLogin.UseCompatibleTextRendering = true;
             // 
             // lblCreate
             // 
@@ -71,9 +73,11 @@
             this.lblCreate.Image = global::JetpackJoyride.Properties.Resources.LoginCreatebg;
             this.lblCreate.Location = new System.Drawing.Point(448, 30);
             this.lblCreate.Name = "lblCreate";
-            this.lblCreate.Size = new System.Drawing.Size(333, 45);
+            this.lblCreate.Size = new System.Drawing.Size(341, 53);
             this.lblCreate.TabIndex = 1;
             this.lblCreate.Text = "Create an Account";
+            this.lblCreate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblCreate.UseCompatibleTextRendering = true;
             // 
             // panel1
             // 
@@ -93,9 +97,11 @@
             this.label1.Image = global::JetpackJoyride.Properties.Resources.LoginPassbg2;
             this.label1.Location = new System.Drawing.Point(441, 191);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(142, 35);
+            this.label1.Size = new System.Drawing.Size(143, 42);
             this.label1.TabIndex = 3;
             this.label1.Text = "Password:";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.UseCompatibleTextRendering = true;
             // 
             // label2
             // 
@@ -106,9 +112,11 @@
             this.label2.Image = global::JetpackJoyride.Properties.Resources.LoginUserbg2;
             this.label2.Location = new System.Drawing.Point(433, 118);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(150, 35);
+            this.label2.Size = new System.Drawing.Size(149, 42);
             this.label2.TabIndex = 4;
             this.label2.Text = "Username:";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2.UseCompatibleTextRendering = true;
             // 
             // btnLogin
             // 
@@ -118,6 +126,7 @@
             this.btnLogin.Size = new System.Drawing.Size(145, 69);
             this.btnLogin.TabIndex = 5;
             this.btnLogin.Text = "Login";
+            this.btnLogin.UseCompatibleTextRendering = true;
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
@@ -129,6 +138,7 @@
             this.btnCreate.Size = new System.Drawing.Size(190, 73);
             this.btnCreate.TabIndex = 6;
             this.btnCreate.Text = "Create Account";
+            this.btnCreate.UseCompatibleTextRendering = true;
             this.btnCreate.UseVisualStyleBackColor = true;
             this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
@@ -140,12 +150,13 @@
             this.btnGuest.Size = new System.Drawing.Size(154, 73);
             this.btnGuest.TabIndex = 10;
             this.btnGuest.Text = "Continue as Guest";
+            this.btnGuest.UseCompatibleTextRendering = true;
             this.btnGuest.UseVisualStyleBackColor = true;
             this.btnGuest.Click += new System.EventHandler(this.btnGuest_Click);
             // 
             // txtUCreate
             // 
-            this.txtUCreate.Font = new System.Drawing.Font("Hurme Geometric Sans 1", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUCreate.Font = new System.Drawing.Font("Josefin Sans", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUCreate.Location = new System.Drawing.Point(589, 112);
             this.txtUCreate.MaxLength = 11;
             this.txtUCreate.Multiline = true;
@@ -158,7 +169,7 @@
             // txtULogin
             // 
             this.txtULogin.BackColor = System.Drawing.SystemColors.Window;
-            this.txtULogin.Font = new System.Drawing.Font("Hurme Geometric Sans 1", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtULogin.Font = new System.Drawing.Font("Josefin Sans", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtULogin.Location = new System.Drawing.Point(179, 112);
             this.txtULogin.MaxLength = 11;
             this.txtULogin.Multiline = true;
@@ -177,9 +188,11 @@
             this.label3.Image = global::JetpackJoyride.Properties.Resources.LoginUserbg;
             this.label3.Location = new System.Drawing.Point(23, 118);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(150, 35);
+            this.label3.Size = new System.Drawing.Size(149, 42);
             this.label3.TabIndex = 16;
             this.label3.Text = "Username:";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label3.UseCompatibleTextRendering = true;
             // 
             // label4
             // 
@@ -190,13 +203,15 @@
             this.label4.Image = global::JetpackJoyride.Properties.Resources.LoginPassbg;
             this.label4.Location = new System.Drawing.Point(31, 191);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(142, 35);
+            this.label4.Size = new System.Drawing.Size(143, 42);
             this.label4.TabIndex = 15;
             this.label4.Text = "Password:";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label4.UseCompatibleTextRendering = true;
             // 
             // txtPLogin
             // 
-            this.txtPLogin.Font = new System.Drawing.Font("Hurme Geometric Sans 1", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPLogin.Font = new System.Drawing.Font("Josefin Sans", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPLogin.Location = new System.Drawing.Point(179, 185);
             this.txtPLogin.MaxLength = 8;
             this.txtPLogin.Multiline = true;
@@ -209,7 +224,7 @@
             // 
             // txtPCreate
             // 
-            this.txtPCreate.Font = new System.Drawing.Font("Hurme Geometric Sans 1", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPCreate.Font = new System.Drawing.Font("Josefin Sans", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPCreate.Location = new System.Drawing.Point(589, 185);
             this.txtPCreate.MaxLength = 8;
             this.txtPCreate.Multiline = true;
@@ -230,9 +245,11 @@
             this.ckLoginShow.ForeColor = System.Drawing.Color.White;
             this.ckLoginShow.Location = new System.Drawing.Point(215, 232);
             this.ckLoginShow.Name = "ckLoginShow";
-            this.ckLoginShow.Size = new System.Drawing.Size(107, 18);
+            this.ckLoginShow.Size = new System.Drawing.Size(108, 20);
             this.ckLoginShow.TabIndex = 21;
             this.ckLoginShow.Text = "Show Password";
+            this.ckLoginShow.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ckLoginShow.UseCompatibleTextRendering = true;
             this.ckLoginShow.UseVisualStyleBackColor = false;
             this.ckLoginShow.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ckLoginShow_MouseDown);
             // 
@@ -246,9 +263,11 @@
             this.ckCreateShow.ForeColor = System.Drawing.Color.White;
             this.ckCreateShow.Location = new System.Drawing.Point(625, 232);
             this.ckCreateShow.Name = "ckCreateShow";
-            this.ckCreateShow.Size = new System.Drawing.Size(107, 18);
+            this.ckCreateShow.Size = new System.Drawing.Size(108, 20);
             this.ckCreateShow.TabIndex = 22;
             this.ckCreateShow.Text = "Show Password";
+            this.ckCreateShow.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ckCreateShow.UseCompatibleTextRendering = true;
             this.ckCreateShow.UseVisualStyleBackColor = false;
             this.ckCreateShow.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ckCreateShow_MouseDown);
             // 
@@ -260,6 +279,7 @@
             this.btnLoginHelp.Size = new System.Drawing.Size(145, 40);
             this.btnLoginHelp.TabIndex = 23;
             this.btnLoginHelp.Text = "Help";
+            this.btnLoginHelp.UseCompatibleTextRendering = true;
             this.btnLoginHelp.UseVisualStyleBackColor = true;
             this.btnLoginHelp.Click += new System.EventHandler(this.btnLoginHelp_Click);
             // 
@@ -271,6 +291,7 @@
             this.btnCreateHelp.Size = new System.Drawing.Size(190, 40);
             this.btnCreateHelp.TabIndex = 24;
             this.btnCreateHelp.Text = "Help";
+            this.btnCreateHelp.UseCompatibleTextRendering = true;
             this.btnCreateHelp.UseVisualStyleBackColor = true;
             this.btnCreateHelp.Click += new System.EventHandler(this.btnCreateHelp_Click);
             // 

@@ -24,13 +24,11 @@ namespace JetpackJoyride
         List<string> username = new List<string>();
         List<int> scores = new List<int>();
         List<string> time = new List<string>();
-        PrivateFontCollection pfc = new PrivateFontCollection();
         string date = "";
         string ScorePath = "J:\\Computer Science Testing\\Silvera_JetpackJoyride\\JetpackJoyrideScores.csv";
         string HomeScorePath = "C:\\Users\\Silve\\OneDrive\\Documents\\JetpackJoyrideScores.csv";
         private void Form2_Load(object sender, EventArgs e)
         {
-            CustomFont();
             MessageBox.Show("The leaderboard updates every 5 seconds, so your score may not show up immediately.");         
             username.Clear();
             scores.Clear();
@@ -41,14 +39,6 @@ namespace JetpackJoyride
             DateTime now = DateTime.Now;
             date = now.ToString();
         }
-        private void CustomFont()
-        {
-            int fontLength = Resources.New_Athletic_M54.Length;
-            byte[] fontdata = Resources.New_Athletic_M54;
-            IntPtr data = Marshal.AllocCoTaskMem(fontLength);
-            Marshal.Copy(fontdata, 0, data, fontLength);
-            pfc.AddMemoryFont(data, fontLength);
-        }
         private void InitializeDataGridView()
         {
             dgvLeaderboard.Visible = true;
@@ -56,7 +46,7 @@ namespace JetpackJoyride
             dgvLeaderboard.Dock = DockStyle.Fill;
             dgvLeaderboard.BackgroundColor = Color.LightGray;
             dgvLeaderboard.BorderStyle = BorderStyle.Fixed3D;
-            
+            //dgvLeaderboard.resize
 
             // Set property values appropriate for read-only display and 
             // limited interactivity. 
@@ -104,7 +94,7 @@ namespace JetpackJoyride
         {
             try
             {
-                string[] Leaderboard = File.ReadAllLines(ScorePath);
+                string[] Leaderboard = File.ReadAllLines(HomeScorePath);
                 for (int i = 0; i < Leaderboard.Length; i++)
                 {
                     string[] rowdata = Leaderboard[i].Split(',');
@@ -112,7 +102,7 @@ namespace JetpackJoyride
                     if (username[0] == "")
                     {
                         username.Clear();
-                        File.WriteAllText(ScorePath, string.Empty);
+                        File.WriteAllText(HomeScorePath, string.Empty);
                         break;
                     }
                     else if (username[0] != "")

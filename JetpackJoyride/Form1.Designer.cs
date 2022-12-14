@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tmrAnimate = new System.Windows.Forms.Timer(this.components);
-            this.txtStart = new System.Windows.Forms.Label();
+            this.lblStart = new System.Windows.Forms.Label();
             this.tmrUpdate = new System.Windows.Forms.Timer(this.components);
             this.lblScore = new System.Windows.Forms.Label();
             this.lblHighscore = new System.Windows.Forms.Label();
@@ -59,17 +59,18 @@
             this.tmrAnimate.Interval = 5;
             this.tmrAnimate.Tick += new System.EventHandler(this.tmrAnimate_Tick);
             // 
-            // txtStart
+            // lblStart
             // 
-            this.txtStart.AutoSize = true;
-            this.txtStart.BackColor = System.Drawing.Color.Transparent;
-            this.txtStart.Font = new System.Drawing.Font("New Athletic M54", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtStart.ForeColor = System.Drawing.SystemColors.Control;
-            this.txtStart.Location = new System.Drawing.Point(334, 493);
-            this.txtStart.Name = "txtStart";
-            this.txtStart.Size = new System.Drawing.Size(313, 38);
-            this.txtStart.TabIndex = 5;
-            this.txtStart.Text = "Press Space to Start";
+            this.lblStart.AutoSize = true;
+            this.lblStart.BackColor = System.Drawing.Color.Transparent;
+            this.lblStart.Font = new System.Drawing.Font("New Athletic M54", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStart.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblStart.Location = new System.Drawing.Point(334, 493);
+            this.lblStart.Name = "lblStart";
+            this.lblStart.Size = new System.Drawing.Size(315, 46);
+            this.lblStart.TabIndex = 5;
+            this.lblStart.Text = "Press Space to Start";
+            this.lblStart.UseCompatibleTextRendering = true;
             // 
             // tmrUpdate
             // 
@@ -82,12 +83,13 @@
             this.lblScore.BackColor = System.Drawing.Color.Transparent;
             this.lblScore.Font = new System.Drawing.Font("New Athletic M54", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblScore.Location = new System.Drawing.Point(24, 6);
+            this.lblScore.Location = new System.Drawing.Point(24, 3);
             this.lblScore.Name = "lblScore";
-            this.lblScore.Size = new System.Drawing.Size(117, 44);
+            this.lblScore.Size = new System.Drawing.Size(112, 52);
             this.lblScore.TabIndex = 8;
             this.lblScore.Text = "0000m";
             this.lblScore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblScore.UseCompatibleTextRendering = true;
             // 
             // lblHighscore
             // 
@@ -95,12 +97,13 @@
             this.lblHighscore.BackColor = System.Drawing.Color.Transparent;
             this.lblHighscore.Font = new System.Drawing.Font("New Athletic M54", 18.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHighscore.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(69)))), ((int)(((byte)(97)))));
-            this.lblHighscore.Location = new System.Drawing.Point(774, 482);
+            this.lblHighscore.Location = new System.Drawing.Point(773, 480);
             this.lblHighscore.Name = "lblHighscore";
-            this.lblHighscore.Size = new System.Drawing.Size(80, 29);
+            this.lblHighscore.Size = new System.Drawing.Size(76, 36);
             this.lblHighscore.TabIndex = 9;
             this.lblHighscore.Text = "0000M";
             this.lblHighscore.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblHighscore.UseCompatibleTextRendering = true;
             // 
             // tmrScore
             // 
@@ -209,7 +212,7 @@
             this.Controls.Add(this.lblScore);
             this.Controls.Add(this.pbScore);
             this.Controls.Add(this.pbBarry);
-            this.Controls.Add(this.txtStart);
+            this.Controls.Add(this.lblStart);
             this.Controls.Add(this.pbLogo);
             this.Controls.Add(this.bgstart);
             this.Controls.Add(this.bg3);
@@ -220,8 +223,8 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Jetpack Joyride";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
             ((System.ComponentModel.ISupportInitialize)(this.pbScore)).EndInit();
@@ -244,7 +247,7 @@
         private System.Windows.Forms.PictureBox bg3;
         private System.Windows.Forms.PictureBox bgstart;
         private System.Windows.Forms.PictureBox pbLogo;
-        private System.Windows.Forms.Label txtStart;
+        private System.Windows.Forms.Label lblStart;
         private System.Windows.Forms.PictureBox pbBarry;
         private System.Windows.Forms.Timer tmrUpdate;
         private System.Windows.Forms.PictureBox pbScore;

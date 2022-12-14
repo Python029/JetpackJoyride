@@ -35,11 +35,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.dgvLeaderboard = new System.Windows.Forms.DataGridView();
-            this.tmrUpdateScores = new System.Windows.Forms.Timer(this.components);
             this.Ranks = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Usernames = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Score = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.When = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tmrUpdateScores = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvLeaderboard)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,26 +58,20 @@
             this.dgvLeaderboard.Location = new System.Drawing.Point(0, 0);
             this.dgvLeaderboard.Name = "dgvLeaderboard";
             this.dgvLeaderboard.ReadOnly = true;
-            this.dgvLeaderboard.Size = new System.Drawing.Size(488, 254);
+            this.dgvLeaderboard.Size = new System.Drawing.Size(498, 254);
             this.dgvLeaderboard.TabIndex = 0;
-            // 
-            // tmrUpdateScores
-            // 
-            this.tmrUpdateScores.Enabled = true;
-            this.tmrUpdateScores.Interval = 5000;
-            this.tmrUpdateScores.Tick += new System.EventHandler(this.tmrUpdateScores_Tick);
             // 
             // Ranks
             // 
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("New Athletic M54", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(192)))), ((int)(((byte)(254)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.Ranks.DefaultCellStyle = dataGridViewCellStyle1;
             this.Ranks.DividerWidth = 5;
-            this.Ranks.HeaderText = "Ranks";
+            this.Ranks.HeaderText = "Rank";
             this.Ranks.MaxInputLength = 5;
             this.Ranks.Name = "Ranks";
             this.Ranks.ReadOnly = true;
@@ -129,11 +123,17 @@
             this.When.ReadOnly = true;
             this.When.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
+            // tmrUpdateScores
+            // 
+            this.tmrUpdateScores.Enabled = true;
+            this.tmrUpdateScores.Interval = 5000;
+            this.tmrUpdateScores.Tick += new System.EventHandler(this.tmrUpdateScores_Tick);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(488, 254);
+            this.ClientSize = new System.Drawing.Size(498, 254);
             this.Controls.Add(this.dgvLeaderboard);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form2";
