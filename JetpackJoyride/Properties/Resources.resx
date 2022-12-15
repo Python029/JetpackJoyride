@@ -118,23 +118,14 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Zap205" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Zap BG's\Zap205.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Zap270" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Zap BG's\Zap270.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Zap206" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Zap BG's\Zap206.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Zap208" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Zap BG's\Zap208.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Zap157" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Zap BG's\Zap157.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Zap257" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Zap BG's\Zap257.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Zap203" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Zap BG's\Zap203.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Zap334" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Zap BG's\Zap334.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Zap285" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Zap BG's\Zap285.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -151,8 +142,8 @@
   <data name="Zap303" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Zap BG's\Zap303.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="zapperH3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\zapperH3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Zap170" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Zap BG's\Zap170.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ZapHBottom" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ZapHBottom.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -166,20 +157,23 @@
   <data name="Zap192" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Zap BG's\Zap192.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Zap213" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Zap BG's\Zap213.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Zap319" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Zap BG's\Zap319.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Zap284" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Zap BG's\Zap284.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Zap234" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Zap BG's\Zap234.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Zap318" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Zap BG's\Zap318.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Zap144" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Zap BG's\Zap144.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Zap170" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Zap BG's\Zap170.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Zap307" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Zap BG's\Zap307.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="bgstart1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\jetpack2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -187,8 +181,11 @@
   <data name="Zap201" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Zap BG's\Zap201.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Zap230" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Zap BG's\Zap230.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Zap163" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Zap BG's\Zap163.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Zap323" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Zap BG's\Zap323.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Zap171" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Zap BG's\Zap171.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -205,6 +202,9 @@
   <data name="Zap301" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Zap BG's\Zap301.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Zap287" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Zap BG's\Zap287.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Zap248" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Zap BG's\Zap248.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -214,14 +214,17 @@
   <data name="background" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Zap287" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Zap BG's\Zap287.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Zap194" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Zap BG's\Zap194.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Zap277" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Zap BG's\Zap277.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="LoginCreatebg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LoginCreatebg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Zap332" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Zap BG's\Zap332.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Zap205" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Zap BG's\Zap205.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Zap152" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Zap BG's\Zap152.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -235,20 +238,29 @@
   <data name="Zap305" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Zap BG's\Zap305.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Zap187" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Zap BG's\Zap187.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Zap258" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Zap BG's\Zap258.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Zap324" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Zap BG's\Zap324.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Zap249" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Zap BG's\Zap249.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Zap322" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Zap BG's\Zap322.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Zap300" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Zap BG's\Zap300.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Zap203" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Zap BG's\Zap203.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Zap294" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Zap BG's\Zap294.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="CatDerik" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\CatDerik.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Zap196" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Zap BG's\Zap196.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -265,17 +277,11 @@
   <data name="Zap229" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Zap BG's\Zap229.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Zap278" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Zap BG's\Zap278.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Zap140" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Zap BG's\Zap140.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Zap178" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Zap BG's\Zap178.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Zap304" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Zap BG's\Zap304.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Zap224" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Zap BG's\Zap224.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -286,38 +292,32 @@
   <data name="Zap335" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Zap BG's\Zap335.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Zap194" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Zap BG's\Zap194.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="JetpackJoyride" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\JetpackJoyride.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="LoginPassbg2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LoginPassbg2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Zap129" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Zap BG's\Zap129.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Zap143" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Zap BG's\Zap143.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Zap240" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Zap BG's\Zap240.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Zap310" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Zap BG's\Zap310.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Zap286" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Zap BG's\Zap286.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Zap137" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Zap BG's\Zap137.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="hitzap" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\hitzap.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Zap291" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Zap BG's\Zap291.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Zap270" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Zap BG's\Zap270.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Zap193" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Zap BG's\Zap193.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Zap158" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Zap BG's\Zap158.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Zap237" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Zap BG's\Zap237.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="slide" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\slide.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Zap147" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Zap BG's\Zap147.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -327,9 +327,6 @@
   </data>
   <data name="Zap337" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Zap BG's\Zap337.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Zap209" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Zap BG's\Zap209.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Zap133" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Zap BG's\Zap133.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -343,14 +340,11 @@
   <data name="Zap233" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Zap BG's\Zap233.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Zap259" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Zap BG's\Zap259.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Zap242" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Zap BG's\Zap242.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Zap284" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Zap BG's\Zap284.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Zap244" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Zap BG's\Zap244.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="PassCheckbg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PassCheckbg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Zap204" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Zap BG's\Zap204.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -361,17 +355,14 @@
   <data name="Zap239" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Zap BG's\Zap239.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Zap143" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Zap BG's\Zap143.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Zap168" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Zap BG's\Zap168.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Zap253" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Zap BG's\Zap253.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Zap276" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Zap BG's\Zap276.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Zap326" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Zap BG's\Zap326.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Zap290" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Zap BG's\Zap290.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Zap316" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Zap BG's\Zap316.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -385,11 +376,8 @@
   <data name="Zap162" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Zap BG's\Zap162.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Zap250" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Zap BG's\Zap250.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="GeometricSans" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\HurmeGeometricSans1-Bold.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="Zap304" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Zap BG's\Zap304.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Zap251" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Zap BG's\Zap251.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -400,29 +388,32 @@
   <data name="Zap151" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Zap BG's\Zap151.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Zap155" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Zap BG's\Zap155.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Zap312" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Zap BG's\Zap312.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ZapHTop" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ZapHTop.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Zap216" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Zap BG's\Zap216.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="running1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\running1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Zap181" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Zap BG's\Zap181.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Zap207" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Zap BG's\Zap207.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Zap145" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Zap BG's\Zap145.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Zap297" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Zap BG's\Zap297.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Zap225" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Zap BG's\Zap225.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Zap155" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Zap BG's\Zap155.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Zap332" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Zap BG's\Zap332.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Zap244" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Zap BG's\Zap244.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="JJStartingTheme" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\JJStartingTheme.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -430,20 +421,11 @@
   <data name="Zap212" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Zap BG's\Zap212.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Zap149" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Zap BG's\Zap149.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Zap307" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Zap BG's\Zap307.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="LoginPanelbg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LoginPanelbg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Zap236" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Zap BG's\Zap236.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Zap214" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Zap BG's\Zap214.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Zap153" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Zap BG's\Zap153.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -457,14 +439,14 @@
   <data name="Zap221" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Zap BG's\Zap221.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Zap331" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Zap BG's\Zap331.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Zap293" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Zap BG's\Zap293.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Zap184" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Zap BG's\Zap184.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Zap231" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Zap BG's\Zap231.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Zap286" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Zap BG's\Zap286.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Zap227" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Zap BG's\Zap227.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -472,29 +454,29 @@
   <data name="LoginPassbg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LoginPassbg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Zap157" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Zap BG's\Zap157.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Zap209" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Zap BG's\Zap209.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Zap338" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Zap BG's\Zap338.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Zap242" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Zap BG's\Zap242.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="falling" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\falling.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Zap163" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Zap BG's\Zap163.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="GeometricSans" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HurmeGeometricSans1-Bold.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Zap281" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Zap BG's\Zap281.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Zap295" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Zap BG's\Zap295.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Zap223" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Zap BG's\Zap223.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Zap274" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Zap BG's\Zap274.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="labelbg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\labelbg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Zap137" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Zap BG's\Zap137.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="LoginUserbg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LoginUserbg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -517,8 +499,8 @@
   <data name="Zap317" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Zap BG's\Zap317.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Zap217" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Zap BG's\Zap217.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="slide" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\slide.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Zap247" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Zap BG's\Zap247.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -526,8 +508,11 @@
   <data name="Zap161" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Zap BG's\Zap161.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Zap139" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Zap BG's\Zap139.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Zap136" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Zap BG's\Zap136.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Zap217" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Zap BG's\Zap217.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Zap210" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Zap BG's\Zap210.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -535,17 +520,17 @@
   <data name="Zap241" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Zap BG's\Zap241.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Zap334" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Zap BG's\Zap334.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Zap182" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Zap BG's\Zap182.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="PassCheckbg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PassCheckbg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Zap310" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Zap BG's\Zap310.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Zap215" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Zap BG's\Zap215.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Zap288" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Zap BG's\Zap288.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="zapperV4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\zapper4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -553,8 +538,8 @@
   <data name="Zap165" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Zap BG's\Zap165.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Zap272" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Zap BG's\Zap272.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Zap279" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Zap BG's\Zap279.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Zap315" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Zap BG's\Zap315.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -565,8 +550,11 @@
   <data name="Zap245" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Zap BG's\Zap245.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Zap306" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Zap BG's\Zap306.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Zap283" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Zap BG's\Zap283.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CatDerik" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CatDerik.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Zap148" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Zap BG's\Zap148.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -604,6 +592,9 @@
   <data name="Zap292" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Zap BG's\Zap292.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Zap191" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Zap BG's\Zap191.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Zap169" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Zap BG's\Zap169.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -613,11 +604,8 @@
   <data name="Zap232" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Zap BG's\Zap232.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Zap202" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Zap BG's\Zap202.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Zap228" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Zap BG's\Zap228.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="running1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\running1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="New_Athletic_M54" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\New Athletic M54.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -655,14 +643,14 @@
   <data name="Zap127" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Zap BG's\Zap127.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Zap298" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Zap BG's\Zap298.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Zap184" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Zap BG's\Zap184.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Zap176" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Zap BG's\Zap176.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Zap134" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Zap BG's\Zap134.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Zap321" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Zap BG's\Zap321.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Zap250" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Zap BG's\Zap250.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Zap262" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Zap BG's\Zap262.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -688,8 +676,8 @@
   <data name="Zap198" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Zap BG's\Zap198.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Zap277" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Zap BG's\Zap277.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Zap149" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Zap BG's\Zap149.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Zap299" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Zap BG's\Zap299.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -697,11 +685,14 @@
   <data name="Zap135" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Zap BG's\Zap135.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Zap288" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Zap BG's\Zap288.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Zap129" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Zap BG's\Zap129.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Zap185" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Zap BG's\Zap185.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Zap139" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Zap BG's\Zap139.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Zap202" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Zap BG's\Zap202.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Zap183" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Zap BG's\Zap183.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -709,11 +700,14 @@
   <data name="Zap269" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Zap BG's\Zap269.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Zap323" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Zap BG's\Zap323.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Zap214" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Zap BG's\Zap214.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Zap197" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Zap BG's\Zap197.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Zap228" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Zap BG's\Zap228.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Zap282" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Zap BG's\Zap282.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -730,11 +724,14 @@
   <data name="running2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\running2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Zap298" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Zap BG's\Zap298.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="wp3804050" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\wp3804050.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Zap279" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Zap BG's\Zap279.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Zap213" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Zap BG's\Zap213.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Zap328" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Zap BG's\Zap328.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -769,38 +766,41 @@
   <data name="zapperH2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\zapperH2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Zap291" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Zap BG's\Zap291.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Zap156" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Zap BG's\Zap156.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Zap191" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Zap BG's\Zap191.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Zap181" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Zap BG's\Zap181.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Zap318" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Zap BG's\Zap318.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Zap325" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Zap BG's\Zap325.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Zap272" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Zap BG's\Zap272.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Zap235" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Zap BG's\Zap235.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="falling" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\falling.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Zap156" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Zap BG's\Zap156.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Zap324" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Zap BG's\Zap324.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Zap321" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Zap BG's\Zap321.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ZapHTop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ZapHTop.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Zap208" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Zap BG's\Zap208.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Zap325" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Zap BG's\Zap325.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Zap176" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Zap BG's\Zap176.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Zap145" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Zap BG's\Zap145.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Zap306" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Zap BG's\Zap306.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Zap164" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Zap BG's\Zap164.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Zap136" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Zap BG's\Zap136.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="zapperH3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\zapperH3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Zap273" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Zap BG's\Zap273.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -811,8 +811,8 @@
   <data name="LoginTextbg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LoginTextbg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Zap297" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Zap BG's\Zap297.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Zap231" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Zap BG's\Zap231.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Zap271" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Zap BG's\Zap271.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -820,11 +820,14 @@
   <data name="Zap267" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Zap BG's\Zap267.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Zap193" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Zap BG's\Zap193.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="JetpackJoyride" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\JetpackJoyride.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Zap331" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Zap BG's\Zap331.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="bananos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bananos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Zap206" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Zap BG's\Zap206.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="zapperV1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\zapper.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -835,14 +838,14 @@
   <data name="Zap142" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Zap BG's\Zap142.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Zap281" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Zap BG's\Zap281.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Zap326" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Zap BG's\Zap326.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Zap130" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Zap BG's\Zap130.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Zap276" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Zap BG's\Zap276.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Zap259" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Zap BG's\Zap259.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Zap266" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Zap BG's\Zap266.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -856,25 +859,25 @@
   <data name="death" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\death.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Zap290" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Zap BG's\Zap290.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Zap253" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Zap BG's\Zap253.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Zap322" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Zap BG's\Zap322.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Zap278" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Zap BG's\Zap278.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Zap283" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Zap BG's\Zap283.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Zap240" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Zap BG's\Zap240.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Zap187" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Zap BG's\Zap187.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Zap185" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Zap BG's\Zap185.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Zap295" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Zap BG's\Zap295.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Zap230" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Zap BG's\Zap230.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Zap134" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Zap BG's\Zap134.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Zap274" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Zap BG's\Zap274.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="bananos" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bananos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="joystick" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\joystick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

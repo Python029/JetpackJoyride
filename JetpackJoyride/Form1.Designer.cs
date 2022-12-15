@@ -40,6 +40,7 @@
             this.pnInfo = new System.Windows.Forms.Panel();
             this.pnE1 = new System.Windows.Forms.Panel();
             this.pnE2 = new System.Windows.Forms.Panel();
+            this.pbControls = new System.Windows.Forms.PictureBox();
             this.pbScore = new System.Windows.Forms.PictureBox();
             this.pbBarry = new System.Windows.Forms.PictureBox();
             this.pbLogo = new System.Windows.Forms.PictureBox();
@@ -47,6 +48,7 @@
             this.bg3 = new System.Windows.Forms.PictureBox();
             this.bg2 = new System.Windows.Forms.PictureBox();
             this.bg1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pbControls)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbScore)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBarry)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
@@ -65,11 +67,11 @@
             // 
             this.lblStart.AutoSize = true;
             this.lblStart.BackColor = System.Drawing.Color.Transparent;
-            this.lblStart.Font = new System.Drawing.Font("New Athletic M54", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblStart.ForeColor = System.Drawing.SystemColors.Control;
             this.lblStart.Location = new System.Drawing.Point(334, 493);
             this.lblStart.Name = "lblStart";
-            this.lblStart.Size = new System.Drawing.Size(315, 46);
+            this.lblStart.Size = new System.Drawing.Size(312, 44);
             this.lblStart.TabIndex = 5;
             this.lblStart.Text = "Press Space to Start";
             this.lblStart.UseCompatibleTextRendering = true;
@@ -83,11 +85,11 @@
             // 
             this.lblScore.AutoSize = true;
             this.lblScore.BackColor = System.Drawing.Color.Transparent;
-            this.lblScore.Font = new System.Drawing.Font("New Athletic M54", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore.ForeColor = System.Drawing.SystemColors.ControlText;
             this.lblScore.Location = new System.Drawing.Point(24, 3);
             this.lblScore.Name = "lblScore";
-            this.lblScore.Size = new System.Drawing.Size(112, 52);
+            this.lblScore.Size = new System.Drawing.Size(129, 50);
             this.lblScore.TabIndex = 8;
             this.lblScore.Text = "0000m";
             this.lblScore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -97,11 +99,11 @@
             // 
             this.lblHighscore.AutoSize = true;
             this.lblHighscore.BackColor = System.Drawing.Color.Transparent;
-            this.lblHighscore.Font = new System.Drawing.Font("New Athletic M54", 18.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHighscore.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHighscore.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(69)))), ((int)(((byte)(97)))));
             this.lblHighscore.Location = new System.Drawing.Point(773, 480);
             this.lblHighscore.Name = "lblHighscore";
-            this.lblHighscore.Size = new System.Drawing.Size(76, 36);
+            this.lblHighscore.Size = new System.Drawing.Size(88, 35);
             this.lblHighscore.TabIndex = 9;
             this.lblHighscore.Text = "0000M";
             this.lblHighscore.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -146,6 +148,18 @@
             this.pnE2.Size = new System.Drawing.Size(82, 78);
             this.pnE2.TabIndex = 13;
             this.pnE2.Click += new System.EventHandler(this.pnE2_Click);
+            // 
+            // pbControls
+            // 
+            this.pbControls.BackColor = System.Drawing.Color.Transparent;
+            this.pbControls.Image = global::JetpackJoyride.Properties.Resources.joystick;
+            this.pbControls.Location = new System.Drawing.Point(12, 61);
+            this.pbControls.Name = "pbControls";
+            this.pbControls.Size = new System.Drawing.Size(80, 74);
+            this.pbControls.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbControls.TabIndex = 14;
+            this.pbControls.TabStop = false;
+            this.pbControls.Click += new System.EventHandler(this.pbControls_Click);
             // 
             // pbScore
             // 
@@ -226,6 +240,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(986, 692);
+            this.Controls.Add(this.pbControls);
             this.Controls.Add(this.pnE2);
             this.Controls.Add(this.pnE1);
             this.Controls.Add(this.pnInfo);
@@ -250,6 +265,7 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
+            ((System.ComponentModel.ISupportInitialize)(this.pbControls)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbScore)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBarry)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
@@ -281,6 +297,7 @@
         private System.Windows.Forms.Panel pnInfo;
         private System.Windows.Forms.Panel pnE1;
         private System.Windows.Forms.Panel pnE2;
+        private System.Windows.Forms.PictureBox pbControls;
     }
 }
 

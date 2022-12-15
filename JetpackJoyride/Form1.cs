@@ -105,6 +105,7 @@ namespace JetpackJoyride
             pnInfo.Parent = bgstart;
             pnE1.Parent = bgstart;
             pnE2.Parent = bgstart;
+            pbControls.Parent = bgstart;
             lblScore.ForeColor= Color.White;
             for (int i = 1; i<4;i++)
             {
@@ -193,7 +194,7 @@ namespace JetpackJoyride
         {
             try
             {
-                string[] Leaderboard = File.ReadAllLines(ScorePath);
+                string[] Leaderboard = File.ReadAllLines(HomeScorePath);
                 for (int i = 0; i < Leaderboard.Length; i++)
                 {
                     string[] rowdata = Leaderboard[i].Split(',');
@@ -331,7 +332,7 @@ namespace JetpackJoyride
                 
                 pbBarry.Image = Resources.slide;
             }
-            if (ground == false && deadbounce == false && deadslide == false)
+            else if (ground == false && deadbounce == false && deadslide == false)
             {
                 Gravity();
             }
@@ -411,11 +412,11 @@ namespace JetpackJoyride
                     DateTime now = DateTime.Now;
                     string date = now.ToString();
                     time.Insert(0, date);
-                    File.WriteAllText(ScorePath, string.Empty);
+                    File.WriteAllText(HomeScorePath, string.Empty);
                     for (int i = 0; i < username.Count; i++)
                     {
                         string score = ($"{username[i]},{scores[i]},{time[i]}\n");
-                        File.AppendAllText(ScorePath, score);
+                        File.AppendAllText(HomeScorePath, score);
                     }
                     DialogResult dialogResult = MessageBox.Show($"Congrats, {Settings.Default.Username}, you achieved a new high score.\nWould you like to view the leaderboard?", "New Highscore", MessageBoxButtons.YesNo);
                     if (dialogResult == DialogResult.Yes)
@@ -456,11 +457,11 @@ namespace JetpackJoyride
                     DateTime now = DateTime.Now;
                     string date = now.ToString();
                     time.Insert(1, date);
-                    File.WriteAllText(ScorePath, string.Empty);
+                    File.WriteAllText(HomeScorePath, string.Empty);
                     for (int i = 0; i < username.Count; i++)
                     {
                         string score = ($"{username[i]},{scores[i]},{time[i]}\n");
-                        File.AppendAllText(ScorePath, score);
+                        File.AppendAllText(HomeScorePath, score);
                     }
                     DialogResult dialogResult = MessageBox.Show($"Congrats, {Settings.Default.Username}, you achieved the second highest score.\nWould you like to view the leaderboard?", "New Score", MessageBoxButtons.YesNo);
                     if (dialogResult == DialogResult.Yes)
@@ -501,11 +502,11 @@ namespace JetpackJoyride
                     DateTime now = DateTime.Now;
                     string date = now.ToString();
                     time.Insert(2, date);
-                    File.WriteAllText(ScorePath, string.Empty);
+                    File.WriteAllText(HomeScorePath, string.Empty);
                     for (int i = 0; i < username.Count; i++)
                     {
                         string score = ($"{username[i]},{scores[i]},{time[i]}\n");
-                        File.AppendAllText(ScorePath, score);
+                        File.AppendAllText(HomeScorePath, score);
                     }
                     DialogResult dialogResult = MessageBox.Show($"Congrats, {Settings.Default.Username}, you achieved the third highest score.\nWould you like to view the leaderboard?", "New Score", MessageBoxButtons.YesNo);
                     if (dialogResult == DialogResult.Yes)
@@ -546,11 +547,11 @@ namespace JetpackJoyride
                     DateTime now = DateTime.Now;
                     string date = now.ToString();
                     time.Insert(3, date);
-                    File.WriteAllText(ScorePath, string.Empty);
+                    File.WriteAllText(HomeScorePath, string.Empty);
                     for (int i = 0; i < username.Count; i++)
                     {
                         string score = ($"{username[i]},{scores[i]},{time[i]}\n");
-                        File.AppendAllText(ScorePath, score);
+                        File.AppendAllText(HomeScorePath, score);
                     }
                     DialogResult dialogResult = MessageBox.Show($"Congrats, {Settings.Default.Username}, you achieved the fourth highest score.\nWould you like to view the leaderboard?", "New Score", MessageBoxButtons.YesNo);
                     if (dialogResult == DialogResult.Yes)
@@ -591,11 +592,11 @@ namespace JetpackJoyride
                     DateTime now = DateTime.Now;
                     string date = now.ToString();
                     time.Insert(4, date);
-                    File.WriteAllText(ScorePath, string.Empty);
+                    File.WriteAllText(HomeScorePath, string.Empty);
                     for (int i = 0; i < username.Count; i++)
                     {
                         string score = ($"{username[i]},{scores[i]},{time[i]}\n");
-                        File.AppendAllText(ScorePath, score);
+                        File.AppendAllText(HomeScorePath, score);
                     }
                     DialogResult dialogResult = MessageBox.Show($"Congrats, {Settings.Default.Username}, you achieved the fifth highest score.\nWould you like to view the leaderboard?", "New Score", MessageBoxButtons.YesNo);
                     if (dialogResult == DialogResult.Yes)
@@ -673,11 +674,11 @@ namespace JetpackJoyride
                     DateTime now = DateTime.Now;
                     string date = now.ToString();
                     time.Insert(0, date);
-                    File.WriteAllText(ScorePath, string.Empty);
+                    File.WriteAllText(HomeScorePath, string.Empty);
                     for (int i = 0; i < username.Count; i++)
                     {
                         string score = ($"{username[i]},{scores[i]},{time[i]}\n");
-                        File.AppendAllText(ScorePath, score);
+                        File.AppendAllText(HomeScorePath, score);
                     }
                     DialogResult dialogResult = MessageBox.Show($"Congrats, {Settings.Default.Username}, you achieved a new high score.\nWould you like to view the leaderboard?", "New Highscore", MessageBoxButtons.YesNo);
                     if (dialogResult == DialogResult.Yes)
@@ -718,11 +719,11 @@ namespace JetpackJoyride
                     DateTime now = DateTime.Now;
                     string date = now.ToString();
                     time.Insert(1, date);
-                    File.WriteAllText(ScorePath, string.Empty);
+                    File.WriteAllText(HomeScorePath, string.Empty);
                     for (int i = 0; i < username.Count; i++)
                     {
                         string score = ($"{username[i]},{scores[i]},{time[i]}\n");
-                        File.AppendAllText(ScorePath, score);
+                        File.AppendAllText(HomeScorePath, score);
                     }
                     DialogResult dialogResult = MessageBox.Show($"Congrats, {Settings.Default.Username}, you achieved the second highest score.\nWould you like to view the leaderboard?", "New Score", MessageBoxButtons.YesNo);
                     if (dialogResult == DialogResult.Yes)
@@ -763,11 +764,11 @@ namespace JetpackJoyride
                     DateTime now = DateTime.Now;
                     string date = now.ToString();
                     time.Insert(2, date);
-                    File.WriteAllText(ScorePath, string.Empty);
+                    File.WriteAllText(HomeScorePath, string.Empty);
                     for (int i = 0; i < username.Count; i++)
                     {
                         string score = ($"{username[i]},{scores[i]},{time[i]}\n");
-                        File.AppendAllText(ScorePath, score);
+                        File.AppendAllText(HomeScorePath, score);
                     }
                     DialogResult dialogResult = MessageBox.Show($"Congrats, {Settings.Default.Username}, you achieved the third highest score.\nWould you like to view the leaderboard?", "New Score", MessageBoxButtons.YesNo);
                     if (dialogResult == DialogResult.Yes)
@@ -808,11 +809,11 @@ namespace JetpackJoyride
                     DateTime now = DateTime.Now;
                     string date = now.ToString();
                     time.Insert(3, date);
-                    File.WriteAllText(ScorePath, string.Empty);
+                    File.WriteAllText(HomeScorePath, string.Empty);
                     for (int i = 0; i < username.Count; i++)
                     {
                         string score = ($"{username[i]},{scores[i]},{time[i]}\n");
-                        File.AppendAllText(ScorePath, score);
+                        File.AppendAllText(HomeScorePath, score);
                     }
                     DialogResult dialogResult = MessageBox.Show($"Congrats, {Settings.Default.Username}, you achieved the fourth highest score.\nWould you like to view the leaderboard?", "New Score", MessageBoxButtons.YesNo);
                     if (dialogResult == DialogResult.Yes)
@@ -853,11 +854,11 @@ namespace JetpackJoyride
                     DateTime now = DateTime.Now;
                     string date = now.ToString();
                     time.Insert(4, date);
-                    File.WriteAllText(ScorePath, string.Empty);
+                    File.WriteAllText(HomeScorePath, string.Empty);
                     for (int i = 0; i < username.Count; i++)
                     {
                         string score = ($"{username[i]},{scores[i]},{time[i]}\n");
-                        File.AppendAllText(ScorePath, score);
+                        File.AppendAllText(HomeScorePath, score);
                     }
                     DialogResult dialogResult = MessageBox.Show($"Congrats, {Settings.Default.Username}, you achieved the fifth highest score.\nWould you like to view the leaderboard?", "New Score", MessageBoxButtons.YesNo);
                     if (dialogResult == DialogResult.Yes)
@@ -901,11 +902,11 @@ namespace JetpackJoyride
                     DateTime now = DateTime.Now;
                     string date = now.ToString();
                     time.Insert(0, date);
-                    File.WriteAllText(ScorePath, string.Empty);
+                    File.WriteAllText(HomeScorePath, string.Empty);
                     for (int i = 0; i < username.Count; i++)
                     {
                         string score = ($"{username[i]},{scores[i]},{time[i]}\n");
-                        File.AppendAllText(ScorePath, score);
+                        File.AppendAllText(HomeScorePath, score);
                     }
                     DialogResult dialogResult = MessageBox.Show($"Congrats, {Settings.Default.Username}, you achieved a new high score.\nWould you like to view the leaderboard?", "New Highscore", MessageBoxButtons.YesNo);
                     if (dialogResult == DialogResult.Yes)
@@ -946,11 +947,11 @@ namespace JetpackJoyride
                     DateTime now = DateTime.Now;
                     string date = now.ToString();
                     time.Insert(1, date);
-                    File.WriteAllText(ScorePath, string.Empty);
+                    File.WriteAllText(HomeScorePath, string.Empty);
                     for (int i = 0; i < username.Count; i++)
                     {
                         string score = ($"{username[i]},{scores[i]},{time[i]}\n");
-                        File.AppendAllText(ScorePath, score);
+                        File.AppendAllText(HomeScorePath, score);
                     }
                     DialogResult dialogResult = MessageBox.Show($"Congrats, {Settings.Default.Username}, you achieved the second highest score.\nWould you like to view the leaderboard?", "New Score", MessageBoxButtons.YesNo);
                     if (dialogResult == DialogResult.Yes)
@@ -991,11 +992,11 @@ namespace JetpackJoyride
                     DateTime now = DateTime.Now;
                     string date = now.ToString();
                     time.Insert(2, date);
-                    File.WriteAllText(ScorePath, string.Empty);
+                    File.WriteAllText(HomeScorePath, string.Empty);
                     for (int i = 0; i < username.Count; i++)
                     {
                         string score = ($"{username[i]},{scores[i]},{time[i]}\n");
-                        File.AppendAllText(ScorePath, score);
+                        File.AppendAllText(HomeScorePath, score);
                     }
                     DialogResult dialogResult = MessageBox.Show($"Congrats, {Settings.Default.Username}, you achieved the third highest score.\nWould you like to view the leaderboard?", "New Score", MessageBoxButtons.YesNo);
                     if (dialogResult == DialogResult.Yes)
@@ -1036,11 +1037,11 @@ namespace JetpackJoyride
                     DateTime now = DateTime.Now;
                     string date = now.ToString();
                     time.Insert(3, date);
-                    File.WriteAllText(ScorePath, string.Empty);
+                    File.WriteAllText(HomeScorePath, string.Empty);
                     for (int i = 0; i < username.Count; i++)
                     {
                         string score = ($"{username[i]},{scores[i]},{time[i]}\n");
-                        File.AppendAllText(ScorePath, score);
+                        File.AppendAllText(HomeScorePath, score);
                     }
                     DialogResult dialogResult = MessageBox.Show($"Congrats, {Settings.Default.Username}, you achieved the fourth highest score.\nWould you like to view the leaderboard?", "New Score", MessageBoxButtons.YesNo);
                     if (dialogResult == DialogResult.Yes)
@@ -1084,11 +1085,11 @@ namespace JetpackJoyride
                     DateTime now = DateTime.Now;
                     string date = now.ToString();
                     time.Insert(0, date);
-                    File.WriteAllText(ScorePath, string.Empty);
+                    File.WriteAllText(HomeScorePath, string.Empty);
                     for (int i = 0; i < username.Count; i++)
                     {
                         string score = ($"{username[i]},{scores[i]},{time[i]}\n");
-                        File.AppendAllText(ScorePath, score);
+                        File.AppendAllText(HomeScorePath, score);
                     }
                     DialogResult dialogResult = MessageBox.Show($"Congrats, {Settings.Default.Username}, you achieved a new high score.\nWould you like to view the leaderboard?", "New Highscore", MessageBoxButtons.YesNo);
                     if (dialogResult == DialogResult.Yes)
@@ -1129,11 +1130,11 @@ namespace JetpackJoyride
                     DateTime now = DateTime.Now;
                     string date = now.ToString();
                     time.Insert(1, date);
-                    File.WriteAllText(ScorePath, string.Empty);
+                    File.WriteAllText(HomeScorePath, string.Empty);
                     for (int i = 0; i < username.Count; i++)
                     {
                         string score = ($"{username[i]},{scores[i]},{time[i]}\n");
-                        File.AppendAllText(ScorePath, score);
+                        File.AppendAllText(HomeScorePath, score);
                     }
                     DialogResult dialogResult = MessageBox.Show($"Congrats, {Settings.Default.Username}, you achieved the second highest score.\nWould you like to view the leaderboard?", "New Score", MessageBoxButtons.YesNo);
                     if (dialogResult == DialogResult.Yes)
@@ -1174,11 +1175,11 @@ namespace JetpackJoyride
                     DateTime now = DateTime.Now;
                     string date = now.ToString();
                     time.Insert(2, date);
-                    File.WriteAllText(ScorePath, string.Empty);
+                    File.WriteAllText(HomeScorePath, string.Empty);
                     for (int i = 0; i < username.Count; i++)
                     {
                         string score = ($"{username[i]},{scores[i]},{time[i]}\n");
-                        File.AppendAllText(ScorePath, score);
+                        File.AppendAllText(HomeScorePath, score);
                     }
                     DialogResult dialogResult = MessageBox.Show($"Congrats, {Settings.Default.Username}, you achieved the third highest score.\nWould you like to view the leaderboard?", "New Score", MessageBoxButtons.YesNo);
                     if (dialogResult == DialogResult.Yes)
@@ -1222,11 +1223,11 @@ namespace JetpackJoyride
                     DateTime now = DateTime.Now;
                     string date = now.ToString();
                     time.Insert(0, date);
-                    File.WriteAllText(ScorePath, string.Empty);
+                    File.WriteAllText(HomeScorePath, string.Empty);
                     for (int i = 0; i < username.Count; i++)
                     {
                         string score = ($"{username[i]},{scores[i]},{time[i]}\n");
-                        File.AppendAllText(ScorePath, score);
+                        File.AppendAllText(HomeScorePath, score);
                     }
                     DialogResult dialogResult = MessageBox.Show($"Congrats, {Settings.Default.Username}, you achieved a new high score.\nWould you like to view the leaderboard?", "New Highscore", MessageBoxButtons.YesNo);
                     if (dialogResult == DialogResult.Yes)
@@ -1267,11 +1268,11 @@ namespace JetpackJoyride
                     DateTime now = DateTime.Now;
                     string date = now.ToString();
                     time.Insert(1, date);
-                    File.WriteAllText(ScorePath, string.Empty);
+                    File.WriteAllText(HomeScorePath, string.Empty);
                     for (int i = 0; i < username.Count; i++)
                     {
                         string score = ($"{username[i]},{scores[i]},{time[i]}\n");
-                        File.AppendAllText(ScorePath, score);
+                        File.AppendAllText(HomeScorePath, score);
                     }
                     DialogResult dialogResult = MessageBox.Show($"Congrats, {Settings.Default.Username}, you achieved the second highest score.\nWould you like to view the leaderboard?", "New Score", MessageBoxButtons.YesNo);
                     if (dialogResult == DialogResult.Yes)
@@ -1312,8 +1313,8 @@ namespace JetpackJoyride
                 string date = now.ToString();
                 time.Insert(0, date);
                 string score = ($"{Settings.Default.Username},{distance},{date}\n");
-                File.WriteAllText(ScorePath, string.Empty);
-                File.AppendAllText(ScorePath, score);
+                File.WriteAllText(HomeScorePath, string.Empty);
+                File.AppendAllText(HomeScorePath, score);
                 DialogResult dialogResult = MessageBox.Show($"Congrats, {Settings.Default.Username}, you achieved a new high score.\nWould you like to view the leaderboard?", "New Highscore", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
@@ -3596,8 +3597,10 @@ namespace JetpackJoyride
                 tmrUpdate.Enabled = true;
                 pbLogo.Parent = null;
                 lblStart.Parent = null;
+                pbControls.Parent = null;
                 this.Controls.Remove(pbLogo);
                 this.Controls.Remove(lblStart);
+                this.Controls.Remove(pbControls);
                 bgstart.Image = Resources.bgstart2;
                 start = true;
                 player.Stop();
@@ -3688,6 +3691,11 @@ namespace JetpackJoyride
         {
             Form4 f4 = new Form4();
             f4.ShowDialog();
+        }
+
+        private void pbControls_Click(object sender, EventArgs e)
+        {
+            if(start == false&& go == false) { MessageBox.Show("Use Space, Up Arrow, or W to fly.", "Controls", MessageBoxButtons.OK, MessageBoxIcon.Information); }  
         }
     }
 }
