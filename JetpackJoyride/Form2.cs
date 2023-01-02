@@ -25,7 +25,7 @@ namespace JetpackJoyride
         List<int> scores = new List<int>();
         List<string> time = new List<string>();
         string date = "";
-        string ScorePath = "J:\\Computer Science Testing\\Silvera_JetpackJoyride\\JetpackJoyrideScores.csv";
+        string ScorePath = "J:\\CS\\Silvera_JetpackJoyride\\JetpackJoyrideScores.csv";
         string HomeScorePath = "C:\\Users\\Silve\\OneDrive\\Documents\\JetpackJoyrideScores.csv";
         private void Form2_Load(object sender, EventArgs e)
         {
@@ -94,7 +94,7 @@ namespace JetpackJoyride
         {
             try
             {
-                string[] Leaderboard = File.ReadAllLines(HomeScorePath);
+                string[] Leaderboard = File.ReadAllLines(ScorePath);
                 for (int i = 0; i < Leaderboard.Length; i++)
                 {
                     string[] rowdata = Leaderboard[i].Split(',');
@@ -102,7 +102,7 @@ namespace JetpackJoyride
                     if (username[0] == "")
                     {
                         username.Clear();
-                        File.WriteAllText(HomeScorePath, string.Empty);
+                        File.WriteAllText(ScorePath, string.Empty);
                         break;
                     }
                     else if (username[0] != "")
